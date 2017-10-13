@@ -80,7 +80,7 @@
 <meta property="og:site_name" content="Bang&#39;Blog">
 <meta property="og:description" content="1.配合服务器解析漏洞2.配合编辑器漏洞3.配合客户端绕过4.配合服务端绕过5.配合waf上传绕过">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-13T02:17:43.678Z">
+<meta property="og:updated_time" content="2017-10-13T02:29:40.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Upload bypass">
 <meta name="twitter:description" content="1.配合服务器解析漏洞2.配合编辑器漏洞3.配合客户端绕过4.配合服务端绕过5.配合waf上传绕过">
@@ -344,21 +344,16 @@
 
       
         <p>1.配合服务器解析漏洞<br>2.配合编辑器漏洞<br>3.配合客户端绕过<br>4.配合服务端绕过<br>5.配合waf上传绕过<br><a id="more"></a></p>
-<p>#解析不可写</p>
-<p>#可写不解析</p>
-<p>#解析漏洞</p>
-<p>##IIS5.X-6.X</p>
-<p>###目录解析</p>
-<ul>
-<li>当目录文件名包含 .asp .cer .asa 时 该目录下文件会以asp解析<br>##文件解析</li>
+<h1 id="解析不可写"><a href="#解析不可写" class="headerlink" title="解析不可写"></a>解析不可写</h1><h1 id="可写不解析"><a href="#可写不解析" class="headerlink" title="可写不解析"></a>可写不解析</h1><h1 id="解析漏洞"><a href="#解析漏洞" class="headerlink" title="解析漏洞"></a>解析漏洞</h1><h2 id="IIS5-X-6-X"><a href="#IIS5-X-6-X" class="headerlink" title="IIS5.X-6.X"></a>IIS5.X-6.X</h2><h3 id="目录解析"><a href="#目录解析" class="headerlink" title="目录解析"></a>目录解析</h3><ul>
+<li>当目录文件名包含 .asp .cer .asa 时 该目录下文件会以asp解析<h2 id="文件解析"><a href="#文件解析" class="headerlink" title="文件解析"></a>文件解析</h2></li>
 <li>xx.asp;.jpg 只解析xx.asp，不解析后面</li>
 <li>xx.asp;.asa 优先解析asp</li>
 <li>但是碰到上传文件会进行重命名的话就GG了。</li>
 </ul>
-<p>##apache1.X-2.X<br>apache解析方式是<font color="red">从后向前</font>解析,直到碰到认识的扩展名为止.</p>
+<h2 id="apache1-X-2-X"><a href="#apache1-X-2-X" class="headerlink" title="apache1.X-2.X"></a>apache1.X-2.X</h2><p>apache解析方式是<font color="red">从后向前</font>解析,直到碰到认识的扩展名为止.</p>
 <ul>
 <li>1.php.rar.xs.aa</li>
-<li>首先会解析aa扩展名，如果不认识将会解析xs扩展名,这样一直遍历到认识的扩展名位置.<br>##Nginx</li>
+<li>首先会解析aa扩展名，如果不认识将会解析xs扩展名,这样一直遍历到认识的扩展名位置.<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2></li>
 <li>Nginx 0.5.*</li>
 <li>Nginx 0.6.*</li>
 <li>Nginx 0.7 &lt;= 0.7.65</li>
@@ -368,29 +363,26 @@
 </li>
 <li><p>Nginx 0.8.41 – 1.5.6：</p>
 </li>
-<li>以上 Nginx 容器的版本下，上传一个在 waf 白名单之内扩展名的文 件 shell.jpg，然后以<br>shell.jpg%20.php 进行请求。<br>##php CGI<br>###IIS7.0/7.5<br>###Nginx &lt; 0.8.3</li>
+<li>以上 Nginx 容器的版本下，上传一个在 waf 白名单之内扩展名的文 件 shell.jpg，然后以<br>shell.jpg%20.php 进行请求。<h2 id="php-CGI"><a href="#php-CGI" class="headerlink" title="php CGI"></a>php CGI</h2><h3 id="IIS7-0-7-5"><a href="#IIS7-0-7-5" class="headerlink" title="IIS7.0/7.5"></a>IIS7.0/7.5</h3><h3 id="Nginx-lt-0-8-3"><a href="#Nginx-lt-0-8-3" class="headerlink" title="Nginx &lt; 0.8.3"></a>Nginx &lt; 0.8.3</h3></li>
 <li>条件:以上的容器版本中默认 php 配置文件 cgi.fix_pathinfo=1</li>
 <li>上传一个存在白名单的扩展名 shell.jpg 请求时以shell.jpg/shell.php 请求，会将shell.jpg以php来解析</li>
 </ul>
-<p>#编辑器漏洞</p>
-<ul>
-<li><p><a href="https://navisec.it/%e7%bc%96%e8%be%91%e5%99%a8%e6%bc%8f%e6%b4%9e%e6%89%8b%e5%86%8c/" target="_blank" rel="external">编辑器漏洞手册</a><br>#客户端绕过<br>绕过javascript检测:</p>
+<h1 id="编辑器漏洞"><a href="#编辑器漏洞" class="headerlink" title="编辑器漏洞"></a>编辑器漏洞</h1><ul>
+<li><p><a href="https://navisec.it/%e7%bc%96%e8%be%91%e5%99%a8%e6%bc%8f%e6%b4%9e%e6%89%8b%e5%86%8c/" target="_blank" rel="external">编辑器漏洞手册</a></p>
+<h1 id="客户端绕过"><a href="#客户端绕过" class="headerlink" title="客户端绕过"></a>客户端绕过</h1><p>绕过javascript检测:</p>
 </li>
 <li><p>在本地浏览器客户端禁用JS即可。可使用火狐浏览器的NoScript插件、IE中禁用掉JS等方式实现。</p>
 </li>
 </ul>
-<p>#服务端绕过<br>文件类型MIME(检测Content-Type)</p>
-<figure class="highlight plain"><figcaption><span>image/gif (原为Content-Type: text/plain)```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"> * &lt;a href=&quot;http://bestsec.net/images/txt/mime.txt&quot; &gt;mime对照表&lt;/a&gt;</div><div class="line">###文件后缀</div><div class="line">常见黑名单</div><div class="line">&lt;pre&gt;</div><div class="line">&lt;code&gt;</div><div class="line">asp|asa|cer|cdx|aspx|ashx|ascx|asax</div><div class="line">php|php2|php3|php4|php5|asis|htaccess</div><div class="line">htm|html|shtml|pwml|phtml|phtm|js|jsp</div><div class="line">vbs|asis|sh|reg|cgi|exe|dll|com|bat|pl|cfc|cfm|ini</div><div class="line">&lt;/code&gt;</div><div class="line">&lt;/pre&gt;</div><div class="line"> * 文件后缀大小写绕过</div><div class="line"> * 后缀pphphp过滤前一个php后剩下第一个字符p与最后hp组合</div><div class="line"> * 后缀加空格</div><div class="line"> * 名单绕过 例如：</div><div class="line">&lt;ul&gt;</div><div class="line">&lt;li&gt;</div><div class="line">asa cer aspx</div><div class="line">&lt;/li&gt;</div><div class="line">&lt;li&gt;</div><div class="line">exe exee</div><div class="line">&lt;/li&gt;</div><div class="line">&lt;li&gt;</div><div class="line">jsp jspx jspf</div><div class="line">&lt;/li&gt;</div><div class="line">&lt;li&gt;</div><div class="line">php php4</div><div class="line">&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line">###文件头标识绕过</div><div class="line">在木马内容基础上再加了一些文件信息，有点像下面的结构</div><div class="line"></div><div class="line">```GIF89a&lt;?php phpinfo(); ?&gt;</div></pre></td></tr></table></figure>
+<h1 id="服务端绕过"><a href="#服务端绕过" class="headerlink" title="服务端绕过"></a>服务端绕过</h1><p>文件类型MIME(检测Content-Type)</p>
+<figure class="highlight plain"><figcaption><span>image/gif (原为Content-Type: text/plain)```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"> * &lt;a href=&quot;http://bestsec.net/images/txt/mime.txt&quot; &gt;mime对照表&lt;/a&gt;</div><div class="line">### 文件后缀</div><div class="line">常见黑名单</div><div class="line">&lt;pre&gt;</div><div class="line">&lt;code&gt;</div><div class="line">asp|asa|cer|cdx|aspx|ashx|ascx|asax</div><div class="line">php|php2|php3|php4|php5|asis|htaccess</div><div class="line">htm|html|shtml|pwml|phtml|phtm|js|jsp</div><div class="line">vbs|asis|sh|reg|cgi|exe|dll|com|bat|pl|cfc|cfm|ini</div><div class="line">&lt;/code&gt;</div><div class="line">&lt;/pre&gt;</div><div class="line"> * 文件后缀大小写绕过</div><div class="line"> * 后缀pphphp过滤前一个php后剩下第一个字符p与最后hp组合</div><div class="line"> * 后缀加空格</div><div class="line"> * 名单绕过 例如：</div><div class="line">&lt;ul&gt;</div><div class="line">&lt;li&gt;</div><div class="line">asa cer aspx</div><div class="line">&lt;/li&gt;</div><div class="line">&lt;li&gt;</div><div class="line">exe exee</div><div class="line">&lt;/li&gt;</div><div class="line">&lt;li&gt;</div><div class="line">jsp jspx jspf</div><div class="line">&lt;/li&gt;</div><div class="line">&lt;li&gt;</div><div class="line">php php4</div><div class="line">&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line">### 文件头标识绕过</div><div class="line">在木马内容基础上再加了一些文件信息，有点像下面的结构</div><div class="line"></div><div class="line">```GIF89a&lt;?php phpinfo(); ?&gt;</div></pre></td></tr></table></figure>
 <ul>
-<li><a href="http://bestsec.net/images/txt/header.txt" target="_blank" rel="external">常用文件的文件头(十六进制)</a><br>###.htaccess解析规则绕过</li>
+<li><a href="http://bestsec.net/images/txt/header.txt" target="_blank" rel="external">常用文件的文件头(十六进制)</a><h3 id="htaccess解析规则绕过"><a href="#htaccess解析规则绕过" class="headerlink" title=".htaccess解析规则绕过"></a>.htaccess解析规则绕过</h3></li>
 </ul>
 <p>在可以上传.htaccess文件时，先上传.htaccess文件，覆盖掉原先的.htaccess文件；再上传【evil.gif】文件。使用如下的.htaccess语句，即可将【evil.gif】文件以php脚本方式解析。<br><figure class="highlight plain"><figcaption><span>"evil.gif"></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SetHandler application/x-httpd-php</div><div class="line">&lt;/FilesMatch&gt;</div></pre></td></tr></table></figure></p>
-<p>#WAF绕过</p>
-<p><pre><br><code><br>1：WTS-WAF  绕过上传<br>原内容：<br>Content-Disposition: form-data; name=”up_picture”; filename=”xss.php”<br>添加回车<br>Content-Disposition: form-data; name=”up_picture”; filename=”xss.ph<br>p”</code></pre></p>
+<h1 id="WAF绕过"><a href="#WAF绕过" class="headerlink" title="WAF绕过"></a>WAF绕过</h1><p><pre><br><code><br>1：WTS-WAF  绕过上传<br>原内容：<br>Content-Disposition: form-data; name=”up_picture”; filename=”xss.php”<br>添加回车<br>Content-Disposition: form-data; name=”up_picture”; filename=”xss.ph<br>p”</code></pre></p>
 <p>2：百度云上传绕过见下：<br>百度云绕过就简单的很多很多，在对文件名大小写上面没有检测php是过了的，Php就能过，或者PHP，一句话自己合成图片马用Xise连接即可。<br>Content-Disposition: form-data; name=”up_picture”; filename=”xss.jpg .Php”<br>3：阿里云上传绕过见下：<br>源代码：<br>Content-Disposition: form-data; name=”img_crop_file”; filename=”1.jpg .Php”Content-Type: image/jpeg<br>修改如下：<br>Content-Disposition: form-data; name=”img_crop_file”; filename=”1.php”<br>没错，将=号这里回车删除掉Content-Type: image/jpeg即可绕过。<br>4：安全狗上传绕过见下：<br>源代码:<br>Content-Disposition: form-data; name=”image”; filename=”085733uykwusqcs8vw8wky.png”Content-Type: image/png<br>绕过内容如下：<br>Content-Disposition: form-data; name=”image”; filename=”085733uykwusqcs8vw8wky.png<br>C.php”<br>删除掉ontent-Type: image/jpeg只留下c，将.php加c后面即可，但是要注意额，双引号要跟着c.php”.<br><br></p>
-<p>#待补充—————————————</p>
-<p>##参考</p>
-<ul>
+<h1 id="待补充—————————————"><a href="#待补充—————————————" class="headerlink" title="待补充—————————————"></a>待补充—————————————</h1><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a href="https://tom0li.github.io/2017/05/27/bypass-upload/" target="_blank" rel="external">tom0li</a></li>
 <li><a href="http://www.issce.cn/2017/10/12/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html" target="_blank" rel="external">sodme</a></li>
 </ul>
@@ -484,8 +476,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -584,6 +585,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#解析不可写"><span class="nav-number">1.</span> <span class="nav-text">解析不可写</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可写不解析"><span class="nav-number">2.</span> <span class="nav-text">可写不解析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解析漏洞"><span class="nav-number">3.</span> <span class="nav-text">解析漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IIS5-X-6-X"><span class="nav-number">3.1.</span> <span class="nav-text">IIS5.X-6.X</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目录解析"><span class="nav-number">3.1.1.</span> <span class="nav-text">目录解析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件解析"><span class="nav-number">3.2.</span> <span class="nav-text">文件解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#apache1-X-2-X"><span class="nav-number">3.3.</span> <span class="nav-text">apache1.X-2.X</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx"><span class="nav-number">3.4.</span> <span class="nav-text">Nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#php-CGI"><span class="nav-number">3.5.</span> <span class="nav-text">php CGI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IIS7-0-7-5"><span class="nav-number">3.5.1.</span> <span class="nav-text">IIS7.0/7.5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nginx-lt-0-8-3"><span class="nav-number">3.5.2.</span> <span class="nav-text">Nginx < 0.8.3</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编辑器漏洞"><span class="nav-number">4.</span> <span class="nav-text">编辑器漏洞</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#客户端绕过"><span class="nav-number">5.</span> <span class="nav-text">客户端绕过</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务端绕过"><span class="nav-number">6.</span> <span class="nav-text">服务端绕过</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#htaccess解析规则绕过"><span class="nav-number">6.0.1.</span> <span class="nav-text">.htaccess解析规则绕过</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WAF绕过"><span class="nav-number">7.</span> <span class="nav-text">WAF绕过</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#待补充—————————————"><span class="nav-number">8.</span> <span class="nav-text">待补充—————————————</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">8.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
